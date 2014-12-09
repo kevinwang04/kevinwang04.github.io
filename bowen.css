@@ -7,6 +7,7 @@ header{
 	float:right;
 	background-color: rgba(222,222,222,0.5);
 }
+
 header ul{
 	list-style: none;
 	margin: 15px;
@@ -28,10 +29,18 @@ body{
 	width: 70%;
 	margin: 50px auto;
 }
+
 .title{
+	font-family: 'Arial Black', Gadget, sans-serif;
 	margin: 0 auto;
 	text-align: center;
 	text-shadow:35px;
+}
+hr{
+	color: #138713;
+	width: 80%;
+	vertical-align: left;
+	height: 2px;
 }
 #article1{
 	width: 80%;
@@ -45,7 +54,7 @@ article{
 	height: 700px;
 	overflow: auto;
 }
-.article1-img{
+#article1-img{
 	position: relative;
 	top: -100px;
 	width: 100%;
@@ -57,9 +66,13 @@ article{
 	margin-right: 25px;
 }
 #article2{
-	margin-top: 60px;
+	margin-top: 40px;
+	border: 2px solid #ccc;
 	width: 80%;
-   border: 2px solid #ccc;
    border-radius: 2%;
    background-color: rgba(123,123,123,0.2);
+}
+#article2-img{
+	position: relative;
+	width: 100%;
 }
