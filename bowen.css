@@ -55,6 +55,7 @@ article{
 	overflow: auto;
 }
 #article1-img{
+	margin-top: 40px;
 	position: relative;
 	top: -100px;
 	width: 100%;
@@ -75,4 +76,20 @@ article{
 #article2-img{
 	position: relative;
 	width: 100%;
+}
+#title4{
+	color: red;
+
+}
+#article4{
+	margin-top:40px; 
+	width: 80%;
+   border: 2px solid #ccc;
+   border-radius: 2%;
+   background-color: rgba(123,123,123,0.2);
+}
+#article4-img1,#article4-img2{
+	position: relative;
+	width: 100%;
+
 }
