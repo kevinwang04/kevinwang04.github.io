@@ -43,6 +43,7 @@ hr{
 	height: 2px;
 }
 #article1{
+	margin-top: 40px;
 	width: 80%;
    border: 2px solid #ccc;
    border-radius: 2%;
