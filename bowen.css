@@ -2,7 +2,7 @@
 	margin: 0 auto;
 	padding: 0;
 }
-header{
+header nav{
 	width: 20%;
 	float:right;
 	background-color: rgba(222,222,222,0.5);
@@ -82,8 +82,8 @@ article{
 	color: red;
 
 }
-#article4{
-	margin-top:40px; 
+#article4{position: relative;
+	margin-top:200px; 
 	width: 80%;
    border: 2px solid #ccc;
    border-radius: 2%;
@@ -93,4 +93,37 @@ article{
 	position: relative;
 	width: 100%;
 
+}
+
+#img-nav{
+	width: 100%;position: absolute;
+ 
+	top: 0px;
+	left: 25%
+
+}
+header div div{
+	margin: 40px auto;
+	width: 150px;height: 150px;
+	float: left;
+}
+header div div a{
+	width: 100px;height: 100px;
+	float: left;
+	text-decoration: none;
+}
+header div div a img{
+	border-radius: 60%;
+	width: 100px;height: 100px;
+
+}
+header div div a h5{
+	height: 40px;
+	margin: 5px;
+	font-size: 20px;
+	text-align: center;
+	color: #555;
+}
+#img-nav2{
+	left: 200px
 }
