@@ -27,7 +27,7 @@ body{
 }
 #wrap{
 	width: 70%;
-	margin: 50px auto;
+	margin: 250px auto;
 }
 
 .title{
@@ -43,6 +43,7 @@ hr{
 	height: 2px;
 }
 #article1{
+	padding-top: 30px;
 	margin-top: 40px;
 	width: 80%;
    border: 2px solid #ccc;
@@ -68,6 +69,7 @@ article{
 	margin-right: 25px;
 }
 #article2{
+	padding-top: 30px;
 	margin-top: 40px;
 	border: 2px solid #ccc;
 	width: 80%;
@@ -83,7 +85,7 @@ article{
 
 }
 #article4{position: relative;
-	margin-top:200px; 
+	margin-top:40px; 
 	width: 80%;
    border: 2px solid #ccc;
    border-radius: 2%;
@@ -126,4 +128,15 @@ header div div a h5{
 }
 #img-nav2{
 	left: 200px
+}
+#article5{
+    padding-top: 30px;
+	margin-top: 40px;
+	border: 2px solid #ccc;
+	width: 80%;
+   border-radius: 2%;
+   background-color: rgba(123,123,123,0.2);
+}
+#title5{
+	color: red;
 }
