@@ -140,3 +140,26 @@ header div div a h5{
 #title5{
 	color: red;
 }
+#article3{
+padding-top: 20px;
+	position: relative;
+	margin-top:40px; 
+	width: 80%;
+   border: 2px solid #ccc;
+   border-radius: 2%;
+   background-color: rgba(123,123,123,0.2);
+}
+#article5_img{
+	width: 98%;
+	border-radius: 5%;
+	padding: 10px;
+
+}
+#title3{
+
+	color: red;
+}
+#article3_img{
+	width: 98%;
+	margin: 10px;
+}
