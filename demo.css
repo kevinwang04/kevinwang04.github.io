@@ -1,0 +1,61 @@
+*{
+	margin: 0;padding: 0;
+}
+#all_wrap{
+	width: 500px;height: 400px;
+	position: relative;
+	margin: 0 auto;
+	overflow: hidden;  /*这个属性设置非常重要，隐藏了多余的照片。*/
+	border: 1px solid #fff;
+}
+#img_wrap{
+	width: 3500px;height: 400px;
+	position: absolute;
+	z-index: 1;
+}
+#img_wrap img{
+	width: 500px;float:left; 
+}
+#buttons_wrap{
+	position: absolute;
+	width: 120px;height: 10px;
+	z-index: 2;
+	left: 190px;
+	bottom: 45px;
+}
+#buttons_wrap span{
+cursor:pointer;
+float: left;
+border:1px solid #fff;
+width: 10px;height: 10px;
+border-radius: 50%;
+margin-left: 10px;
+background-color: #333;
+}
+#buttons_wrap .on{
+	background:orangered;
+}
+
+.arrow{
+	cursor: pointer;
+	display: none;
+	line-height: 40px;
+	text-align: center;
+	font-size: 36px;
+	font-weight: bold;
+	width: 40px;height: 40px;
+	position: absolute;
+	top: 180px;
+	background-color: rgba(0,0,0,0.3);
+	color: #fff;
+	z-index: 2;
+	text-decoration: none;
+}
+.arrow:hover{
+	background-color: rgba(0,0,0,0.7);
+}
+#all_wrap:hover .arrow{
+	display: block;
+}
+#prev { left: 20px;}
+#next { right: 20px;}
