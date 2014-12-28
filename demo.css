@@ -1,7 +1,4 @@
-*{
-	margin: 0;padding: 0;
-}
-#all_wrap{
+#allWrap{
 	width: 500px;height: 400px;
 	position: relative;
 	margin: 0 auto;
@@ -14,7 +11,7 @@
 	z-index: 1;
 }
 #img_wrap img{
-	width: 500px;float:left; 
+	width: 500px;float:left; height: 375px;
 }
 #buttons_wrap{
 	position: absolute;
