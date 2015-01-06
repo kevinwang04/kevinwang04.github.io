@@ -2,7 +2,9 @@
 	margin: 0 auto;
 	padding: 0;
 }
-header nav{
+header nav{position: fixed;
+	right: 0;
+	top: 180px;
 	width: 20%;
 	float:right;
 	background-color: rgba(222,222,222,0.5);
