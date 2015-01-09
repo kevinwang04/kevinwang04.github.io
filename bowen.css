@@ -4,32 +4,40 @@
 }
 header nav{position: fixed;
 	right: 0;
-	top: 180px;
-	width: 20%;
+	top: 150px;
+	width: 15%;
 	float:right;
 	background-color: rgba(222,222,222,0.5);
+	border-radius: 5%;
 }
 
 header ul{
 	list-style: none;
-	margin: 15px;
+	/*margin: 15px;*/
 }
 header ul li{
-	margin: 10px;
-	text-align: left;
+	padding:10px;
+	text-align:center;
 	font-size: 1.5em;
+}
+header ul li:hover{
+	background-color: rgba(27, 119, 86, 0.43);
 }
 header ul li a{
 	text-decoration: none;
-	color: #185C59;
+	color: rgba(33, 176, 169, 0.52);
 	font-family:  "Comic Sans MS",cursive,sans-serif;
 }
+header ul li a:hover{
+	color: rgba(27, 111, 72, 0.72);
+}
+
 body{
 	background-color: rgba(88, 161, 132, 0.5);
 }
 #wrap{
 	width: 70%;
-	margin: 250px auto;
+	margin: 0px auto;
 }
 
 .title{
@@ -100,14 +108,14 @@ article{
 }
 
 #img-nav{
-	width: 100%;position: absolute;
- 
-	top: 0px;
-	left: 25%
+	top:0px;
+	overflow: hidden;
+	width: 60%;
+	padding-left: 50px;
 
 }
 header div div{
-	margin: 40px auto;
+	margin: 30px 20px;
 	width: 150px;height: 150px;
 	float: left;
 }
@@ -119,15 +127,25 @@ header div div a{
 header div div a img{
 	border-radius: 60%;
 	width: 100px;height: 100px;
-
+    transition:1.2s;
+    -moz-transition:1.2s;
+    -webkit-transition:1.2s;
+}
+header div div a img:hover{
+	transform:scale(1.2);
+	-moz-transform:scale(1.2);
+	-webkit-transform:scale(1.2);
 }
 header div div a h5{
-	height: 40px;
+	height: 25px;
 	margin: 5px;
 	font-size: 20px;
 	text-align: center;
 	color: #555;
 }
+/*header div div a h5:hover{
+	background-color: #ccc;
+}*/
 #img-nav2{
 	left: 200px
 }

@@ -1,8 +1,8 @@
-#allWrap{
+#allWrap {
 	width: 500px;height: 400px;
 	position: relative;
 	margin: 0 auto;
-	overflow: hidden;  /*这个属性设置非常重要，隐藏了多余的照片。*/
+	overflow: hidden;  
 	border: 1px solid #fff;
 }
 #img_wrap{
@@ -30,7 +30,7 @@ margin-left: 10px;
 background-color: #333;
 }
 #buttons_wrap .on{
-	background:orangered;
+	background:orange;
 }
 
 .arrow{
