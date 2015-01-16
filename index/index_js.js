@@ -1,4 +1,4 @@
- (window.onload = function(){
+ window.onload = function(){
 	var container=document.getElementById('all_wrap');
 	var list = document.getElementById('img_wrap');
 	var button = document.getElementById('buttons_wrap').getElementsByTagName('span');
@@ -100,4 +100,3 @@
 
 	play();
 };
-)
