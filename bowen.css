@@ -32,8 +32,8 @@ header ul li a:hover{
 	color: rgba(27, 111, 72, 0.72);
 }
 
-body{
-	background-color: rgba(88, 161, 132, 0.5);
+ body{
+     background:#ccc url(bowen/bowen_bg.jpg) repeat fixed top center;
 }
 #wrap{
 	width: 70%;
@@ -110,8 +110,8 @@ article{
 #img-nav{
 	top:0px;
 	overflow: hidden;
-	width: 60%;
-	padding-left: 50px;
+	width: 77%;
+	padding-left: 180px;
 
 }
 header div div{
