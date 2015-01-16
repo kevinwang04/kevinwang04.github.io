@@ -73,3 +73,7 @@ header img{
 #life_article2 span{
 	background-color: rgba(226, 92, 92, 0.72);
 }
+
+@media screen and (max-width: 600px){
+	
+}
