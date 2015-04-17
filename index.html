@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>My Blog</title>
+	<title>My Blog——王欢的个人站点</title>
 	<meta charset="utf-8">
 	<link rel="icon" href="shortcut.png" type="image/png">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
@@ -10,130 +10,87 @@
 	<link rel="stylesheet" type="text/css" href="http://www.w3cschool.cc/try/bootstrap/layoutit/ckeditor/skins/moono/editor.css?t=D3NA">
    	<link rel="stylesheet" type="text/css" href="main.css">
    	
+   	
 </head>
 <body>
-	<div class="container-fluid">
-		<div class="row-fluid">
-        	<div class="col-xs-12 col-sm-12 col-md-12">
-        		<nav class="navbar navbar-inverse navbar-fixed-top ">
-					  <div class="container-fluid">
-					    <!-- Brand and toggle get grouped for better mobile display -->
-					    <div class="navbar-header">
-					      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-					        <span class="sr-only">Toggle navigation</span>
-					        <span class="icon-bar"></span>
-					        <span class="icon-bar"></span>
-					        <span class="icon-bar"></span>
-					      </button>
-					      <a class="navbar-brand" href="#">Brand</a>
-					    </div>
-
-					    <!-- Collect the nav links, forms, and other content for toggling -->
-					    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-					      <ul class="nav navbar-nav">
-					        <li class="active"><a href="#">Link <span class="sr-only">(current)</span></a></li>
-					        <li><a href="#">Link</a></li>
-					        <li class="dropdown">
-					          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="true">Dropdown <span class="caret"></span></a>
-					          <ul class="dropdown-menu" role="menu">
-					            <li><a href="#">Action</a></li>
-					            <li><a href="#">Another action</a></li>
-					            <li><a href="#">Something else here</a></li>
-					            <li class="divider"></li>
-					            <li><a href="#">Separated link</a></li>
-					            <li class="divider"></li>
-					            <li><a href="#">One more separated link</a></li>
-					          </ul>
-					        </li>
-					      </ul>
-					      <form class="navbar-form navbar-right" role="search">
-					        <div class="form-group">
-					          <input type="text" class="form-control" placeholder="Search">
-					        </div>
-					       <!--  <a class="subscribe-button icon-feed" href="http://www.golaravel.com/rss/">提交</a> -->
-					        <button type="submit" class="btn btn-default">Submit</button>
-					      </form>
-					      <!-- <ul class="nav navbar-nav navbar-right">
-					        <li><a href="#">Link</a></li>
-					        <li class="dropdown">
-					          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Dropdown <span class="caret"></span></a>
-					          <ul class="dropdown-menu" role="menu">
-					            <li><a href="#">Action</a></li>
-					            <li><a href="#">Another action</a></li>
-					            <li><a href="#">Something else here</a></li>
-					            <li class="divider"></li>
-					            <li><a href="#">Separated link</a></li>
-					          </ul>
-					        </li>
-					      </ul> -->
-					    </div><!-- /.navbar-collapse -->
-					  </div><!-- /.container-fluid -->
-					</nav>
-        	</div>
-  			<!-- <div class="col-xs-6 col-md-4">.col-xs-6 .col-md-4</div> -->	
+	<div class="container-fluid side_bar">
+		<div class="home_wrap text-center"><i class="icon-home" class="tooltip-test" data-toggle="tooltip" data-placement="right" title="back home"></i></div>
+		<div class="home_wrap text-center"><i class="icon-list-alt" data-toggle="tooltip" data-placement="right" title="my works"></i></div>
+		<div class="home_wrap text-center"><i class="icon-user" data-toggle="tooltip" data-placement="right" title="about me"></i></div>
+	</div>
+	<div class="page_wrap">
+		<!-- 实现开关按钮 -->
+		<div class="nav_icon" id="nav_icon">
+				<span></span>
+				<span></span>
+				<span></span>
 		</div>
-	</div>
-	<div id="welcome_context">
-		<h1 class="text-center">Kevin Wang</h1>
-		<h3 class="text-center">interested in <strong class="text-primary">web</strong> & <strong class="text-primary">android</strong> developing</h3>
-		<img src="index_img/show_me.png" alt="it's real me" class="img-circle center-block">
-		<div class="col-xs-12 col-md-3 col-md-offset-3 contact_me text-center" ><h4><a href="mailto:kavinwang04@gmail.com">kavinwang04@gmail<i class="icon-envelope-alt"></i></a></h4></div>
-	  	<div class="col-xs-12 col-md-3 text-center"><h4><a href="https://github.com/kevinwang04"><i class="icon-github"></i>contact me on github</a></h4></div>
-    </div>
+		<div id="welcome_context">
+			<h1 class="text-center">Kevin Wang</h1>
+			<h3 class="text-center">interested in <strong class="text-primary">web</strong> & <strong class="text-primary">android</strong> developing</h3>
+			<img src="index_img/show_me.png" alt="it's real me" class="img-circle center-block">
+			<div class="row">
+				<div class="col-xs-12 col-md-3 col-md-offset-3 contact_me text-center" ><h4><a href="mailto:kavinwang04@gmail.com">kavinwang04@gmail<i class="icon-envelope-alt"></i></a></h4></div>
+			  	<div class="col-xs-12 col-md-3 text-center"><h4><a href="https://github.com/kevinwang04"><i class="icon-github"></i>contact me on github</a></h4></div>
+		  	</div>
+	    </div>
 
-   	<div class="work_wrap center-block">
-    	<h1 class="text-center uppercase">what am I work on right now</h1>
+	   	<div class="work_wrap center-block">
+	    	<h1 class="text-center uppercase" >what do I work on right now</h1>
 
-    	<div class="row">
-	  		<div class="col-xs-12 col-md-4 text-center border-right">
-	  			<div class="icon"><i class="icon-laptop work_icon"></i></div>
-	  			<h3>WEB DEVELOPEMENT</h3>
-	  			<p>skljfklsdjfsdfjsdjfjfkfkljf</p>
-	  		</div>
-	 	 	<div class="col-xs-12 col-md-4 text-center border-right">
-	 	 		<div class="icon"><i class="icon-mobile-phone work_icon"></i></div>
-	 	 		<h3>ANDROID DEVELOPEMENT</h3>
-	 	 		<p>sfdjlskjdfjlsdjlfjlskdj;f</p>
-	 	 	</div>
-	 	 	<div class="col-xs-12 col-md-4 text-center ">
-	 	 		<div class="icon"><i class="icon-book work_icon"></i></div>
-	 	 		<h3 class="uppercase">school works</h3>
-	 	 		<p>sfdjlskjdfjlsdjlfjlskdj;f</p>
-	 	 	</div>
-	</div>
-    </div>
-    
-		
+	    	<div class="row">
+		  		<div class="col-xs-12 col-md-4 text-center border-right">
+		  			<div class="icon"><i class="icon-laptop work_icon"></i></div>
+		  			<h3>WEB DEVELOPEMENT</h3>
+		  			<p>skljfklsdjfsdfjsdjfjfkfkljf</p>
+		  		</div>
+		 	 	<div class="col-xs-12 col-md-4 text-center border-right">
+		 	 		<div class="icon"><i class="icon-mobile-phone work_icon"></i></div>
+		 	 		<h3>ANDROID DEVELOPEMENT</h3>
+		 	 		<p>sfdjlskjdfjlsdjlfjlskdj;f</p>
+		 	 	</div>
+		 	 	<div class="col-xs-12 col-md-4 text-center ">
+		 	 		<div class="icon"><i class="icon-book work_icon"></i></div>
+		 	 		<h3 class="uppercase">school works</h3>
+		 	 		<p>sfdjlskjdfjlsdjlfjlskdj;f</p>
+		 	 	</div>
+		</div>
+	    </div>
+	    
+			
 
 
-    <footer>
-    	<div class="container">
-    		<div class="row">
-    			<div class="col-xs-12 col-md-4 col-md-offset-4 text-center">
-    				<ul class="list-inline">
-    					<li><a href="javascript:void();" class="white"><h4 class="uppercase">about me</h4s></a></li>
-    					<li><a href="javascript:void();" class="white"><h4 class="uppercase">my work</h4s></a></li>
-    					<li><a href="javascript:void();" class="white"><h4 class="uppercase">home</h4s></a></li>
-    				</ul>
+	    <footer>
+	    	<div class="container">
+	    		<div class="row">
+	    			<div class="col-xs-12 col-md-4 col-md-offset-4 text-center">
+	    				<ul class="list-inline">
+	    					<li><a href="javascript:void();" class="white"><h4 class="uppercase">about me</h4s></a></li>
+	    					<li><a href="javascript:void();" class="white"><h4 class="uppercase">my work</h4s></a></li>
+	    					<li><a href="javascript:void();" class="white"><h4 class="uppercase">home</h4s></a></li>
+	    				</ul>
 
-    			</div>
-    		</div>
-    			<div class="row">
-    			<div class="col-xs-12 col-md-4 col-md-offset-4 text-center">
-    				<ul class="list-inline">
-    					<li><a href="https://www.linkedin.com/profile/view?id=325284454&trk=hp-identity-name" class="white"><i class="icon-linkedin-sign footer_icon"></i></a></li>
-    					<li><a href="javascript:void();" class="white"><i class="icon-twitter-sign footer_icon"></i></a></li>
-    					<li><a href="https://github.com/kevinwang04" class="white"><i class="icon-github footer_icon"></i></a></li>
-    				</ul>
+	    			</div>
+	    		</div>
+	    			<div class="row">
+	    			<div class="col-xs-12 col-md-4 col-md-offset-4 text-center">
+	    				<ul class="list-inline">
+	    					<li><a href="https://www.linkedin.com/profile/view?id=325284454&trk=hp-identity-name" class="white"><i class="icon-linkedin-sign footer_icon"></i></a></li>
+	    					<li><a href="javascript:void();" class="white"><i class="icon-twitter-sign footer_icon"></i></a></li>
+	    					<li><a href="https://github.com/kevinwang04" class="white"><i class="icon-github footer_icon"></i></a></li>
+	    				</ul>
 
-    			</div>
-    		</div>
-    		<h4 class="text-center">© 2015 · KEVIN WANG · ALL RIGHTS RESERVED</h4>
-    		<h5 class="text-center">A LITTLE DOT MAKES BIG DIFFERENCES</h5>
-    	</div>
-    </footer>
-
+	    			</div>
+	    		</div>
+	    		<h4 class="text-center">© 2015 · KEVIN WANG · ALL RIGHTS RESERVED</h4>
+	    		<h5 class="text-center">STAY HUNGRY · STAY FOOLISH</h5>
+	    	</div>
+	    </footer>
+	</div> 
+	<script type="text/javascript" src="http://apps.bdimg.com/libs/jquery/2.1.1/jquery.min.js"></script>
+	<script type="text/javascript" src="main.js"></script>   
 	<script type="text/javascript" src="http://apps.bdimg.com/libs/bootstrap/3.2.0/js/bootstrap.min.js"></script>
 	<script type="text/javascript" src="http://apps.bdimg.com/libs/jqueryui/1.10.4/jquery-ui.min.js"></script>
+	
 </body>
 </html>

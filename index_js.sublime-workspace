@@ -1,0 +1,758 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"s",
+				"script	Tag"
+			],
+			[
+				"l",
+				"left"
+			],
+			[
+				"ba",
+				"background-color"
+			],
+			[
+				"ma",
+				"margin"
+			],
+			[
+				"fo",
+				"font-size"
+			],
+			[
+				"mar",
+				"margin-left"
+			],
+			[
+				"pad",
+				"padding-bottom"
+			],
+			[
+				"paddi",
+				"padding-bottom"
+			],
+			[
+				"bo",
+				"border-bottom"
+			],
+			[
+				"font",
+				"font-family"
+			],
+			[
+				"tex",
+				"text-transform"
+			],
+			[
+				"le",
+				"letter-spacing"
+			],
+			[
+				"i",
+				"italic"
+			],
+			[
+				"fon",
+				"font-family"
+			],
+			[
+				"fons",
+				"font-size"
+			],
+			[
+				"add",
+				"addEventListern"
+			],
+			[
+				"get",
+				"get	Get Elements"
+			],
+			[
+				"bacgro",
+				"background"
+			],
+			[
+				"max-",
+				"max-width"
+			],
+			[
+				"c",
+				"center"
+			],
+			[
+				"bacl",
+				"background-color"
+			],
+			[
+				"te",
+				"text-decoration"
+			],
+			[
+				"co",
+				"color"
+			],
+			[
+				"FON",
+				"font-size"
+			],
+			[
+				"br",
+				"br"
+			],
+			[
+				"li",
+				"line-height"
+			],
+			[
+				"C",
+				"class	Attr"
+			],
+			[
+				"p",
+				"printf	printf …"
+			],
+			[
+				"str",
+				"strcpy"
+			],
+			[
+				"bord",
+				"border-radius"
+			],
+			[
+				"for",
+				"for	for (…) {…}"
+			],
+			[
+				"fun",
+				"function"
+			],
+			[
+				"g",
+				"getElementById"
+			],
+			[
+				"blog",
+				"blog_js"
+			],
+			[
+				"a",
+				"a	Tag"
+			],
+			[
+				"margin",
+				"margin"
+			],
+			[
+				"d",
+				"div	Tag"
+			],
+			[
+				"di",
+				"display"
+			],
+			[
+				"borderr",
+				"border-radius"
+			],
+			[
+				"r",
+				"rgba()"
+			],
+			[
+				"border",
+				"border"
+			],
+			[
+				"ar",
+				"article	Tag"
+			],
+			[
+				"onl",
+				"onclick	Attr"
+			],
+			[
+				"bc",
+				"background-color"
+			],
+			[
+				"po",
+				"position"
+			],
+			[
+				"t",
+				"top"
+			],
+			[
+				"backc",
+				"background-color"
+			],
+			[
+				"WI",
+				"width"
+			],
+			[
+				"fonts",
+				"font-size"
+			],
+			[
+				"ha",
+				"header	Tag"
+			],
+			[
+				"wi",
+				"webkit-transition"
+			],
+			[
+				"bag",
+				"background-color"
+			],
+			[
+				"border-r",
+				"border-right-color"
+			],
+			[
+				"border-top",
+				"border-top-width"
+			],
+			[
+				"tx",
+				"text-align"
+			],
+			[
+				"posi",
+				"position"
+			],
+			[
+				"position",
+				"list-style-position"
+			],
+			[
+				"bac",
+				"background-color"
+			],
+			[
+				"back",
+				"background-color"
+			],
+			[
+				"u",
+				"ul	Tag"
+			],
+			[
+				"re",
+				"repeat-x"
+			],
+			[
+				"h",
+				"href	Attr"
+			],
+			[
+				"pa",
+				"padding"
+			],
+			[
+				"text",
+				"text-transform"
+			],
+			[
+				"backgr",
+				"background-color"
+			],
+			[
+				"list",
+				"list-style-type"
+			],
+			[
+				"st",
+				"style	Tag"
+			],
+			[
+				"marg",
+				"margin-right"
+			],
+			[
+				"bor",
+				"border-right"
+			],
+			[
+				"wid",
+				"width"
+			],
+			[
+				"padd",
+				"padding-top"
+			],
+			[
+				"backgrou",
+				"background-color"
+			],
+			[
+				"ta",
+				"target	Attr"
+			],
+			[
+				"ce",
+				"cellspacing	Attr"
+			],
+			[
+				"cel",
+				"cellpadding	Attr"
+			],
+			[
+				"cell",
+				"cellspacing	Attr"
+			],
+			[
+				"ht",
+				"http-equiv	Attr"
+			],
+			[
+				"he",
+				"height	Attr"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "index_js.sublime-project",
+			"settings":
+			{
+				"buffer_size": 73,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "main.css",
+			"settings":
+			{
+				"buffer_size": 1761,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "index.html",
+			"settings":
+			{
+				"buffer_size": 4131,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "main.js",
+			"settings":
+			{
+				"buffer_size": 124,
+				"line_ending": "Windows"
+			}
+		}
+	],
+	"build_system": "",
+	"command_palette":
+	{
+		"height": 311.0,
+		"selected_items":
+		[
+			[
+				"Snippet: ",
+				"Snippet: html"
+			]
+		],
+		"width": 468.0
+	},
+	"console":
+	{
+		"height": 126.0,
+		"history":
+		[
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/F/kevin software/github/kevinwang04.github.io"
+	],
+	"file_history":
+	[
+		"/F/kevin software/github/kevinwang04.github.io/main",
+		"/F/kevin software/github/kevinwang04.github.io/index",
+		"/C/Users/kevin/Desktop/my programs/bata/源码/下拉菜单源码/demo/jquery实现/demo.html",
+		"/C/Users/kevin/Desktop/my programs/bata/源码/下拉菜单源码/demo/jquery实现/function quickSort(array){.js",
+		"/C/Users/kevin/Desktop/my programs/bata/源码/下拉菜单源码/demo/jquery实现/menu.html",
+		"/C/Users/kevin/Desktop/my programs/bata/源码/下拉菜单源码/demo/javascript实现/menu4（js）.html",
+		"/C/Users/kevin/Desktop/my programs/bata/源码/网页广告特效/右下角广告（源代码）/右下角弹框.html",
+		"/C/Users/kevin/Desktop/my programs/bata/源码/网页广告特效/右下角广告（源代码）/右下角弹框1.html",
+		"/C/Users/kevin/Desktop/my programs/bata/源码/网页广告特效/顶部广告（源代码）/ad_down.html",
+		"/C/Users/kevin/Desktop/my programs/bata/源码/网页广告特效/顶部广告（源代码）/adDemo_close.html",
+		"/C/Users/kevin/Desktop/my programs/bata/源码/搜索框源码/bing-search-ajax.htm",
+		"/C/Users/kevin/Desktop/my programs/bata/源码/搜索框源码/bing-search-demo.htm",
+		"/C/Users/kevin/Desktop/my programs/bata/源码/搜索框源码/mydemo.html",
+		"/C/Users/kevin/Desktop/my programs/bata/源码/AJAX源码/XMLHttpRequest.html",
+		"/C/Users/kevin/Desktop/my programs/bata/less/style/mainless.less",
+		"/C/Users/kevin/Desktop/my programs/bata/less/main.html",
+		"/F/kevin software/github/old_index.html",
+		"/C/Users/kevin/Desktop/my programs/bata/less/style/mainless.css",
+		"/C/Users/kevin/Desktop/my programs/bata/源码/手风琴特效/手风琴效果/demo.html",
+		"/C/Users/kevin/Desktop/my programs/bata/源码/手风琴特效/手风琴效果/jquery-1.9.1.js",
+		"/F/kevin software/XAMPP/htdocs/test_web/testweb.php",
+		"/C/Users/kevin/Desktop/my programs/bata/bootstrap/newIndex.html",
+		"/C/Users/kevin/Desktop/my programs/bata/bootstrap/main.css",
+		"/F/kevin software/github/kevinwang04.github.io/index.html",
+		"/C/Users/kevin/Desktop/my programs/bata/源码/javascript金典实例.html",
+		"/C/Windows/System32/drivers/etc/hosts.ics",
+		"/F/kevinwang file/study resorces/c++lab/poj_1/test1.cpp",
+		"/C/Users/kevin/Desktop/my programs/bata/less/style/mailess.css",
+		"/C/Users/kevin/Desktop/my programs/bata/LessHtml.html",
+		"/C/Users/kevin/Desktop/my programs/bata/mainless.less",
+		"/F/kevin software/github/kevinwang04.github.io/bowen/about_life/life_article/article2_max_width",
+		"/F/kevin software/github/kevinwang04.github.io/bowen/about_life/life_article_list.css",
+		"/F/kevin software/github/kevinwang04.github.io/bowen/bowen.css",
+		"/F/kevin software/github/kevinwang04.github.io/bowen/about_life/life_article/article2.html",
+		"/F/kevin software/github/kevinwang04.github.io/bowen/bowen.html",
+		"/F/kevin software/github/kevinwang04.github.io/index/main.css",
+		"/F/kevin software/github/kevinwang04.github.io/index/index.html",
+		"/F/kevin software/github/kevinwang04.github.io/bowen/life_article/article2.css",
+		"/F/kevin software/github/kevinwang04.github.io/bowen/life_article/article2.html",
+		"/F/kevin software/github/kevinwang04.github.io/bowen/life_article/article1.css",
+		"/F/kevin software/github/kevinwang04.github.io/bowen/life_article/article1.html",
+		"/F/kevin software/github/kevinwang04.github.io/bowen/life_article_list.css",
+		"/F/kevin software/github/kevinwang04.github.io/bowen/life_article_list.html",
+		"/F/kevin software/github/kevinwang04.github.io/bowen.css",
+		"/F/kevin software/github/kevinwang04.github.io/bowen.html",
+		"/F/kevin software/github/kevinwang04.github.io/index_js.js",
+		"/F/kevin software/github/kevinwang04.github.io/myphotos.html",
+		"/F/kevin software/github/kevinwang04.github.io/demo.css",
+		"/F/kevin software/github/kevinwang04.github.io/main.css",
+		"/F/kevin software/github/kevinwang04.github.io/bowen/life_article/article2",
+		"/F/kevin software/github/kevinwang04.github.io/bowen/life_article_list",
+		"/F/kevin software/github/kevinwang04.github.io/bowen/list_of_tech.css",
+		"/F/kevin software/github/kevinwang04.github.io/bowen/nothing_article_list.html",
+		"/F/kevin software/github/kevinwang04.github.io/bowen/nothing_article_list.css",
+		"/C/Users/kevin/Desktop/lab8.cpp",
+		"/F/kevin software/github/kevinwang04.github.io/bowen/tech_article_list.html",
+		"/C/Users/kevin/Downloads/code/53a406b1000154e200000000/焦点图轮播效果(源代码)/js/jquery.1.10.2.js",
+		"/C/Users/kevin/Downloads/code/53a406b1000154e200000000/焦点图轮播效果(源代码)/demo-jq.html",
+		"/C/Users/kevin/Downloads/code/53a406b1000154e200000000/焦点图轮播效果(源代码)/demo.html",
+		"/F/kevin software/github/kevinwang04.github.io/add1.css",
+		"/F/kevin software/github/kevinwang04.github.io/add1",
+		"/C/Users/kevin/Desktop/my programs/my FE/demo.html",
+		"/C/Users/kevin/Desktop/my programs/my FE/demo.css",
+		"/C/Users/kevin/Desktop/my programs/my FE/demo.js",
+		"/C/Users/doqin/Documents/GitHub/doqin.github.io/index.html",
+		"/C/Users/doqin/Documents/GitHub/doqin.github.io/javascripts/main.js",
+		"/C/Users/doqin/Documents/GitHub/doqin.github.io/style.css",
+		"/C/Users/doqin/Documents/GitHub/doqin.github.io/blog_html.html",
+		"/C/Users/doqin/Documents/GitHub/doqin.github.io/blog_js.html",
+		"/C/Users/doqin/Documents/GitHub/doqin.github.io/blog_ss.html",
+		"/C/Users/doqin/Documents/GitHub/doqin.github.io/above.html",
+		"/C/Users/doqin/Documents/GitHub/doqin.github.io/blog.html",
+		"/F/kevin software/github/kevinwang04.github.io/myphotos.css",
+		"/F/kevin software/github/MyBlog/kevin/myphotos.html",
+		"/F/kevin software/github/MyBlog/kevin/myblog.html",
+		"/F/kevin software/github/MyBlog/kevin/myphotos.css",
+		"/F/kevin software/github/MyBlog/kevin/main.css",
+		"/F/kevin software/github/MyBlog/kevin/bowen.css",
+		"/F/kevin software/github/MyBlog/kevin/bowen.html",
+		"/C/Users/kevin/Desktop/myblog",
+		"/C/Users/kevin/Desktop/main",
+		"/C/Users/kevin/Desktop/my FE/new blog/index.html",
+		"/C/Users/kevin/Desktop/my FE/new blog/index.css",
+		"/C/Users/doqin/Desktop/doqin/my blog/blog",
+		"/C/Users/doqin/Desktop/doqin/my blog/style.css",
+		"/C/Users/doqin/Desktop/doqin/my blog/index.html",
+		"/C/Users/doqin/Desktop/新建文件夹/style.css",
+		"/C/Users/doqin/Desktop/新建文件夹/index.html",
+		"/C/Users/doqin/Desktop/style.css",
+		"/C/Users/doqin/Desktop/index.html",
+		"/C/Users/doqin/Desktop/blog修改/word.html",
+		"/C/Users/doqin/Desktop/blog修改/me.html",
+		"/C/Users/doqin/Desktop/blog修改/message.html",
+		"/C/Users/doqin/Desktop/blog修改/style.css",
+		"/C/Users/doqin/Desktop/blog修改/index.html",
+		"/C/Users/doqin/Desktop/blog/me.html",
+		"/C/Users/doqin/Desktop/blog/word.html",
+		"/C/Users/doqin/Desktop/blog/message.html",
+		"/C/Users/doqin/Desktop/blog/style.css",
+		"/C/Users/doqin/Desktop/blog/index.html",
+		"/C/Users/doqin/Desktop/a.html",
+		"/C/Users/admin/Desktop/iwst_linkline/index.html",
+		"/C/Users/admin/Desktop/my blog/11.html",
+		"/C/Users/admin/Desktop/iwst_linkline/style.css",
+		"/C/Users/admin/Desktop/iwst_linkline/blog.html",
+		"/C/Users/admin/Desktop/beupicsitenav/index.html",
+		"/C/Users/admin/Desktop/beupicsitenav/css/common2.css",
+		"/C/Users/admin/Desktop/my blog/2.css",
+		"/C/Users/admin/Desktop/my blog/1",
+		"/C/Users/admin/Desktop/2.html",
+		"/C/Users/admin/Desktop/1",
+		"/C/Users/admin/Desktop/新建文件夹/3.jpg",
+		"/C/Users/admin/Desktop/新建文件夹/1"
+	],
+	"find":
+	{
+		"height": 26.0
+	},
+	"find_in_files":
+	{
+		"height": 90.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			";\n",
+			"6",
+			"topmenu",
+			"span",
+			"shortcut",
+			");",
+			"rotate",
+			"name",
+			"png",
+			"img",
+			"jpg",
+			"span",
+			"gadget",
+			"gatget",
+			"ex_menu",
+			"sb",
+			"mian nav",
+			"article",
+			"crl",
+			"header",
+			"main",
+			"bg.png",
+			"MT_navwrap",
+			"face"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 2,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "index_js.sublime-project",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 73,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JSON.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "main.css",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1761,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								248,
+								248
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/CSS/CSS.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "index.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 4131,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								3485,
+								3485
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 1350.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "main.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 124,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								124,
+								33
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 26.0
+	},
+	"input":
+	{
+		"height": 0.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"project": "index_js.sublime-project",
+	"replace":
+	{
+		"height": 48.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 500.0,
+		"selected_items":
+		[
+		],
+		"width": 380.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": false,
+	"show_open_files": true,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 158.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}
