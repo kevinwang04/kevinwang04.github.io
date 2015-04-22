@@ -4,6 +4,18 @@
 		"selected_items":
 		[
 			[
+				"borr",
+				"border-radius"
+			],
+			[
+				"pad",
+				"padding"
+			],
+			[
+				"mar",
+				"margin"
+			],
+			[
 				"s",
 				"script	Tag"
 			],
@@ -22,14 +34,6 @@
 			[
 				"fo",
 				"font-size"
-			],
-			[
-				"mar",
-				"margin-left"
-			],
-			[
-				"pad",
-				"padding-bottom"
 			],
 			[
 				"paddi",
@@ -320,34 +324,29 @@
 	"buffers":
 	[
 		{
-			"file": "index_js.sublime-project",
+			"file": "main.js",
 			"settings":
 			{
-				"buffer_size": 73,
-				"line_ending": "Unix"
+				"buffer_size": 1258,
+				"line_ending": "Windows"
 			}
 		},
 		{
-			"file": "main.css",
+			"contents": "/*\n * grunt-contrib-bump\n * http://gruntjs.com/\n *\n * Copyright (c) 2014 \"Cowboy\" Ben Alman, contributors\n * Licensed under the MIT license.\n */\n\n'use strict';\n\nvar semver = require('semver');\nvar shell = require('shelljs');\n\nmodule.exports = function(grunt) {\n\n  grunt.registerTask('bump', 'Bump the version property of a JSON file.', function() {\n    // Validate specified semver increment modes.\n    var valids = ['major', 'minor', 'patch', 'prerelease'];\n    var modes = [];\n    this.args.forEach(function(mode) {\n      var matches = [];\n      valids.forEach(function(valid) {\n        if (valid.indexOf(mode) === 0) { matches.push(valid); }\n      });\n      if (matches.length === 0) {\n        grunt.log.error('Error: mode \"' + mode + '\" does not match any known modes.');\n      } else if (matches.length > 1) {\n        grunt.log.error('Error: mode \"' + mode + '\" is ambiguous (possibly: ' + matches.join(', ') + ').');\n      } else {\n        modes.push(matches[0]);\n      }\n    });\n    if (this.errorCount === 0 && modes.length === 0) {\n      grunt.log.error('Error: no modes specified.');\n    }\n    if (this.errorCount > 0) {\n      grunt.log.error('Valid modes are: ' + valids.join(', ') + '.');\n      throw new Error('Use valid modes (or unambiguous mode abbreviations).');\n    }\n    // Options.\n    var options = this.options({\n      filepaths: ['package.json'],\n      syncVersions: false,\n      commit: true,\n      commitMessage: 'Bumping version to {%= version %}.',\n      tag: true,\n      tagName: 'v{%= version %}',\n      tagMessage: 'Version {%= version %}',\n      tagPrerelease: false,\n    });\n    // Normalize filepaths to array.\n    var filepaths = Array.isArray(options.filepaths) ? options.filepaths : [options.filepaths];\n    // Process JSON files, in-order.\n    var versions = {};\n    filepaths.forEach(function(filepath) {\n      var o = grunt.file.readJSON(filepath);\n      var origVersion = o.version;\n      // If syncVersions is enabled, only grab version from the first file,\n      // guaranteeing new versions will always be in sync.\n      var firstVersion = Object.keys(versions)[0];\n      if (options.syncVersions && firstVersion) {\n        o.version = firstVersion;\n      }\n      modes.forEach(function(mode) {\n        var orig = o.version;\n        var s = semver.parse(o.version);\n        s.inc(mode);\n        o.version = String(s);\n        // Workaround for https://github.com/isaacs/node-semver/issues/50\n        if (/-/.test(orig) && mode === 'patch') {\n          o.version = o.version.replace(/\\d+$/, function(n) { return n - 1; });\n        }\n        // If prerelease on an un-prerelease version, bump patch version first\n        if (!/-/.test(orig) && mode === 'prerelease') {\n          s.inc('patch');\n          s.inc('prerelease');\n          o.version = String(s);\n        }\n      });\n      if (versions[origVersion]) {\n        versions[origVersion].filepaths.push(filepath);\n      } else {\n        versions[origVersion] = {version: o.version, filepaths: [filepath]};\n      }\n      // Actually *do* something.\n      grunt.log.write('Bumping version in ' + filepath + ' from ' + origVersion + ' to ' + o.version + '...');\n      grunt.file.write(filepath, JSON.stringify(o, null, 2));\n      grunt.log.ok();\n    });\n    // Commit changed files?\n    if (options.commit) {\n      Object.keys(versions).forEach(function(origVersion) {\n        var o = versions[origVersion];\n        commit(o.filepaths, processTemplate(options.commitMessage, {\n          version: o.version,\n          origVersion: origVersion\n        }));\n      });\n    }\n    // We're only going to create one tag. And it's going to be the new\n    // version of the first bumped file. Because, sanity.\n    var newVersion = versions[Object.keys(versions)[0]].version;\n    if (options.tag) {\n      if (options.tagPrerelease || modes.indexOf('prerelease') === -1) {\n        tag(\n          processTemplate(options.tagName, {version: newVersion}),\n          processTemplate(options.tagMessage, {version: newVersion})\n        );\n      } else {\n        grunt.log.writeln('Not tagging (prerelease version).');\n      }\n    }\n    if (this.errorCount > 0) {\n      grunt.warn('There were errors.');\n    }\n  });\n\n  // Using custom delimiters keeps templates from being auto-processed.\n  grunt.template.addDelimiters('bump', '{%', '%}');\n\n  function processTemplate(message, data) {\n    return grunt.template.process(message, {\n      delimiters: 'bump',\n      data: data,\n    });\n  }\n\n  // Kinda borrowed from https://github.com/geddski/grunt-release\n  function commit(filepaths, message) {\n    grunt.log.writeln('Committing ' + filepaths.join(', ') + ' with message: ' + message);\n    run(\"git commit -m '\" + message + \"' '\" + filepaths.join(\"' '\") + \"'\");\n  }\n\n  function tag(name, message) {\n    grunt.log.writeln('Tagging ' + name + ' with message: ' + message);\n    run(\"git tag '\" + name + \"' -m '\" + message + \"'\");\n  }\n\n  function run(cmd) {\n    if (grunt.option('no-write')) {\n      grunt.verbose.writeln('Not actually running: ' + cmd);\n    } else {\n      grunt.verbose.writeln('Running: ' + cmd);\n      var result = shell.exec(cmd, {silent:true});\n      if (result.code !== 0) {\n        grunt.log.error('Error (' + result.code + ') ' + result.output);\n      }\n    }\n  }\n\n};",
+			"file": "/G/NEWsoftware/nodeJS/node_modules/grunt/internal-tasks/bump.js",
+			"file_size": -1,
+			"file_write_time": -1,
 			"settings":
 			{
-				"buffer_size": 1761,
-				"line_ending": "Windows"
+				"buffer_size": 5263,
+				"line_ending": "Unix"
 			}
 		},
 		{
 			"file": "index.html",
 			"settings":
 			{
-				"buffer_size": 4131,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "main.js",
-			"settings":
-			{
-				"buffer_size": 124,
+				"buffer_size": 4444,
 				"line_ending": "Windows"
 			}
 		}
@@ -363,7 +362,7 @@
 				"Snippet: html"
 			]
 		],
-		"width": 468.0
+		"width": 512.0
 	},
 	"console":
 	{
@@ -387,6 +386,10 @@
 	],
 	"file_history":
 	[
+		"/F/kevin software/github/kevinwang04.github.io/main.css",
+		"/F/kevin software/github/kevinwang04.github.io/index_js.sublime-project",
+		"/C/Users/kevin/Desktop/my programs/bata/css打地鼠",
+		"/C/Users/kevin/Desktop/my programs/bata/css打地鼠.html",
 		"/F/kevin software/github/kevinwang04.github.io/main",
 		"/F/kevin software/github/kevinwang04.github.io/index",
 		"/C/Users/kevin/Desktop/my programs/bata/源码/下拉菜单源码/demo/jquery实现/demo.html",
@@ -435,7 +438,6 @@
 		"/F/kevin software/github/kevinwang04.github.io/index_js.js",
 		"/F/kevin software/github/kevinwang04.github.io/myphotos.html",
 		"/F/kevin software/github/kevinwang04.github.io/demo.css",
-		"/F/kevin software/github/kevinwang04.github.io/main.css",
 		"/F/kevin software/github/kevinwang04.github.io/bowen/life_article/article2",
 		"/F/kevin software/github/kevinwang04.github.io/bowen/life_article_list",
 		"/F/kevin software/github/kevinwang04.github.io/bowen/list_of_tech.css",
@@ -503,7 +505,7 @@
 	],
 	"find":
 	{
-		"height": 26.0
+		"height": 27.0
 	},
 	"find_in_files":
 	{
@@ -517,6 +519,16 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			";\n",
+			"45deg",
+			"250",
+			".addClass(\"show\")",
+			"addClass",
+			"+=250px",
+			"250",
+			"+=",
+			"250px",
+			"slow",
 			";\n",
 			"6",
 			"topmenu",
@@ -558,109 +570,24 @@
 	"groups":
 	[
 		{
-			"selected": 2,
+			"selected": 1,
 			"sheets":
 			[
 				{
 					"buffer": 0,
-					"file": "index_js.sublime-project",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 73,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								0,
-								0
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/JavaScript/JSON.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 3,
-					"type": "text"
-				},
-				{
-					"buffer": 1,
-					"file": "main.css",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 1761,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								248,
-								248
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/CSS/CSS.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 2,
-					"type": "text"
-				},
-				{
-					"buffer": 2,
-					"file": "index.html",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 4131,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								3485,
-								3485
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/HTML/HTML.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 1350.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 0,
-					"type": "text"
-				},
-				{
-					"buffer": 3,
 					"file": "main.js",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 124,
+						"buffer_size": 1258,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								124,
-								33
+								264,
+								264
 							]
 						],
 						"settings":
@@ -673,13 +600,71 @@
 					},
 					"stack_index": 1,
 					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "/G/NEWsoftware/nodeJS/node_modules/grunt/internal-tasks/bump.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 5263,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								985,
+								985
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": -0.0,
+						"translation.y": 342.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "index.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 4444,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								744,
+								744
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
 				}
 			]
 		}
 	],
 	"incremental_find":
 	{
-		"height": 26.0
+		"height": 27.0
 	},
 	"input":
 	{
@@ -715,7 +700,7 @@
 	"project": "index_js.sublime-project",
 	"replace":
 	{
-		"height": 48.0
+		"height": 50.0
 	},
 	"save_all_on_build": true,
 	"select_file":
