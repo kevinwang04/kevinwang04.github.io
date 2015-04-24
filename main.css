@@ -28,15 +28,7 @@ body{
 	float: left;
 	list-style: none;
 }
-/*侧边栏样式*/
-/*.side_bar{
-	background:url(bg.jpg) no-repeat center center;
-	left: -250px;
-	height: 100%;
-	width: 250px;
-	position: fixed;
-	z-index: 20;
-}*/
+/*删掉了侧边栏*/
 .side_bar{
 	position: fixed;
 	width: 100%;
@@ -117,8 +109,6 @@ body{
 	font-weight: 300;
 	font-style: italic;
 	line-height: 1.2em;
-	/*font-family: 'Raleway';*/
-	/*text-shadow:3px 3px 3px blue;*/
 }
 #welcome_context h3{
 	color: white;
@@ -177,58 +167,4 @@ body{
 	color: rebeccapurple;
 	font-size: 40px;
 }
-/*footer{*/
-	/*height: 300px;*/
-	/*margin-top: 50px;*/
 
-	/*padding-bottom: 50px;*/
-	/*background:linear-gradient(to bottom,#7C8886 0,#1F2221 100%);
-}
-footer h4,h5{
-	color: rgba(255, 255, 255, 0.32);
-}
-footer li{
-	margin: 10px;
-}*/
-
-/*实现个人兴趣介绍栏CSS*/
-/*.interesting_wrap{
-	background: linear-gradient(to right,#8961BA 10%,#8B8A2F 100%);
-	overflow: hidden;
-	padding-bottom: 50px;
-}
-.interesting_wrap li{
-	list-style: none;
-	margin-top: 50px;
-	height: 400px;
-	border:2px solid rgba(244, 244, 242, 0.61);
-	float: left;
-	overflow: hidden;
-	cursor: pointer;
-	padding: 0;
-	box-shadow: 2px 3px 5px #435;
-}
-.sports{
-	background:url(newIndex_img/sports.jpg) no-repeat top center;
-}
-.music{
-	background:url(newIndex_img/music.jpg) no-repeat 0 0;
-}
-.design{
-	background:url(newIndex_img/design.png) no-repeat top center;
-}
-.coding{
-	background:url(newIndex_img/coding.png) no-repeat top center;
-}
-.interesting_wrap li span{
-	display: block;
-	position: relative;
-	top: 400px;
-	height: 400px;
-	background-color: rgba(116, 211, 168, 0.831373);
-}
-.interesting_wrap li h3{
-	margin-top: 0;
-}
-*/
-/*实现页面切换CSS*/
