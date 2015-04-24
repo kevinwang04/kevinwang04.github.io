@@ -4,6 +4,22 @@
 		"selected_items":
 		[
 			[
+				"c",
+				"console"
+			],
+			[
+				"arr",
+				"arrType"
+			],
+			[
+				"re",
+				"return"
+			],
+			[
+				"num",
+				"number2"
+			],
+			[
 				"borr",
 				"border-radius"
 			],
@@ -82,10 +98,6 @@
 			[
 				"max-",
 				"max-width"
-			],
-			[
-				"c",
-				"center"
 			],
 			[
 				"bacl",
@@ -248,10 +260,6 @@
 				"ul	Tag"
 			],
 			[
-				"re",
-				"repeat-x"
-			],
-			[
 				"h",
 				"href	Attr"
 			],
@@ -332,10 +340,18 @@
 			}
 		},
 		{
-			"contents": "/*\n * grunt-contrib-bump\n * http://gruntjs.com/\n *\n * Copyright (c) 2014 \"Cowboy\" Ben Alman, contributors\n * Licensed under the MIT license.\n */\n\n'use strict';\n\nvar semver = require('semver');\nvar shell = require('shelljs');\n\nmodule.exports = function(grunt) {\n\n  grunt.registerTask('bump', 'Bump the version property of a JSON file.', function() {\n    // Validate specified semver increment modes.\n    var valids = ['major', 'minor', 'patch', 'prerelease'];\n    var modes = [];\n    this.args.forEach(function(mode) {\n      var matches = [];\n      valids.forEach(function(valid) {\n        if (valid.indexOf(mode) === 0) { matches.push(valid); }\n      });\n      if (matches.length === 0) {\n        grunt.log.error('Error: mode \"' + mode + '\" does not match any known modes.');\n      } else if (matches.length > 1) {\n        grunt.log.error('Error: mode \"' + mode + '\" is ambiguous (possibly: ' + matches.join(', ') + ').');\n      } else {\n        modes.push(matches[0]);\n      }\n    });\n    if (this.errorCount === 0 && modes.length === 0) {\n      grunt.log.error('Error: no modes specified.');\n    }\n    if (this.errorCount > 0) {\n      grunt.log.error('Valid modes are: ' + valids.join(', ') + '.');\n      throw new Error('Use valid modes (or unambiguous mode abbreviations).');\n    }\n    // Options.\n    var options = this.options({\n      filepaths: ['package.json'],\n      syncVersions: false,\n      commit: true,\n      commitMessage: 'Bumping version to {%= version %}.',\n      tag: true,\n      tagName: 'v{%= version %}',\n      tagMessage: 'Version {%= version %}',\n      tagPrerelease: false,\n    });\n    // Normalize filepaths to array.\n    var filepaths = Array.isArray(options.filepaths) ? options.filepaths : [options.filepaths];\n    // Process JSON files, in-order.\n    var versions = {};\n    filepaths.forEach(function(filepath) {\n      var o = grunt.file.readJSON(filepath);\n      var origVersion = o.version;\n      // If syncVersions is enabled, only grab version from the first file,\n      // guaranteeing new versions will always be in sync.\n      var firstVersion = Object.keys(versions)[0];\n      if (options.syncVersions && firstVersion) {\n        o.version = firstVersion;\n      }\n      modes.forEach(function(mode) {\n        var orig = o.version;\n        var s = semver.parse(o.version);\n        s.inc(mode);\n        o.version = String(s);\n        // Workaround for https://github.com/isaacs/node-semver/issues/50\n        if (/-/.test(orig) && mode === 'patch') {\n          o.version = o.version.replace(/\\d+$/, function(n) { return n - 1; });\n        }\n        // If prerelease on an un-prerelease version, bump patch version first\n        if (!/-/.test(orig) && mode === 'prerelease') {\n          s.inc('patch');\n          s.inc('prerelease');\n          o.version = String(s);\n        }\n      });\n      if (versions[origVersion]) {\n        versions[origVersion].filepaths.push(filepath);\n      } else {\n        versions[origVersion] = {version: o.version, filepaths: [filepath]};\n      }\n      // Actually *do* something.\n      grunt.log.write('Bumping version in ' + filepath + ' from ' + origVersion + ' to ' + o.version + '...');\n      grunt.file.write(filepath, JSON.stringify(o, null, 2));\n      grunt.log.ok();\n    });\n    // Commit changed files?\n    if (options.commit) {\n      Object.keys(versions).forEach(function(origVersion) {\n        var o = versions[origVersion];\n        commit(o.filepaths, processTemplate(options.commitMessage, {\n          version: o.version,\n          origVersion: origVersion\n        }));\n      });\n    }\n    // We're only going to create one tag. And it's going to be the new\n    // version of the first bumped file. Because, sanity.\n    var newVersion = versions[Object.keys(versions)[0]].version;\n    if (options.tag) {\n      if (options.tagPrerelease || modes.indexOf('prerelease') === -1) {\n        tag(\n          processTemplate(options.tagName, {version: newVersion}),\n          processTemplate(options.tagMessage, {version: newVersion})\n        );\n      } else {\n        grunt.log.writeln('Not tagging (prerelease version).');\n      }\n    }\n    if (this.errorCount > 0) {\n      grunt.warn('There were errors.');\n    }\n  });\n\n  // Using custom delimiters keeps templates from being auto-processed.\n  grunt.template.addDelimiters('bump', '{%', '%}');\n\n  function processTemplate(message, data) {\n    return grunt.template.process(message, {\n      delimiters: 'bump',\n      data: data,\n    });\n  }\n\n  // Kinda borrowed from https://github.com/geddski/grunt-release\n  function commit(filepaths, message) {\n    grunt.log.writeln('Committing ' + filepaths.join(', ') + ' with message: ' + message);\n    run(\"git commit -m '\" + message + \"' '\" + filepaths.join(\"' '\") + \"'\");\n  }\n\n  function tag(name, message) {\n    grunt.log.writeln('Tagging ' + name + ' with message: ' + message);\n    run(\"git tag '\" + name + \"' -m '\" + message + \"'\");\n  }\n\n  function run(cmd) {\n    if (grunt.option('no-write')) {\n      grunt.verbose.writeln('Not actually running: ' + cmd);\n    } else {\n      grunt.verbose.writeln('Running: ' + cmd);\n      var result = shell.exec(cmd, {silent:true});\n      if (result.code !== 0) {\n        grunt.log.error('Error (' + result.code + ') ' + result.output);\n      }\n    }\n  }\n\n};",
+			"contents": "<!DOCTYPE html>\n<html>\n<head>\n	<title>JavaScript demo</title>\n	<meta charset=\"utf-8\">\n</head>\n<body>\n	<input id=\"number1\">\n	<input id=\"number2\">\n	<span id=\"result\"></span>\n	<button id=\"addbtn\">相加</button>\n\n	<script type=\"text/javascript\">\n	//任务1：\n	console.log(\"hello world\");\n\n	//任务2：\n	function $(id){\n		return document.getElementById(id);\n	}\n	\n	function clickEvent(){\n		$('addbtn').addEventListener('click',addEventHandle,false);\n	}\n	function addEventHandle(){\n		var num1 = $(\"number1\").value;\n		var num2 = $('number2').value;\n		var newNum = addNumber(num1,num2);\n		innerNumber(newNum);\n	}\n	function addNumber(num1,num2){\n		return num1 + num2;\n	}\n	function innerNumber(result){\n		$(\"result\").innerHTML=result;\n	}\n	clickEvent();\n\n	//任务三：\n	function isFn(arr){\n		\n		return arr.constructor.toString().indexOf(\"Function\")>-1;\n\n	}\n	console.log(isFn([\"Banana\", \"Orange\", \"Apple\", \"Mango\"]));\n\n	var arr = ['java', 'c', 'php', 'html'];\n	function output(item) {\n    console.log(item);\n	}\n	function each(arr , Fn){\n		arr.consele(\"\")\n	}\n	each(arr, output); \n	</script>\n</body>\n</html>",
+			"file": "/C/Users/kevin/Desktop/my programs/my javascript/javascriptDemo.html",
+			"file_size": 1136,
+			"file_write_time": 130741709733443829,
+			"settings":
+			{
+				"buffer_size": 1073,
+				"line_ending": "Windows"
+			}
+		},
+		{
 			"file": "/G/NEWsoftware/nodeJS/node_modules/grunt/internal-tasks/bump.js",
-			"file_size": -1,
-			"file_write_time": -1,
 			"settings":
 			{
 				"buffer_size": 5263,
@@ -346,7 +362,39 @@
 			"file": "index.html",
 			"settings":
 			{
-				"buffer_size": 4444,
+				"buffer_size": 4530,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "/C/Users/kevin/Desktop/my programs/bata/源码/灵活快速响应式导航栏/5/index.html",
+			"settings":
+			{
+				"buffer_size": 21647,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "/C/Users/kevin/Desktop/my programs/bata/源码/灵活快速响应式导航栏/5/css/scrollbars.css",
+			"settings":
+			{
+				"buffer_size": 13309,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/C/Users/kevin/Desktop/my programs/bata/源码/灵活快速响应式导航栏/5/css/flexinav.css",
+			"settings":
+			{
+				"buffer_size": 16066,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "index_js.js",
+			"settings":
+			{
+				"buffer_size": 2161,
 				"line_ending": "Windows"
 			}
 		}
@@ -386,6 +434,16 @@
 	],
 	"file_history":
 	[
+		"/C/Users/kevin/Desktop/my programs/bata/源码/横向手风琴/20/index.html",
+		"/C/Users/kevin/Desktop/my programs/bata/源码/横向手风琴/20/js/jqueryba.js",
+		"/C/Users/kevin/Desktop/my programs/bata/源码/横向手风琴/20/css/jqueryba.css",
+		"/E/web demo/free_sparallax_V104 (1)/free_sparallax/index.php",
+		"/E/web demo/free_sparallax_V104 (1)/free_sparallax/header.php",
+		"/E/web demo/free_sparallax_V104 (1)/free_sparallax/sidebar.php",
+		"/E/web demo/free_sparallax_V104 (1)/free_sparallax/footer.php",
+		"/C/Users/kevin/Desktop/my programs/my javascript/javascriptDemo.html",
+		"/C/Users/kevin/Downloads/readonline.asp",
+		"/G/NEWsoftware/nodeJS/node_modules/bower/bower_components/jquery/dist/jquery.min.js",
 		"/F/kevin software/github/kevinwang04.github.io/main.css",
 		"/F/kevin software/github/kevinwang04.github.io/index_js.sublime-project",
 		"/C/Users/kevin/Desktop/my programs/bata/css打地鼠",
@@ -570,7 +628,7 @@
 	"groups":
 	[
 		{
-			"selected": 1,
+			"selected": 3,
 			"sheets":
 			[
 				{
@@ -586,8 +644,8 @@
 						"selection":
 						[
 							[
-								264,
-								264
+								221,
+								221
 							]
 						],
 						"settings":
@@ -595,14 +653,42 @@
 							"syntax": "Packages/JavaScript/JavaScript.tmLanguage"
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 57.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 1,
+					"stack_index": 7,
 					"type": "text"
 				},
 				{
 					"buffer": 1,
+					"file": "/C/Users/kevin/Desktop/my programs/my javascript/javascriptDemo.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1073,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								499,
+								499
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 342.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 6,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
 					"file": "/G/NEWsoftware/nodeJS/node_modules/grunt/internal-tasks/bump.js",
 					"semi_transient": false,
 					"settings":
@@ -625,27 +711,27 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": -0.0,
-						"translation.y": 342.0,
+						"translation.y": 2109.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 0,
+					"stack_index": 5,
 					"type": "text"
 				},
 				{
-					"buffer": 2,
+					"buffer": 3,
 					"file": "index.html",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 4444,
+						"buffer_size": 4530,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								744,
-								744
+								3790,
+								3790
 							]
 						],
 						"settings":
@@ -656,7 +742,124 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "/C/Users/kevin/Desktop/my programs/bata/源码/灵活快速响应式导航栏/5/index.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 21647,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 285.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 4,
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "/C/Users/kevin/Desktop/my programs/bata/源码/灵活快速响应式导航栏/5/css/scrollbars.css",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 13309,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/CSS/CSS.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"type": "text"
+				},
+				{
+					"buffer": 6,
+					"file": "/C/Users/kevin/Desktop/my programs/bata/源码/灵活快速响应式导航栏/5/css/flexinav.css",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 16066,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/CSS/CSS.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 2679.0,
+						"zoom_level": 1.0
+					},
 					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 7,
+					"file": "index_js.js",
+					"semi_transient": true,
+					"settings":
+					{
+						"buffer_size": 2161,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
 					"type": "text"
 				}
 			]

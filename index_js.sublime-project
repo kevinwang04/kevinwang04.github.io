@@ -4,6 +4,14 @@
 		{
 			"follow_symlinks": true,
 			"path": "."
+		},
+		{
+			"follow_symlinks": true,
+			"path": "E:\\web demo\\free_sparallax_V104 (1)\\free_sparallax"
+		},
+		{
+			"follow_symlinks": true,
+			"path": "F:\\kevin software\\wordpress\\wordpress-4.1-zh_CN\\wordpress"
 		}
 	]
 }
