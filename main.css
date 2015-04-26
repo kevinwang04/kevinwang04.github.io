@@ -35,27 +35,42 @@ body{
 /*	top: 0;*/
 	z-index: 20;
 	padding: 20px;
-	background:linear-gradient(to bottom,rgba(55, 50, 134, 0.62) 0,rgba(74, 105, 35, 0.56) 80%);
+	background:rgba(144, 144, 144, 0.66);
 
 }
 .nav_iconShow{
 	display: block;
 }
 .nav_icon{
-
 	left: 0px;
 	position: fixed;
 	display: inline-block;
 	z-index: 21;
 	margin-left: 20px;
 	margin-top: 20px;
-	cursor: pointer;
-	
+	cursor: pointer;	
+}
+.nav_icon:active{
+	animation:myfirst 5s;
+	-webkit-animation:myfirst 5s;
+}
+@keyframes myfirst
+{
+0%   {color: red;}
+50%  {color: green;}
+100%  {color: #428bca;}
+}
+
+@-webkit-keyframes myfirst /* Safari and Chrome */
+{
+0%   {color: red;}
+50%  {color: green;}
+100%  {color: #428bca;}
 }
 /*侧边栏内部式样*/
 .home_wrap{
 	float: left;
-	margin-top: 20px;
+	margin:20px 0;
 	
 }
 .icon-home,.icon-list-alt{

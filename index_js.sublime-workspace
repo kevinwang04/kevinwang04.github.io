@@ -4,16 +4,60 @@
 		"selected_items":
 		[
 			[
+				"bo",
+				"border"
+			],
+			[
+				"ic",
+				"icon-home"
+			],
+			[
+				"mar",
+				"margin-top"
+			],
+			[
+				"si",
+				"side_bar"
+			],
+			[
+				"bgc",
+				"background-color"
+			],
+			[
+				"ma",
+				"margin"
+			],
+			[
+				"re",
+				"ready"
+			],
+			[
+				"a",
+				"animate"
+			],
+			[
+				"mous",
+				"mouseenter"
+			],
+			[
+				"co",
+				"coding"
+			],
+			[
+				"lis",
+				"list-style"
+			],
+			[
+				"te",
+				"text-align"
+			],
+			[
 				"c",
 				"console"
 			],
 			[
 				"arr",
 				"arrType"
-			],
-			[
-				"re",
-				"return"
 			],
 			[
 				"num",
@@ -28,10 +72,6 @@
 				"padding"
 			],
 			[
-				"mar",
-				"margin"
-			],
-			[
 				"s",
 				"script	Tag"
 			],
@@ -44,20 +84,12 @@
 				"background-color"
 			],
 			[
-				"ma",
-				"margin"
-			],
-			[
 				"fo",
 				"font-size"
 			],
 			[
 				"paddi",
 				"padding-bottom"
-			],
-			[
-				"bo",
-				"border-bottom"
 			],
 			[
 				"font",
@@ -104,14 +136,6 @@
 				"background-color"
 			],
 			[
-				"te",
-				"text-decoration"
-			],
-			[
-				"co",
-				"color"
-			],
-			[
 				"FON",
 				"font-size"
 			],
@@ -154,10 +178,6 @@
 			[
 				"blog",
 				"blog_js"
-			],
-			[
-				"a",
-				"a	Tag"
 			],
 			[
 				"margin",
@@ -332,69 +352,42 @@
 	"buffers":
 	[
 		{
-			"file": "main.js",
-			"settings":
-			{
-				"buffer_size": 1258,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"contents": "<!DOCTYPE html>\n<html>\n<head>\n	<title>JavaScript demo</title>\n	<meta charset=\"utf-8\">\n</head>\n<body>\n	<input id=\"number1\">\n	<input id=\"number2\">\n	<span id=\"result\"></span>\n	<button id=\"addbtn\">相加</button>\n\n	<script type=\"text/javascript\">\n	//任务1：\n	console.log(\"hello world\");\n\n	//任务2：\n	function $(id){\n		return document.getElementById(id);\n	}\n	\n	function clickEvent(){\n		$('addbtn').addEventListener('click',addEventHandle,false);\n	}\n	function addEventHandle(){\n		var num1 = $(\"number1\").value;\n		var num2 = $('number2').value;\n		var newNum = addNumber(num1,num2);\n		innerNumber(newNum);\n	}\n	function addNumber(num1,num2){\n		return num1 + num2;\n	}\n	function innerNumber(result){\n		$(\"result\").innerHTML=result;\n	}\n	clickEvent();\n\n	//任务三：\n	function isFn(arr){\n		\n		return arr.constructor.toString().indexOf(\"Function\")>-1;\n\n	}\n	console.log(isFn([\"Banana\", \"Orange\", \"Apple\", \"Mango\"]));\n\n	var arr = ['java', 'c', 'php', 'html'];\n	function output(item) {\n    console.log(item);\n	}\n	function each(arr , Fn){\n		arr.consele(\"\")\n	}\n	each(arr, output); \n	</script>\n</body>\n</html>",
-			"file": "/C/Users/kevin/Desktop/my programs/my javascript/javascriptDemo.html",
-			"file_size": 1136,
-			"file_write_time": 130741709733443829,
-			"settings":
-			{
-				"buffer_size": 1073,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "/G/NEWsoftware/nodeJS/node_modules/grunt/internal-tasks/bump.js",
-			"settings":
-			{
-				"buffer_size": 5263,
-				"line_ending": "Unix"
-			}
-		},
-		{
 			"file": "index.html",
 			"settings":
 			{
-				"buffer_size": 4530,
+				"buffer_size": 4584,
 				"line_ending": "Windows"
 			}
 		},
 		{
-			"file": "/C/Users/kevin/Desktop/my programs/bata/源码/灵活快速响应式导航栏/5/index.html",
+			"file": "/F/kevin software/XAMPP/htdocs/free_sparallax/index.php",
 			"settings":
 			{
-				"buffer_size": 21647,
+				"buffer_size": 148,
 				"line_ending": "Windows"
 			}
 		},
 		{
-			"file": "/C/Users/kevin/Desktop/my programs/bata/源码/灵活快速响应式导航栏/5/css/scrollbars.css",
+			"file": "/E/web demo/free_sparallax_V104 (1)/free_sparallax/header.php",
 			"settings":
 			{
-				"buffer_size": 13309,
+				"buffer_size": 5471,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "/F/kevin software/XAMPP/phpMyAdmin/config.inc.php",
+			"settings":
+			{
+				"buffer_size": 1848,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "/C/Users/kevin/Desktop/my programs/bata/源码/灵活快速响应式导航栏/5/css/flexinav.css",
+			"file": "main.css",
 			"settings":
 			{
-				"buffer_size": 16066,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "index_js.js",
-			"settings":
-			{
-				"buffer_size": 2161,
+				"buffer_size": 2502,
 				"line_ending": "Windows"
 			}
 		}
@@ -430,22 +423,40 @@
 	},
 	"expanded_folders":
 	[
-		"/F/kevin software/github/kevinwang04.github.io"
+		"/F/kevin software/github/kevinwang04.github.io",
+		"/E/web demo/free_sparallax_V104 (1)/free_sparallax",
+		"/F/kevin software/wordpress/wordpress-4.1-zh_CN/wordpress"
 	],
 	"file_history":
 	[
-		"/C/Users/kevin/Desktop/my programs/bata/源码/横向手风琴/20/index.html",
+		"/F/kevin software/XAMPP/htdocs/Superfocus_free/index.php",
+		"/E/web demo/free_sparallax_V104 (1)/free_sparallax/header.php",
+		"/H/806doc/填鸭の食儿/网络/wpcap例程.cpp",
+		"/F/kevin software/github/kevinwang04.github.io/main.js",
+		"/F/kevin software/XAMPP/htdocs/index.html",
+		"/F/kevin software/XAMPP/htdocs/index.php",
+		"/F/kevin software/XAMPP/htdocs/test_web/testweb.php",
+		"/C/Users/kevin/Desktop/my programs/my javascript/javascriptDemo.html",
+		"/G/NEWsoftware/nodeJS/node_modules/grunt/internal-tasks/bump.js",
+		"/F/kevin software/github/kevinwang04.github.io/index_js.sublime-workspace",
 		"/C/Users/kevin/Desktop/my programs/bata/源码/横向手风琴/20/js/jqueryba.js",
 		"/C/Users/kevin/Desktop/my programs/bata/源码/横向手风琴/20/css/jqueryba.css",
+		"/F/kevin software/github/kevinwang04.github.io/main.css",
+		"/F/kevin software/XAMPP/phpMyAdmin/config.inc.php",
+		"/C/Users/kevin/Desktop/fullscreen.html",
+		"/C/Users/kevin/Desktop/my programs/bata/源码/Google首页导航特效/12/css/jqueryba.css",
+		"/C/Users/kevin/Desktop/my programs/bata/源码/Google首页导航特效/12/index.html",
+		"/C/Users/kevin/Desktop/my programs/bata/源码/横向手风琴/20/index.html",
+		"/C/Users/kevin/Desktop/my programs/bata/源码/灵活快速响应式导航栏/5/index.html",
+		"/C/Users/kevin/Desktop/my programs/bata/源码/灵活快速响应式导航栏/5/css/scrollbars.css",
+		"/C/Users/kevin/Desktop/my programs/bata/源码/灵活快速响应式导航栏/5/css/flexinav.css",
+		"/C/Users/kevin/Desktop/my programs/bata/源码/鼠标滑过遮罩跟随导航/3/index.html",
+		"/F/kevin software/github/kevinwang04.github.io/index_js.sublime-project",
 		"/E/web demo/free_sparallax_V104 (1)/free_sparallax/index.php",
-		"/E/web demo/free_sparallax_V104 (1)/free_sparallax/header.php",
 		"/E/web demo/free_sparallax_V104 (1)/free_sparallax/sidebar.php",
 		"/E/web demo/free_sparallax_V104 (1)/free_sparallax/footer.php",
-		"/C/Users/kevin/Desktop/my programs/my javascript/javascriptDemo.html",
 		"/C/Users/kevin/Downloads/readonline.asp",
 		"/G/NEWsoftware/nodeJS/node_modules/bower/bower_components/jquery/dist/jquery.min.js",
-		"/F/kevin software/github/kevinwang04.github.io/main.css",
-		"/F/kevin software/github/kevinwang04.github.io/index_js.sublime-project",
 		"/C/Users/kevin/Desktop/my programs/bata/css打地鼠",
 		"/C/Users/kevin/Desktop/my programs/bata/css打地鼠.html",
 		"/F/kevin software/github/kevinwang04.github.io/main",
@@ -468,7 +479,6 @@
 		"/C/Users/kevin/Desktop/my programs/bata/less/style/mainless.css",
 		"/C/Users/kevin/Desktop/my programs/bata/源码/手风琴特效/手风琴效果/demo.html",
 		"/C/Users/kevin/Desktop/my programs/bata/源码/手风琴特效/手风琴效果/jquery-1.9.1.js",
-		"/F/kevin software/XAMPP/htdocs/test_web/testweb.php",
 		"/C/Users/kevin/Desktop/my programs/bata/bootstrap/newIndex.html",
 		"/C/Users/kevin/Desktop/my programs/bata/bootstrap/main.css",
 		"/F/kevin software/github/kevinwang04.github.io/index.html",
@@ -546,20 +556,7 @@
 		"/C/Users/doqin/Desktop/blog/word.html",
 		"/C/Users/doqin/Desktop/blog/message.html",
 		"/C/Users/doqin/Desktop/blog/style.css",
-		"/C/Users/doqin/Desktop/blog/index.html",
-		"/C/Users/doqin/Desktop/a.html",
-		"/C/Users/admin/Desktop/iwst_linkline/index.html",
-		"/C/Users/admin/Desktop/my blog/11.html",
-		"/C/Users/admin/Desktop/iwst_linkline/style.css",
-		"/C/Users/admin/Desktop/iwst_linkline/blog.html",
-		"/C/Users/admin/Desktop/beupicsitenav/index.html",
-		"/C/Users/admin/Desktop/beupicsitenav/css/common2.css",
-		"/C/Users/admin/Desktop/my blog/2.css",
-		"/C/Users/admin/Desktop/my blog/1",
-		"/C/Users/admin/Desktop/2.html",
-		"/C/Users/admin/Desktop/1",
-		"/C/Users/admin/Desktop/新建文件夹/3.jpg",
-		"/C/Users/admin/Desktop/新建文件夹/1"
+		"/C/Users/doqin/Desktop/blog/index.html"
 	],
 	"find":
 	{
@@ -577,6 +574,23 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"class",
+			"white",
+			"green",
+			"home_wrap",
+			";\n",
+			"11",
+			"p",
+			"12",
+			"8",
+			"JPG",
+			"jpg",
+			"png",
+			"gif",
+			"facebook",
+			"linkedin",
+			"flicker",
+			"behance",
 			";\n",
 			"45deg",
 			"250",
@@ -628,110 +642,24 @@
 	"groups":
 	[
 		{
-			"selected": 3,
+			"selected": 2,
 			"sheets":
 			[
 				{
 					"buffer": 0,
-					"file": "main.js",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 1258,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								221,
-								221
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 57.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 7,
-					"type": "text"
-				},
-				{
-					"buffer": 1,
-					"file": "/C/Users/kevin/Desktop/my programs/my javascript/javascriptDemo.html",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 1073,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								499,
-								499
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/HTML/HTML.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 342.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 6,
-					"type": "text"
-				},
-				{
-					"buffer": 2,
-					"file": "/G/NEWsoftware/nodeJS/node_modules/grunt/internal-tasks/bump.js",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 5263,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								985,
-								985
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": -0.0,
-						"translation.y": 2109.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 5,
-					"type": "text"
-				},
-				{
-					"buffer": 3,
 					"file": "index.html",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 4530,
+						"buffer_size": 4584,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								3790,
-								3790
+								1302,
+								1302
 							]
 						],
 						"settings":
@@ -739,57 +667,111 @@
 							"syntax": "Packages/HTML/HTML.tmLanguage"
 						},
 						"translation.x": 0.0,
+						"translation.y": 171.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "/F/kevin software/XAMPP/htdocs/free_sparallax/index.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 148,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								21,
+								21
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.tmLanguage"
+						},
+						"translation.x": 0.0,
 						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "/E/web demo/free_sparallax_V104 (1)/free_sparallax/header.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 5471,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								2587,
+								2587
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 1140.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 0,
 					"type": "text"
 				},
 				{
-					"buffer": 4,
-					"file": "/C/Users/kevin/Desktop/my programs/bata/源码/灵活快速响应式导航栏/5/index.html",
+					"buffer": 3,
+					"file": "/F/kevin software/XAMPP/phpMyAdmin/config.inc.php",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 21647,
+						"buffer_size": 1848,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								0,
-								0
+								235,
+								235
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/HTML/HTML.tmLanguage",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
+							"syntax": "Packages/PHP/PHP.tmLanguage"
 						},
-						"translation.x": 0.0,
-						"translation.y": 285.0,
+						"translation.x": -0.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 4,
+					"stack_index": 2,
 					"type": "text"
 				},
 				{
-					"buffer": 5,
-					"file": "/C/Users/kevin/Desktop/my programs/bata/源码/灵活快速响应式导航栏/5/css/scrollbars.css",
+					"buffer": 4,
+					"file": "main.css",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 13309,
+						"buffer_size": 2502,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								0,
-								0
+								2501,
+								2501
 							]
 						],
 						"settings":
@@ -798,68 +780,10 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 2907.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 3,
-					"type": "text"
-				},
-				{
-					"buffer": 6,
-					"file": "/C/Users/kevin/Desktop/my programs/bata/源码/灵活快速响应式导航栏/5/css/flexinav.css",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 16066,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								0,
-								0
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/CSS/CSS.tmLanguage",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 2679.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 2,
-					"type": "text"
-				},
-				{
-					"buffer": 7,
-					"file": "index_js.js",
-					"semi_transient": true,
-					"settings":
-					{
-						"buffer_size": 2161,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								0,
-								0
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 1,
+					"stack_index": 4,
 					"type": "text"
 				}
 			]
