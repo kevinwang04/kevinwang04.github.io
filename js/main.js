@@ -9,11 +9,8 @@ $(document).ready(function(){
 		$(this).animate({borderRadius:"100%"});
 		if ($(".nav_icon").hasClass("show")) {
 			//隐藏侧边栏
-			$('.side_bar').css({"transform":"translateY((-side_h - 40)px)",
-							"transition-timing-function":"ease-in","-webkit-transition-timing-function":"ease-in"	
-							})
 			$(this).removeClass("show");
-			/*$(".side_bar").animate({top:(-side_h-40)+"px"});*/
+			$(".side_bar").animate({top:(-side_h-40)+"px"});
 			/*$(".page_wrap" ).animate({left:'0px'});
 			$(".side_bar").animate({left:"-250px"});*/
 			$(this).children("span:first").css({"width":"25px","transform":"rotate(0)","position":"relative","top":"0px"});
@@ -25,7 +22,7 @@ $(document).ready(function(){
 							"transition-timing-function":"ease-in","-webkit-transition-timing-function":"ease-in"	
 							})
 			$(this).addClass("show");
-			/*$(".side_bar").animate({top:"0"});*/
+			$(".side_bar").animate({top:"0"});
 			/*$(".page_wrap" ).animate({left:'250px'});
 			$(".side_bar").animate({left:"0px"});*/
 			$(this).children("span:first").css({"width":"35px", "transform":"rotate(45deg)","position":"relative","top":"5px"});
