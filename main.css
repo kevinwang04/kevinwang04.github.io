@@ -54,19 +54,20 @@ body{
 	animation:myfirst 5s;
 	-webkit-animation:myfirst 5s;
 }
-@keyframes myfirst
-{
-0%   {color: red;}
-50%  {color: green;}
-100%  {color: #428bca;}
+@keyframes myfirst{
+	0%   {color: red;}
+	50%  {color: green;}
+	100%  {color: #428bca;}
 }
 
-@-webkit-keyframes myfirst /* Safari and Chrome */
-{
-0%   {color: red;}
-50%  {color: green;}
-100%  {color: #428bca;}
+@-webkit-keyframes myfirst{ /* Safari and Chrome */
+	0%   {color: red;}
+	50%  {color: green;}
+	100%  {color: #428bca;}
 }
+@keyframes show_hide{0%{top: #;}100%{top: 0;}}@-webkit-keyframes show_hide{0%{top: #;}100%{top: 0;}}
+
+
 /*侧边栏内部式样*/
 .home_wrap{
 	float: left;
