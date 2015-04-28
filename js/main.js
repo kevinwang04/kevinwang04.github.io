@@ -47,9 +47,9 @@ $(document).ready(function(){
 	});
 
 //实现页面切换效果：
-	var n = $(".ul_wrap li").size();
+	var n = $(".pages").size();
 	$(".ul_wrap").width(n*100+"%");
-	$('.ul_wrap li').width(100/n+"%");
+	$('.pages').width(100/n+"%");
 	$(".icon-list-alt").click(function(){
 		$(".ul_wrap").animate({left:'-100%'},300);
 	});
