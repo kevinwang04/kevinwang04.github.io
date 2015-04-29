@@ -11,7 +11,8 @@ body {
 .all_wrap {
     overflow: hidden;
     /*height: 100%;*/
-    
+    position: absolute;
+    top: 70px;
     width: 100%;
 }
 
