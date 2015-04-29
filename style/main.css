@@ -162,11 +162,11 @@ body {
     position: relative;
     width: 100%;
     padding-bottom: 20px;
-    /*height: 100%;*/
+    height: 450px;
     /*本来想设置成单页面全屏效果，后来为了适配移动端还是放弃了，呜呜。。。*/
     
     border: 1px solid white;
-    background: linear-gradient(to right, #3d7c72 0, #450c79 100%);
+   /*  background: linear-gradient(to right, #3d7c72 0, #450c79 100%); */
 }
 
 #name {
@@ -177,6 +177,10 @@ body {
     margin-top: 60px;
     letter-spacing: 10px;
     color: white;
+}
+
+.top_contact{
+    margin-top:350px; 
 }
 
 #welcome_context h3 {
@@ -191,8 +195,8 @@ body {
 }
 
 #welcome_context img {
-    width: 60px;
-    margin-top: 20px;
+    width: 80px;
+    margin-top: 220px;
     margin-bottom: 15px;
 }
 
