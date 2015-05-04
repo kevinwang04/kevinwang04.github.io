@@ -403,67 +403,32 @@
 			"file": "index.html",
 			"settings":
 			{
-				"buffer_size": 10453,
+				"buffer_size": 10477,
 				"line_ending": "Windows"
 			}
 		},
 		{
-			"contents": "<!doctype html>\n<html lang=\"zh\" class=\"no-js\">\n<head>\n	<meta charset=\"UTF-8\">\n	<meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n\n	<link href='http://fonts.useso.com/css?family=Open+Sans:400,300,600,700' rel='stylesheet' type='text/css'>\n\n	<link rel=\"stylesheet\" href=\"css/reset.css\"> <!-- CSS reset -->\n	<link rel=\"stylesheet\" href=\"css/style.css\"> <!-- Resource style -->\n	<script src=\"js/modernizr.js\"></script> <!-- Modernizr -->\n</head>\n<body>\n	<header class=\"cd-header\">\n		<a href=\"#\" class=\"cd-logo\"><img src=\"img/cd-logo.svg\" alt=\"Logo\"></a>\n		<a href=\"#\" class=\"cd-3d-nav-trigger\">\n			Menu\n			<span></span>\n		</a>\n	</header> <!-- .cd-header -->\n	\n	<main>\n		<h1>3D Rotating Navigation</h1>\n		<!-- all your content here -->\n	</main>\n	\n	<nav class=\"cd-3d-nav-container\">\n		<ul class=\"cd-3d-nav\">\n			<li class=\"cd-selected\">\n				<a href=\"http://www.htmleaf.com/\">Dashboard</a>\n			</li>\n\n			<li>\n				<a href=\"http://www.htmleaf.com/\">Projects</a>\n			</li>\n\n			<li>\n				<a href=\"http://www.htmleaf.com/\">Images</a>\n			</li>\n\n			<li>\n				<a href=\"http://www.htmleaf.com/\">Settings</a>\n			</li>\n\n			<li>\n				<a href=\"http://www.htmleaf.com/\">New</a>\n			</li>\n		</ul> <!-- .cd-3d-nav -->\n\n		<span class=\"cd-marker color-1\"></span>	\n	</nav> <!-- .cd-3d-nav-container -->\n<script src=\"http://libs.useso.com/js/jquery/2.1.1/jquery.min.js\"></script>\n<script src=\"js/main.js\"></script> <!-- Resource jQuery -->\n</body>\n</html>",
-			"file": "/C/Users/kevin/Desktop/my programs/bata/源码/jQuery之家源码/顶部隐藏菜单3D显示/201412051551/index.html",
-			"file_size": 1458,
-			"file_write_time": 130748052413907993,
+			"file": "blog_articles/index.html",
 			"settings":
 			{
-				"buffer_size": 1440,
+				"buffer_size": 10276,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "style/main.css",
+			"file": "blog_articles/css/component.css",
 			"settings":
 			{
-				"buffer_size": 3955,
+				"buffer_size": 6795,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "blog_articles/css/demo.css",
+			"settings":
+			{
+				"buffer_size": 2821,
 				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "/C/Users/kevin/Desktop/my programs/bata/源码/jQuery之家源码/顶部隐藏菜单3D显示/201412051551/js/main.js",
-			"settings":
-			{
-				"buffer_size": 1680,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "/C/Users/kevin/Desktop/my programs/bata/源码/jQuery之家源码/顶部隐藏菜单3D显示/201412051551/js/modernizr.js",
-			"settings":
-			{
-				"buffer_size": 15250,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "/C/Users/kevin/Desktop/my programs/bata/源码/jQuery之家源码/顶部隐藏菜单3D显示/201412051551/css/style.css",
-			"settings":
-			{
-				"buffer_size": 11958,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "style/top_bar.css",
-			"settings":
-			{
-				"buffer_size": 12085,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "/C/Users/kevin/Desktop/my programs/bata/源码/jQuery之家源码/图片3D背景视觉差/201504262049/src/jquery.logosDistort.js",
-			"settings":
-			{
-				"buffer_size": 14815,
-				"line_ending": "Unix"
 			}
 		}
 	],
@@ -564,21 +529,32 @@
 	"expanded_folders":
 	[
 		"/F/kevin software/github/kevinwang04.github.io",
-		"/F/kevin software/github/kevinwang04.github.io/style",
-		"/E/web demo/free_sparallax_V104 (1)/free_sparallax/widget",
-		"/F/kevin software/wordpress/wordpress-4.1-zh_CN/wordpress/wp-content"
+		"/F/kevin software/github/kevinwang04.github.io/blog_articles",
+		"/F/kevin software/github/kevinwang04.github.io/old_blog/bowen"
 	],
 	"file_history":
 	[
+		"/C/Users/kevin/Desktop/my programs/bata/源码/jQuery之家源码/顶部隐藏菜单3D显示1/201412051551/css/component.css",
+		"/F/kevin software/github/kevinwang04.github.io/old_blog/bowen/bowen.html",
+		"/F/kevin software/github/kevinwang04.github.io/blog_articles/css/demo.css",
+		"/F/kevin software/github/kevinwang04.github.io/blog_articles/css/component.css",
+		"/F/kevin software/github/kevinwang04.github.io/style/top_bar.css",
+		"/F/kevin software/github/kevinwang04.github.io/index.html",
+		"/F/kevin software/github/kevinwang04.github.io/blog_articles/index.html",
+		"/C/Users/kevin/Desktop/my programs/bata/源码/jQuery之家源码/顶部隐藏菜单3D显示1/201412051551/index.html",
 		"/C/Users/kevin/Desktop/my programs/bata/源码/jQuery之家源码/顶部隐藏菜单3D显示1/201412051551/css/style.css",
-		"/F/kevin software/github/kevinwang04.github.io/assets/css/perspectiveRules.css",
+		"/C/Users/kevin/Desktop/my programs/bata/源码/jQuery之家源码/顶部隐藏菜单3D显示/201412051551/index.html",
+		"/F/kevin software/github/kevinwang04.github.io/style/main.css",
+		"/C/Users/kevin/Desktop/my programs/bata/源码/jQuery之家源码/顶部隐藏菜单3D显示/201412051551/js/main.js",
+		"/C/Users/kevin/Desktop/my programs/bata/源码/jQuery之家源码/顶部隐藏菜单3D显示/201412051551/js/modernizr.js",
 		"/C/Users/kevin/Desktop/my programs/bata/源码/jQuery之家源码/顶部隐藏菜单3D显示/201412051551/css/style.css",
+		"/C/Users/kevin/Desktop/my programs/bata/源码/jQuery之家源码/图片3D背景视觉差/201504262049/src/jquery.logosDistort.js",
+		"/C/Users/kevin/Desktop/my programs/bata/源码/jQuery之家源码/网格图片3D翻转load页面/201410181539/index.html",
+		"/F/kevin software/github/kevinwang04.github.io/assets/css/perspectiveRules.css",
 		"/C/Users/kevin/Desktop/my programs/bata/源码/jQuery之家源码/顶部隐藏菜单3D显示/201412051551/css/reset.css",
 		"/C/Users/kevin/Desktop/my programs/bata/源码/jQuery之家源码/图片3D背景视觉差/201504262049/index3.html",
-		"/F/kevin software/github/kevinwang04.github.io/index.html",
 		"/C/Users/kevin/Desktop/my programs/bata/源码/jQuery之家源码/图片3D背景视觉差/201504262049/assets/js/jquery.logosDistort.min.js",
 		"/F/software/SublimeText3/Data/Packages/Emmet/Default (Windows).sublime-keymap",
-		"/F/kevin software/github/kevinwang04.github.io/style/main.css",
 		"/F/software/SublimeText3/Data/Packages/User/ColorPicker.sublime-settings",
 		"/F/kevin software/github/kevinwang04.github.io/index_js.js",
 		"/F/kevin software/github/kevinwang04.github.io/style/bootstrap.min.css",
@@ -609,7 +585,6 @@
 		"/F/kevin software/github/kevinwang04.github.io/old_blog/bowen/bowen.css",
 		"/G/NEWsoftware/nodeJS/node_modules/grunt-contrib-watch/node_modules/tiny-lr-fork/node_modules/qs/test/browser/jquery.js",
 		"/F/kevin software/github/kevinwang04.github.io/old_blog/bowen/about_life/life_article/article2.html",
-		"/F/kevin software/github/kevinwang04.github.io/old_blog/bowen/bowen.html",
 		"/F/kevin software/github/kevinwang04.github.io/other_src/Font-Awesome-3.2.1/src/icons.yml",
 		"/F/kevin software/github/kevinwang04.github.io/main.css",
 		"/F/kevin software/github/kevinwang04.github.io/other_src/Font-Awesome-3.2.1/src/community.html",
@@ -686,18 +661,7 @@
 		"/F/kevinwang file/study resorces/c++lab/poj_1/test1.cpp",
 		"/C/Users/kevin/Desktop/my programs/bata/less/style/mailess.css",
 		"/C/Users/kevin/Desktop/my programs/bata/LessHtml.html",
-		"/C/Users/kevin/Desktop/my programs/bata/mainless.less",
-		"/F/kevin software/github/kevinwang04.github.io/bowen/about_life/life_article/article2_max_width",
-		"/F/kevin software/github/kevinwang04.github.io/bowen/about_life/life_article_list.css",
-		"/F/kevin software/github/kevinwang04.github.io/bowen/bowen.css",
-		"/F/kevin software/github/kevinwang04.github.io/bowen/about_life/life_article/article2.html",
-		"/F/kevin software/github/kevinwang04.github.io/bowen/bowen.html",
-		"/F/kevin software/github/kevinwang04.github.io/index/main.css",
-		"/F/kevin software/github/kevinwang04.github.io/index/index.html",
-		"/F/kevin software/github/kevinwang04.github.io/bowen/life_article/article2.css",
-		"/F/kevin software/github/kevinwang04.github.io/bowen/life_article/article2.html",
-		"/F/kevin software/github/kevinwang04.github.io/bowen/life_article/article1.css",
-		"/F/kevin software/github/kevinwang04.github.io/bowen/life_article/article1.html"
+		"/C/Users/kevin/Desktop/my programs/bata/mainless.less"
 	],
 	"find":
 	{
@@ -715,6 +679,11 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			".noscroll",
+			"body",
+			".noscroll",
+			".cd-header",
+			".cd-3d-nav::after",
 			"header",
 			".cd-3d-nav-container.nav-is-visible",
 			"all",
@@ -817,7 +786,7 @@
 	"groups":
 	[
 		{
-			"selected": 0,
+			"selected": 1,
 			"sheets":
 			[
 				{
@@ -826,15 +795,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 10453,
+						"buffer_size": 10477,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								837,
-								837
+								9218,
+								9218
 							]
 						],
 						"settings":
@@ -843,41 +812,6 @@
 							"auto_complete": false,
 							"bh_regions":
 							[
-								"bh_angle",
-								"bh_angle_center",
-								"bh_angle_open",
-								"bh_angle_close",
-								"bh_angle_content",
-								"bh_curly",
-								"bh_curly_center",
-								"bh_curly_open",
-								"bh_curly_close",
-								"bh_curly_content",
-								"bh_c_define",
-								"bh_c_define_center",
-								"bh_c_define_open",
-								"bh_c_define_close",
-								"bh_c_define_content",
-								"bh_default",
-								"bh_default_center",
-								"bh_default_open",
-								"bh_default_close",
-								"bh_default_content",
-								"bh_double_quote",
-								"bh_double_quote_center",
-								"bh_double_quote_open",
-								"bh_double_quote_close",
-								"bh_double_quote_content",
-								"bh_tag",
-								"bh_tag_center",
-								"bh_tag_open",
-								"bh_tag_close",
-								"bh_tag_content",
-								"bh_round",
-								"bh_round_center",
-								"bh_round_open",
-								"bh_round_close",
-								"bh_round_content",
 								"bh_square",
 								"bh_square_center",
 								"bh_square_open",
@@ -888,623 +822,87 @@
 								"bh_regex_open",
 								"bh_regex_close",
 								"bh_regex_content",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content",
 								"bh_single_quote",
 								"bh_single_quote_center",
 								"bh_single_quote_open",
 								"bh_single_quote_close",
 								"bh_single_quote_content",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content",
 								"bh_unmatched",
 								"bh_unmatched_center",
 								"bh_unmatched_open",
 								"bh_unmatched_close",
 								"bh_unmatched_content"
 							],
-							"function_name_status_row": 20,
+							"function_name_status_row": 146,
 							"syntax": "Packages/HTML/HTML.tmLanguage",
 							"tab_size": 4,
 							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 198.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 0,
-					"type": "text"
-				},
-				{
-					"buffer": 1,
-					"file": "/C/Users/kevin/Desktop/my programs/bata/源码/jQuery之家源码/顶部隐藏菜单3D显示/201412051551/index.html",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 1440,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								322,
-								322
-							]
-						],
-						"settings":
-						{
-							"BracketHighlighterBusy": false,
-							"auto_complete": false,
-							"bh_regions":
-							[
-								"bh_angle",
-								"bh_angle_center",
-								"bh_angle_open",
-								"bh_angle_close",
-								"bh_angle_content",
-								"bh_curly",
-								"bh_curly_center",
-								"bh_curly_open",
-								"bh_curly_close",
-								"bh_curly_content",
-								"bh_c_define",
-								"bh_c_define_center",
-								"bh_c_define_open",
-								"bh_c_define_close",
-								"bh_c_define_content",
-								"bh_default",
-								"bh_default_center",
-								"bh_default_open",
-								"bh_default_close",
-								"bh_default_content",
-								"bh_double_quote",
-								"bh_double_quote_center",
-								"bh_double_quote_open",
-								"bh_double_quote_close",
-								"bh_double_quote_content",
-								"bh_tag",
-								"bh_tag_center",
-								"bh_tag_open",
-								"bh_tag_close",
-								"bh_tag_content",
-								"bh_round",
-								"bh_round_center",
-								"bh_round_open",
-								"bh_round_close",
-								"bh_round_content",
-								"bh_square",
-								"bh_square_center",
-								"bh_square_open",
-								"bh_square_close",
-								"bh_square_content",
-								"bh_regex",
-								"bh_regex_center",
-								"bh_regex_open",
-								"bh_regex_close",
-								"bh_regex_content",
-								"bh_single_quote",
-								"bh_single_quote_center",
-								"bh_single_quote_open",
-								"bh_single_quote_close",
-								"bh_single_quote_content",
-								"bh_unmatched",
-								"bh_unmatched_center",
-								"bh_unmatched_open",
-								"bh_unmatched_close",
-								"bh_unmatched_content"
-							],
-							"function_name_status_row": 8,
-							"syntax": "Packages/HTML/HTML.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 4,
-					"type": "text"
-				},
-				{
-					"buffer": 2,
-					"file": "style/main.css",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 3955,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								161,
-								161
-							]
-						],
-						"settings":
-						{
-							"BracketHighlighterBusy": false,
-							"bh_regions":
-							[
-								"bh_angle",
-								"bh_angle_center",
-								"bh_angle_open",
-								"bh_angle_close",
-								"bh_angle_content",
-								"bh_curly",
-								"bh_curly_center",
-								"bh_curly_open",
-								"bh_curly_close",
-								"bh_curly_content",
-								"bh_c_define",
-								"bh_c_define_center",
-								"bh_c_define_open",
-								"bh_c_define_close",
-								"bh_c_define_content",
-								"bh_default",
-								"bh_default_center",
-								"bh_default_open",
-								"bh_default_close",
-								"bh_default_content",
-								"bh_double_quote",
-								"bh_double_quote_center",
-								"bh_double_quote_open",
-								"bh_double_quote_close",
-								"bh_double_quote_content",
-								"bh_tag",
-								"bh_tag_center",
-								"bh_tag_open",
-								"bh_tag_close",
-								"bh_tag_content",
-								"bh_round",
-								"bh_round_center",
-								"bh_round_open",
-								"bh_round_close",
-								"bh_round_content",
-								"bh_square",
-								"bh_square_center",
-								"bh_square_open",
-								"bh_square_close",
-								"bh_square_content",
-								"bh_regex",
-								"bh_regex_center",
-								"bh_regex_open",
-								"bh_regex_close",
-								"bh_regex_content",
-								"bh_single_quote",
-								"bh_single_quote_center",
-								"bh_single_quote_open",
-								"bh_single_quote_close",
-								"bh_single_quote_content",
-								"bh_unmatched",
-								"bh_unmatched_center",
-								"bh_unmatched_open",
-								"bh_unmatched_close",
-								"bh_unmatched_content"
-							],
-							"function_name_status_row": 14,
-							"syntax": "Packages/CSS/CSS.tmLanguage",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 3,
-					"type": "text"
-				},
-				{
-					"buffer": 3,
-					"file": "/C/Users/kevin/Desktop/my programs/bata/源码/jQuery之家源码/顶部隐藏菜单3D显示/201412051551/js/main.js",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 1680,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								61,
-								64
-							]
-						],
-						"settings":
-						{
-							"BracketHighlighterBusy": false,
-							"bh_regions":
-							[
-								"bh_angle",
-								"bh_angle_center",
-								"bh_angle_open",
-								"bh_angle_close",
-								"bh_angle_content",
-								"bh_curly",
-								"bh_curly_center",
-								"bh_curly_open",
-								"bh_curly_close",
-								"bh_curly_content",
-								"bh_c_define",
-								"bh_c_define_center",
-								"bh_c_define_open",
-								"bh_c_define_close",
-								"bh_c_define_content",
-								"bh_default",
-								"bh_default_center",
-								"bh_default_open",
-								"bh_default_close",
-								"bh_default_content",
-								"bh_double_quote",
-								"bh_double_quote_center",
-								"bh_double_quote_open",
-								"bh_double_quote_close",
-								"bh_double_quote_content",
-								"bh_tag",
-								"bh_tag_center",
-								"bh_tag_open",
-								"bh_tag_close",
-								"bh_tag_content",
-								"bh_round",
-								"bh_round_center",
-								"bh_round_open",
-								"bh_round_close",
-								"bh_round_content",
-								"bh_square",
-								"bh_square_center",
-								"bh_square_open",
-								"bh_square_close",
-								"bh_square_content",
-								"bh_regex",
-								"bh_regex_center",
-								"bh_regex_open",
-								"bh_regex_close",
-								"bh_regex_content",
-								"bh_single_quote",
-								"bh_single_quote_center",
-								"bh_single_quote_open",
-								"bh_single_quote_close",
-								"bh_single_quote_content",
-								"bh_unmatched",
-								"bh_unmatched_center",
-								"bh_unmatched_open",
-								"bh_unmatched_close",
-								"bh_unmatched_content"
-							],
-							"function_name_status_row": 2,
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": -0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 6,
-					"type": "text"
-				},
-				{
-					"buffer": 4,
-					"file": "/C/Users/kevin/Desktop/my programs/bata/源码/jQuery之家源码/顶部隐藏菜单3D显示/201412051551/js/modernizr.js",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 15250,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								405,
-								405
-							]
-						],
-						"settings":
-						{
-							"BracketHighlighterBusy": false,
-							"bh_regions":
-							[
-								"bh_angle",
-								"bh_angle_center",
-								"bh_angle_open",
-								"bh_angle_close",
-								"bh_angle_content",
-								"bh_curly",
-								"bh_curly_center",
-								"bh_curly_open",
-								"bh_curly_close",
-								"bh_curly_content",
-								"bh_c_define",
-								"bh_c_define_center",
-								"bh_c_define_open",
-								"bh_c_define_close",
-								"bh_c_define_content",
-								"bh_default",
-								"bh_default_center",
-								"bh_default_open",
-								"bh_default_close",
-								"bh_default_content",
-								"bh_double_quote",
-								"bh_double_quote_center",
-								"bh_double_quote_open",
-								"bh_double_quote_close",
-								"bh_double_quote_content",
-								"bh_tag",
-								"bh_tag_center",
-								"bh_tag_open",
-								"bh_tag_close",
-								"bh_tag_content",
-								"bh_round",
-								"bh_round_center",
-								"bh_round_open",
-								"bh_round_close",
-								"bh_round_content",
-								"bh_square",
-								"bh_square_center",
-								"bh_square_open",
-								"bh_square_close",
-								"bh_square_content",
-								"bh_regex",
-								"bh_regex_center",
-								"bh_regex_open",
-								"bh_regex_close",
-								"bh_regex_content",
-								"bh_single_quote",
-								"bh_single_quote_center",
-								"bh_single_quote_open",
-								"bh_single_quote_close",
-								"bh_single_quote_content",
-								"bh_unmatched",
-								"bh_unmatched_center",
-								"bh_unmatched_open",
-								"bh_unmatched_close",
-								"bh_unmatched_content"
-							],
-							"function_name_status_row": 1,
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage"
 						},
 						"translation.x": -0.0,
 						"translation.y": 4554.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 2,
-					"type": "text"
-				},
-				{
-					"buffer": 5,
-					"file": "/C/Users/kevin/Desktop/my programs/bata/源码/jQuery之家源码/顶部隐藏菜单3D显示/201412051551/css/style.css",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 11958,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								0,
-								0
-							]
-						],
-						"settings":
-						{
-							"BracketHighlighterBusy": false,
-							"bh_regions":
-							[
-								"bh_angle",
-								"bh_angle_center",
-								"bh_angle_open",
-								"bh_angle_close",
-								"bh_angle_content",
-								"bh_curly",
-								"bh_curly_center",
-								"bh_curly_open",
-								"bh_curly_close",
-								"bh_curly_content",
-								"bh_c_define",
-								"bh_c_define_center",
-								"bh_c_define_open",
-								"bh_c_define_close",
-								"bh_c_define_content",
-								"bh_default",
-								"bh_default_center",
-								"bh_default_open",
-								"bh_default_close",
-								"bh_default_content",
-								"bh_double_quote",
-								"bh_double_quote_center",
-								"bh_double_quote_open",
-								"bh_double_quote_close",
-								"bh_double_quote_content",
-								"bh_tag",
-								"bh_tag_center",
-								"bh_tag_open",
-								"bh_tag_close",
-								"bh_tag_content",
-								"bh_round",
-								"bh_round_center",
-								"bh_round_open",
-								"bh_round_close",
-								"bh_round_content",
-								"bh_square",
-								"bh_square_center",
-								"bh_square_open",
-								"bh_square_close",
-								"bh_square_content",
-								"bh_regex",
-								"bh_regex_center",
-								"bh_regex_open",
-								"bh_regex_close",
-								"bh_regex_content",
-								"bh_single_quote",
-								"bh_single_quote_center",
-								"bh_single_quote_open",
-								"bh_single_quote_close",
-								"bh_single_quote_content",
-								"bh_unmatched",
-								"bh_unmatched_center",
-								"bh_unmatched_open",
-								"bh_unmatched_close",
-								"bh_unmatched_content"
-							],
-							"function_name_status_row": 0,
-							"syntax": "Packages/CSS/CSS.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": -0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 5,
-					"type": "text"
-				},
-				{
-					"buffer": 6,
-					"file": "style/top_bar.css",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 12085,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								502,
-								502
-							]
-						],
-						"settings":
-						{
-							"BracketHighlighterBusy": false,
-							"bh_regions":
-							[
-								"bh_angle",
-								"bh_angle_center",
-								"bh_angle_open",
-								"bh_angle_close",
-								"bh_angle_content",
-								"bh_curly",
-								"bh_curly_center",
-								"bh_curly_open",
-								"bh_curly_close",
-								"bh_curly_content",
-								"bh_c_define",
-								"bh_c_define_center",
-								"bh_c_define_open",
-								"bh_c_define_close",
-								"bh_c_define_content",
-								"bh_default",
-								"bh_default_center",
-								"bh_default_open",
-								"bh_default_close",
-								"bh_default_content",
-								"bh_double_quote",
-								"bh_double_quote_center",
-								"bh_double_quote_open",
-								"bh_double_quote_close",
-								"bh_double_quote_content",
-								"bh_tag",
-								"bh_tag_center",
-								"bh_tag_open",
-								"bh_tag_close",
-								"bh_tag_content",
-								"bh_round",
-								"bh_round_center",
-								"bh_round_open",
-								"bh_round_close",
-								"bh_round_content",
-								"bh_square",
-								"bh_square_center",
-								"bh_square_open",
-								"bh_square_close",
-								"bh_square_content",
-								"bh_regex",
-								"bh_regex_center",
-								"bh_regex_open",
-								"bh_regex_close",
-								"bh_regex_content",
-								"bh_single_quote",
-								"bh_single_quote_center",
-								"bh_single_quote_open",
-								"bh_single_quote_close",
-								"bh_single_quote_content",
-								"bh_unmatched",
-								"bh_unmatched_center",
-								"bh_unmatched_open",
-								"bh_unmatched_close",
-								"bh_unmatched_content"
-							],
-							"function_name_status_row": 28,
-							"syntax": "Packages/CSS/CSS.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 198.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 1,
 					"type": "text"
 				},
 				{
-					"buffer": 7,
-					"file": "/C/Users/kevin/Desktop/my programs/bata/源码/jQuery之家源码/图片3D背景视觉差/201504262049/src/jquery.logosDistort.js",
+					"buffer": 1,
+					"file": "blog_articles/index.html",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 14815,
+						"buffer_size": 10276,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								81,
-								82
+								9364,
+								9364
 							]
 						],
 						"settings":
 						{
 							"BracketHighlighterBusy": false,
+							"auto_complete": false,
 							"bh_regions":
 							[
-								"bh_angle",
-								"bh_angle_center",
-								"bh_angle_open",
-								"bh_angle_close",
-								"bh_angle_content",
-								"bh_curly",
-								"bh_curly_center",
-								"bh_curly_open",
-								"bh_curly_close",
-								"bh_curly_content",
-								"bh_c_define",
-								"bh_c_define_center",
-								"bh_c_define_open",
-								"bh_c_define_close",
-								"bh_c_define_content",
-								"bh_default",
-								"bh_default_center",
-								"bh_default_open",
-								"bh_default_close",
-								"bh_default_content",
-								"bh_double_quote",
-								"bh_double_quote_center",
-								"bh_double_quote_open",
-								"bh_double_quote_close",
-								"bh_double_quote_content",
-								"bh_tag",
-								"bh_tag_center",
-								"bh_tag_open",
-								"bh_tag_close",
-								"bh_tag_content",
-								"bh_round",
-								"bh_round_center",
-								"bh_round_open",
-								"bh_round_close",
-								"bh_round_content",
 								"bh_square",
 								"bh_square_center",
 								"bh_square_open",
@@ -1515,27 +913,240 @@
 								"bh_regex_open",
 								"bh_regex_close",
 								"bh_regex_content",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content",
 								"bh_single_quote",
 								"bh_single_quote_center",
 								"bh_single_quote_open",
 								"bh_single_quote_close",
 								"bh_single_quote_content",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content",
 								"bh_unmatched",
 								"bh_unmatched_center",
 								"bh_unmatched_open",
 								"bh_unmatched_close",
 								"bh_unmatched_content"
 							],
-							"function_name_status_row": 2,
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
-							"tab_size": 2,
+							"function_name_status_row": -1,
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"tab_size": 4,
 							"translate_tabs_to_spaces": true
 						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.x": -0.0,
+						"translation.y": 3828.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 7,
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "blog_articles/css/component.css",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 6795,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								836,
+								836
+							]
+						],
+						"settings":
+						{
+							"BracketHighlighterBusy": false,
+							"bh_regions":
+							[
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content"
+							],
+							"function_name_status_row": 25,
+							"syntax": "Packages/CSS/CSS.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": -0.0,
+						"translation.y": 126.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "blog_articles/css/demo.css",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2821,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								757,
+								757
+							]
+						],
+						"settings":
+						{
+							"BracketHighlighterBusy": false,
+							"bh_regions":
+							[
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content"
+							],
+							"function_name_status_row": 17,
+							"syntax": "Packages/CSS/CSS.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": -0.0,
+						"translation.y": 302.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
 					"type": "text"
 				}
 			]

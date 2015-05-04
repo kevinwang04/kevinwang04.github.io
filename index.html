@@ -17,12 +17,14 @@
 
 <body>
     <!-- 进行了一次大的页面布局调整，重构了一下页面结构，，去掉了侧边栏和footer,改为下滑式导航 -->
-    <div class="cd-header">
+    <header class="cd-header">
         <a href="#" class="cd-logo"><img src="newIndex_img/img/cd-logo.svg" alt="Logo"></a>
         <a href="#" class="cd-3d-nav-trigger">
             Menu
             <span></span>
         </a>
+    </header>
+    <main>
         <div class="all_wrap">
             <!-- 這是自己寫的導航欄，已被抛弃== -->
             <!-- <div class="container-fluid side_bar">
@@ -33,109 +35,89 @@
             </div>
         </div> -->
             <div class="ul_wrap">
-                <ul>
-                    <!-- 这是第一个页面部分 -->
-                    <li class="pages">
-                        <!--  <div class="nav_icon" id="nav_icon">
+                <!-- 这是第一个页面部分 -->
+                <div class="pages">
+                    <!--  <div class="nav_icon" id="nav_icon">
                            这是实现开关按钮，与旧版的导航栏是一套组合，也被抛弃了
                            <span></span>
                            <span></span>
                            <span></span>
                        </div> -->
-                        <div id="demo3" class="relative">
-                            <img alt="background" src="assets/images/space.jpg" />
-                            <img alt="space2" src="assets/images/space2.png" />
-                            <div></div>
-                            <img alt="asteroids" src="assets/images/asteroids.png" />
-                            <img alt="planet" src="assets/images/planet.png" />
-                            <div>
-                                <div class="top_contact">
-                                    <h1 class="text-center" id="name">Kevin Wang</h1>
-                                    <h3 class="text-center">interested in <strong class="text-primary strong">web</strong> & <strong class="text-primary strong">android</strong> developing</h3>
-                                </div>
-                            </div>
-                            <div class="show_me"><img src="index_img/show_me.png" alt="it's real me" class="img-circle center-block">
-                            </div>
-                            <div>
-                            </div>
-                            <img alt="ui" src="assets/images/cockpit.png" />
-                        </div>
-                        <div class="work_wrap center-block">
-                            <div class="row work_on">
-                                <h1 class="text-center uppercase">what do I work on right now</h1>
-                                <div class="col-xs-12 col-md-4 text-center border-right">
-                                    <div class="icon text-info"><i class="icon-laptop work_icon"></i></div>
-                                    <h3>WEB DEVELOPEMENT</h3>
-                                    <p>skljfklsdjfsdfjsdjfjfkfkljf</p>
-                                </div>
-                                <div class="col-xs-12 col-md-4 text-center border-right">
-                                    <div class="icon text-info"><i class="icon-mobile-phone work_icon"></i></div>
-                                    <h3>ANDROID DEVELOPEMENT</h3>
-                                    <p>sfdjlskjdfjlsdjlfjlskdj;f</p>
-                                </div>
-                                <div class="col-xs-12 col-md-4 text-center ">
-                                    <div class="icon text-info"><i class="icon-book work_icon"></i></div>
-                                    <h3 class="uppercase">school works</h3>
-                                    <p>sfdjlskjdfjlsdjlfjlskdj;f</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div id="welcome_context">
+                    <div id="demo3" class="relative">
+                        <img alt="background" src="assets/images/space.jpg" />
+                        <img alt="space2" src="assets/images/space2.png" />
+                        <div></div>
+                        <img alt="asteroids" src="assets/images/asteroids.png" />
+                        <img alt="planet" src="assets/images/planet.png" />
+                        <div>
                             <div class="top_contact">
-                                <div class="row">
-                                    <div class="col-xs-12 col-md-3 col-md-offset-3 contact_me text-center">
-                                        <h4><a href="mailto:kavinwang04@gmail.com">kavinwang04@gmail<i class="icon-envelope-alt"></i></a></h4></div>
-                                    <div class="col-xs-12 col-md-3 text-center">
-                                        <h4><a href="https://github.com/kevinwang04"><i class="icon-github"></i>contact me on github</a></h4></div>
-                                </div>
+                                <h1 class="text-center" id="name">Kevin Wang</h1>
+                                <h3 class="text-center">interested in <strong class="text-primary strong">web</strong> & <strong class="text-primary strong">android</strong> developing</h3>
                             </div>
                         </div>
-                        <div class="container footer">
+                        <div class="show_me"><img src="index_img/show_me.png" alt="it's real me" class="img-circle center-block">
+                        </div>
+                        <div>
+                        </div>
+                        <img alt="ui" src="assets/images/cockpit.png" />
+                    </div>
+                    <div class="work_wrap center-block">
+                        <div class="row work_on">
+                            <h1 class="text-center uppercase">what do I work on right now</h1>
+                            <div class="col-xs-12 col-md-4 text-center border-right">
+                                <div class="icon text-info"><i class="icon-laptop work_icon"></i></div>
+                                <h3>WEB DEVELOPEMENT</h3>
+                                <p>skljfklsdjfsdfjsdjfjfkfkljf</p>
+                            </div>
+                            <div class="col-xs-12 col-md-4 text-center border-right">
+                                <div class="icon text-info"><i class="icon-mobile-phone work_icon"></i></div>
+                                <h3>ANDROID DEVELOPEMENT</h3>
+                                <p>sfdjlskjdfjlsdjlfjlskdj;f</p>
+                            </div>
+                            <div class="col-xs-12 col-md-4 text-center ">
+                                <div class="icon text-info"><i class="icon-book work_icon"></i></div>
+                                <h3 class="uppercase">school works</h3>
+                                <p>sfdjlskjdfjlsdjlfjlskdj;f</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="welcome_context">
+                        <div class="top_contact">
                             <div class="row">
-                                <div class="col-xs-12 col-md-4 col-md-offset-4 text-center">
-                                    <ul class="list-inline">
-                                        <li><a href="javascript:void();" class="white"><h4 class="uppercase">about me</h4></a></li>
-                                        <li><a href="javascript:void();" class="white"><h4 class="uppercase">my work</h4></a></li>
-                                        <li><a href="javascript:void();" class="white"><h4 class="uppercase">home</h4></a></li>
-                                    </ul>
-                                </div>
-                                <div class="col-xs-12 col-md-4 col-md-offset-4 text-center">
-                                    <ul class="list-inline">
-                                        <li><a href="https://www.linkedin.com/profile/view?id=325284454&trk=hp-identity-name" class="white"><i class="icon-linkedin-sign footer_icon"></i></a></li>
-                                        <li><a href="javascript:void();" class="white"><i class="icon-twitter-sign footer_icon"></i></a></li>
-                                        <li><a href="https://github.com/kevinwang04" class="white"><i class="icon-github footer_icon"></i></a></li>
-                                    </ul>
-                                </div>
-                                <div class="col-xs-12 col-md-4 col-md-offset-4 text-center">
-                                    <h4 class="text-center">© 2015 · KEVIN WANG · ALL RIGHTS RESERVED</h4>
-                                    <h5 class="text-center">STAY HUNGRY · STAY FOOLISH   </h5>
-                                    <h5 class="text-center"><a href="old_blog/old_index.html">WELCOME TO BLOG 1.0</a></h5>
-                                </div>
+                                <div class="col-xs-12 col-md-3 col-md-offset-3 contact_me text-center">
+                                    <h4><a href="mailto:kavinwang04@gmail.com">kavinwang04@gmail<i class="icon-envelope-alt"></i></a></h4></div>
+                                <div class="col-xs-12 col-md-3 text-center">
+                                    <h4><a href="https://github.com/kevinwang04"><i class="icon-github"></i>contact me on github</a></h4></div>
                             </div>
                         </div>
-                    </li>
-                    <!-- 这是第二个页面 -->
-                    <!--          <li class="pages" id="body" onload="init()">
-                                   <div class="my_work" style="width:100%;border:2px solid blue;"></div>
-                               </li>
-                               第三个页面
-                               <li class="pages">
-                                   <div class="my_work" style="width:100%;border:2px solid blue;">
-                                       <div class="row">
-                                           <div class="col-xs-12 col-md-4 col-md-offset-4 text-center">
-                                               <ul class="list-inline">
-                                                   <li><a href="https://www.linkedin.com/profile/view?id=325284454&trk=hp-identity-name" class="white"><i class="icon-linkedin-sign footer_icon"></i></a></li>
-                                                   <li><a href="https://github.com/kevinwang04" class="white"><i class="icon-github footer_icon"></i></a></li>
-                                                   <li><a href="javascript:void();" class="white"><i class="icon-twitter-sign footer_icon"></i></a></li>
-                                               </ul>
-                                           </div>
-                                       </div>
-                                   </div>
-                               </li> -->
-                </ul>
+                    </div>
+                    <div class="container footer">
+                        <div class="row">
+                            <div class="col-xs-12 col-md-4 col-md-offset-4 text-center">
+                                <ul class="list-inline">
+                                    <li><a href="javascript:void();" class="white"><h4 class="uppercase">about me</h4></a></li>
+                                    <li><a href="javascript:void();" class="white"><h4 class="uppercase">my work</h4></a></li>
+                                    <li><a href="javascript:void();" class="white"><h4 class="uppercase">home</h4></a></li>
+                                </ul>
+                            </div>
+                            <div class="col-xs-12 col-md-4 col-md-offset-4 text-center">
+                                <ul class="list-inline">
+                                    <li><a href="https://www.linkedin.com/profile/view?id=325284454&trk=hp-identity-name" class="white"><i class="icon-linkedin-sign footer_icon"></i></a></li>
+                                    <li><a href="javascript:void();" class="white"><i class="icon-twitter-sign footer_icon"></i></a></li>
+                                    <li><a href="https://github.com/kevinwang04" class="white"><i class="icon-github footer_icon"></i></a></li>
+                                </ul>
+                            </div>
+                            <div class="col-xs-12 col-md-4 col-md-offset-4 text-center">
+                                <h4 class="text-center">© 2015 · KEVIN WANG · ALL RIGHTS RESERVED</h4>
+                                <h5 class="text-center">STAY HUNGRY · STAY FOOLISH   </h5>
+                                <h5 class="text-center"><a href="old_blog/old_index.html">WELCOME TO BLOG 1.0</a></h5>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
-    </div>
+    </main>
     <!-- .cd-header -->
     <!--  <main>
        <h1>3D Rotating Navigation</h1>
@@ -147,16 +129,16 @@
                 <a href="#">Dashboard</a>
             </li>
             <li>
-                <a href="blog_articles/index.html">Projects</a>
+                <a href="blog_articles/article_index.html">Projects</a>
             </li>
             <li>
-                <a href="http://www.htmleaf.com/">Images</a>
+                <a href="#">Images</a>
             </li>
             <li>
-                <a href="http://www.htmleaf.com/">Settings</a>
+                <a href="#">Settings</a>
             </li>
             <li>
-                <a href="http://www.htmleaf.com/">New</a>
+                <a href="#">New</a>
             </li>
         </ul>
         <!-- .cd-3d-nav -->
