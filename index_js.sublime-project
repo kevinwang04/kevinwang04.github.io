@@ -12,6 +12,10 @@
 		{
 			"follow_symlinks": true,
 			"path": "F:\\kevin software\\wordpress\\wordpress-4.1-zh_CN\\wordpress"
+		},
+		{
+			"follow_symlinks": true,
+			"path": "C:\\Users\\kevin\\Desktop\\my programs\\my javascript\\baidu_ife"
 		}
 	]
 }

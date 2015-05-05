@@ -37,7 +37,9 @@ body {
     list-style: none;
 }
 /*删掉了侧边栏*/
-
+.logo{
+    width: 150px;
+}
 .side_bar {
     position: fixed;
     /*	top: 0;*/

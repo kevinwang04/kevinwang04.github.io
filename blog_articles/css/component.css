@@ -29,7 +29,7 @@ body {
 
 .grid-wrap {
 	margin: 10px auto 0;
-	max-width: 1090px;
+	/* max-width: 1090px; */
 	width: 100%;
 	padding: 0;
 	-webkit-perspective: 1500px;
@@ -59,6 +59,8 @@ body {
 	margin: 10px;
 	display: inline-block;
 	cursor: pointer;
+	background-color: #FFF;
+	box-shadow: 6px 6px 6px #444;
 	-webkit-touch-callout: none;
 	-webkit-user-select: none;
 	-khtml-user-select: none;
@@ -66,7 +68,11 @@ body {
 	-ms-user-select: none;
 	user-select: none;
 }
-
+.grid figure h2{
+	margin: 10px auto;
+	position: absolute;
+	color: #666;
+}
 .grid figure.active {
 	opacity: 0;
 }
