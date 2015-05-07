@@ -56,9 +56,7 @@ body {
 	height: 200px;
 }
 
-.grid h1{
 
-}
 
 .grid figure {
 	margin: 10px;
@@ -74,7 +72,7 @@ body {
 	user-select: none;
 }
 .grid figure h1{
-	margin: 10px auto;
+	
 	
 	color: #666;
 }
