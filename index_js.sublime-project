@@ -15,7 +15,11 @@
 		},
 		{
 			"follow_symlinks": true,
-			"path": "C:\\Users\\kevin\\Desktop\\my programs\\my javascript\\baidu_ife"
+			"path": "C:\\Users\\kevin\\Desktop\\my programs\\my javascript\\baidu_ife\\ife"
+		},
+		{
+			"follow_symlinks": true,
+			"path": "G:\\NEWsoftware\\nodeJS\\node_blog"
 		}
 	]
 }

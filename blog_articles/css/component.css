@@ -21,6 +21,7 @@
 
 body {
 	position: relative;
+	font-family: "lucida grande", "lucida sans unicode", lucida, helvetica, "Hiragino Sans GB", "Microsoft YaHei", "WenQuanYi Micro Hei", sans-serif;
 }
 
 .noscroll {
@@ -51,9 +52,11 @@ body {
 
 .grid figure,
 .grid .placeholder {
-	width: 340px;
-	height: 300px;
+	width: 60%;
+	height: 200px;
 }
+
+
 
 .grid figure {
 	margin: 10px;
@@ -68,9 +71,9 @@ body {
 	-ms-user-select: none;
 	user-select: none;
 }
-.grid figure h2{
-	margin: 10px auto;
-	position: absolute;
+.grid figure h1{
+	
+	
 	color: #666;
 }
 .grid figure.active {
@@ -285,9 +288,10 @@ p.dummy-text:nth-child(3) {
 	text-align: left;
 	margin: 0 auto;
 	padding: 10px 0;
-	color: #ddd;
-	font-size: 1em;
-	font-family: 'Blokk', Arial, serif;
+	color: rgba(24, 35, 45, 0.88);
+	font-size: 1.5em;
+	line-height: 1.3em;
+	font-family: "lucida grande", "lucida sans unicode", lucida, helvetica, "Hiragino Sans GB", "Microsoft YaHei", "WenQuanYi Micro Hei", sans-serif;
 }
 
 .dummy-text:last-child {
@@ -331,8 +335,8 @@ p.dummy-text:nth-child(3) {
 
 	.grid figure,
 	.grid .placeholder {
-		width: 240px;
-		height: 212px;
+		width: 80%;
+		height: 162px;
 	}
 
 }
