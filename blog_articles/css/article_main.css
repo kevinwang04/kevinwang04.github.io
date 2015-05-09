@@ -113,6 +113,11 @@ a:hover, a:focus {
 	content: "\e004";
 }
 
+.ds-thread{
+	width: 50%;
+	margin: 80px auto;
+
+}
 section {
 	padding: 0em 3% 4em;
 	text-align: center;

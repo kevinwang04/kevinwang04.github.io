@@ -233,7 +233,7 @@ body {
 
 .dummy-img,
 .dummy-text {
-    max-width: 600px;
+    max-width: 900px;
     width: 90%;
     opacity: 0;
     -webkit-transition: opacity 0.5s, -webkit-transform 0.5s;
