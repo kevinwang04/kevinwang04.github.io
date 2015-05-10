@@ -11,8 +11,10 @@ body {
 .all_wrap {
     overflow: hidden;
     /*height: 100%;*/
-    position: absolute;
+    
+    /* position: absolute; */
     /* top: 70px; */
+    
     width: 100%;
 }
 
@@ -37,17 +39,19 @@ body {
     list-style: none;
 }
 /*删掉了侧边栏*/
-.logo{
+
+.logo {
     width: 150px;
 }
+
 .side_bar {
     position: fixed;
-    /*	top: 0;*/
+    /*  top: 0;*/
     
     z-index: 20;
     width: 100%;
     padding: 20px;
-    background:rgba(58, 65, 61, 0.66);
+    background: rgba(58, 65, 61, 0.66);
 }
 
 .nav_iconShow {
@@ -153,7 +157,7 @@ body {
     width: 25px;
     height: 4px;
     margin: 5px 0;
-    background-color:rgba(76, 169, 65, 0.69);
+    background-color: rgba(76, 169, 65, 0.69);
 }
 
 .page_wrap {
@@ -161,12 +165,13 @@ body {
 }
 /*顶部样式*/
 
-.relative{
+.relative {
     position: relative;
     width: 100%;
-    height:600px;
+    height: 600px;
     overflow: hidden;
 }
+
 #welcome_context {
     position: relative;
     width: 100%;
@@ -188,8 +193,8 @@ body {
     color: white;
 }
 
-.top_contact{
-    margin-top:350px; 
+.top_contact {
+    margin-top: 350px;
 }
 
 #demo3 h3 {
@@ -238,7 +243,64 @@ body {
 }
 
 .work_on h1 {
+    width: 80%;
+    margin: 80px auto;
     color: rgba(35, 139, 48, .86);
+}
+
+
+
+@media screen and (min-width: 996px){
+
+    .work_on>div:nth-of-type(1), .work_on>div:nth-of-type(2){
+        height: 310px;
+        margin-bottom: 80px;
+        border-right: 2px dashed #666;
+    }
+
+    .work_on p {
+    font-family: 'Gotham 1r', arial, sans-serif;
+    font-size: 18px;
+    letter-spacing: 0.70px;
+    line-height: 1.3em;
+    color: rgb(134, 139, 138);
+    width: 70%;
+    margin: 50px auto;
+    }
+}
+
+@media screen and (max-width: 996px){
+
+    /*  .work_on>div:nth-of-type(1), .work_on>div:nth-of-type(2){
+       width: 70%;
+       margin: 0 auto;
+       border-bottom: 2px dashed #666;
+        }
+        
+    .work_on>div:nth-of-type(3){
+       width: 50%;
+       margin: 0 auto;
+    } */
+
+    .work_on p{
+    font-family: 'Gotham 1r', arial, sans-serif;
+    font-size: 18px;
+    letter-spacing: 0.70px;
+    line-height: 1.3em;
+    color: rgb(134, 139, 138);
+    width: 70%;
+    margin: 50px auto;
+    }
+
+   .work_on h3{
+    font-family: 'Gotham 1r', arial, sans-serif;
+    font-size: 25px;
+    letter-spacing: 0.70px;
+    line-height: 1.3em;
+    color: rgb(134, 139, 138);
+    width: 70%;
+    margin: 50px auto;
+   }
 }
 
 .rder-right {
@@ -259,6 +321,7 @@ body {
 
 .footer {
     /*height: 300px;*/
+    
     padding-bottom: 50px;
     padding-bottom: 50px;
     background: linear-gradient(to bottom, #7c8886 0, #1f2221 100%);

@@ -27,7 +27,7 @@ body {
     margin: 10px auto 0;
     /* max-width: 1090px; */
     
-    width: 100%;
+    width: 88%;
     padding: 0;
     -webkit-perspective: 1500px;
     perspective: 1500px;
@@ -48,12 +48,12 @@ body {
 
 .grid figure,
 .grid .placeholder {
-    width: 60%;
+    width: 90%;
     height: 200px;
 }
 
 .grid figure {
-    margin: 10px;
+    margin: 20px;
     display: inline-block;
     cursor: pointer;
     background-color: #FFF;
@@ -288,7 +288,7 @@ p.dummy-text:nth-child(3) {
 .dummy-text {
     text-align: left;
     margin: 0 auto;
-    padding: 10px 0;
+    padding: 10px;
     color: rgba(24, 35, 45, 0.88);
     font-size: 1.5em;
     line-height: 1.3em;
@@ -335,7 +335,8 @@ p.dummy-text:nth-child(3) {
 @media screen and (max-width: 1000px) {
     .grid figure,
     .grid .placeholder {
-        width: 80%;
+        width: 90%;
         height: 162px;
     }
+   
 }

@@ -25,6 +25,8 @@ Main Components
 -------------------------------- */
 
 .cd-header {
+  z-index: 100;
+  width: 100%;
     height: 80px;
     /* width: 90%; */
     
@@ -68,8 +70,13 @@ Main Components
 }
 
 .cd-logo {
+  width:80%;
     float: left;
     margin-top: 18px;
+}
+
+.logo {
+    width: 160px  ;
 }
 
 .cd-3d-nav-trigger {
@@ -80,6 +87,7 @@ Main Components
     margin-top: 18px;
     margin-right: 18px;
     background-color:rgba(57, 118, 56, 0.49);
+    bordder:1px solid green;
     border-radius: 1px;
     box-shadow: 2px 2px 2px #666;
     /* replace text with background image */
@@ -90,7 +98,11 @@ Main Components
     color: transparent;
 }
 .cd-3d-nav-trigger:hover{
-   
+        transition:trigger_change 0.2s 0.2s;
+}
+@keyframes triggle_change{
+    from{ background-color: #666;}
+    to{background-color: #ccc;}
 }
 
 .cd-3d-nav-trigger span,
@@ -261,6 +273,7 @@ Main Components
     height: 100%;
     width: 20%;
     float: left;
+    list-style: none; 
 }
 
 .cd-3d-nav li:first-of-type a::before {
@@ -314,7 +327,7 @@ Main Components
     background-position: 0 0;
 }
 
-.no-touch .cd-3d-nav a:hover {
+.cd-3d-nav a:hover {
     background-color: #2b3145;
 }
 
