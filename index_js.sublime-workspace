@@ -4,6 +4,46 @@
 		"selected_items":
 		[
 			[
+				"a",
+				"auto"
+			],
+			[
+				"fo",
+				"font-weight"
+			],
+			[
+				"fon",
+				"font-size"
+			],
+			[
+				"offse",
+				"offset"
+			],
+			[
+				"off",
+				"offset	.offset()"
+			],
+			[
+				"ini",
+				"iniIndex"
+			],
+			[
+				"cla",
+				"class1〔variable〕"
+			],
+			[
+				"stude",
+				"students〔argument〕"
+			],
+			[
+				"teacher",
+				"teachName〔argument〕"
+			],
+			[
+				"get",
+				"get	.get()"
+			],
+			[
 				"selec",
 				"selector〔argument〕"
 			],
@@ -80,10 +120,6 @@
 				"overflow"
 			],
 			[
-				"fo",
-				"font-family"
-			],
-			[
 				"b",
 				"background"
 			],
@@ -102,10 +138,6 @@
 			[
 				"ge",
 				"getobjectLength"
-			],
-			[
-				"a",
-				"arr"
 			],
 			[
 				"j",
@@ -216,16 +248,8 @@
 				"italic"
 			],
 			[
-				"fon",
-				"font-family"
-			],
-			[
 				"fons",
 				"font-size"
-			],
-			[
-				"get",
-				"get	Get Elements"
 			],
 			[
 				"bacgro",
@@ -444,70 +468,104 @@
 	"buffers":
 	[
 		{
-			"file": "blog_articles/article_index.html",
+			"file": "js/top_bar.js",
 			"settings":
 			{
-				"buffer_size": 9980,
+				"buffer_size": 1680,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "blog_articles/css/demo.css",
+			"file": "blog_articles/js/main.js",
 			"settings":
 			{
-				"buffer_size": 2933,
+				"buffer_size": 1925,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "style/main.css",
+			"settings":
+			{
+				"buffer_size": 4419,
 				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "blog_articles/css/top_bar.css",
-			"settings":
-			{
-				"buffer_size": 12040,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "blog_articles/css/component.css",
-			"settings":
-			{
-				"buffer_size": 7183,
-				"line_ending": "Unix"
 			}
 		},
 		{
 			"file": "index.html",
 			"settings":
 			{
-				"buffer_size": 9025,
+				"buffer_size": 9106,
 				"line_ending": "Windows"
 			}
 		},
 		{
-			"file": "style/top_bar.css",
+			"contents": "Package Control Messages\n========================\n\nMarkdown Preview:\n----------------\n\n  Sublime Text 2/3 Markdown Preview\n  =================================\n  \n  Preview and build your markdown files quickly in your web browser from sublime text 2/3. \n  \n  You can use builtin [python-markdown][10] parser or use the [github markdown API][5] for the conversion.\n  \n  **NOTE:** If you choose the GitHub API for conversion (set parser: github in your settings), your code will be sent through https to github for live conversion. You'll have [Github flavored markdown][6], syntax highlighting and EMOJI support for free :heart: :octocat: :gift:. If you make more than 60 calls a day, be sure to set your GitHub API key in the settings :). You can also get most of this in the default Markdown parser with by enabling certain extensions; see \"[Parsing Github Flavored Markdown](#parsing-github-flavored-markdown-)\"\" below for more information.\n  \n  **LINUX users:** If you want to use GitHub API for conversion, you'll need to have a custom Python install that includes python-ssl as its not built in the Sublime Text 2 Linux package. see [@dusteye comment][8]. If you use a custom window manager, also be sure to set a `BROWSER` environment variable. see [@PPvG comments][9]\n  \n  ## Features :\n  \n   - Markdown preview using the [Python-markdown][10] or the Github API just choose select the build commands.\n   - Syntax highlighting via Pygments. See \"[Configuring Pygments](#configuring-pygments)\" for more info.\n   - Build markdown file using Sublime Text build system. The build parser are config via the `\"parser\"` config.\n   - Browser preview auto reload on save if you have the [ST2 LiveReload plugin][7] installed.\n   - Builtin parser : supports `abbr`, `attr_list`, `def_list`, `fenced_code`, `footnotes`, `tables`, `smart_strong`, `smarty`,  `wikilinks`, `meta`, `sane_lists`, `codehilite`, `nl2br`, and `toc` markdown extensions.\n   - CSS search path for local and build-in CSS files (always enabled) and/or CSS overriding if you need\n   - YAML support thanks to @tommi\n   - Clipboard selection and copy to clipboard thanks to @hexatrope\n   - MathJax support : \\\\\\\\(\\frac{\\pi}{2}\\\\\\\\) thanks to @bps10\n   - HTML template customisation thanks to @hozaka\n   - Embed images as base64 (see [settings][settings] file for more info)\n   - Strip out multimarkdown critic marks (see [settings][settings] file for more info)\n   - 3rd party extensions for the Python Markdown parser:\n  \n      | Extension | Documentation |\n      |-----------|---------------|\n      | magiclink | Find and convert HTML links and email address to links ([MagicLink Documentation](http://facelessuser.github.io/PyMdown/Extensions/MagicLink.html)). |\n      | delete | Surround inline text with `~~crossed out~~` to get del tags ~~crossed out~~. |\n      | insert | Surround inline text with `^^underlined^^` to get ins tags <ins>underlined</ins>. |\n      | tasklist | Github Flavored Markdown tasklists ([Tasklist Documentation](http://facelessuser.github.io/PyMdown/Extensions/Tasklist.html)). |\n      | githubemoji | Support for Github Flavored Markdown emojis ([GithubEmoji Documentation](http://facelessuser.github.io/PyMdown/Extensions/GithubEmoji.html)). |\n      | headeranchor | Github Flavored Markdown style header anchors ([HeaderAnchor Documentation](http://facelessuser.github.io/PyMdown/Extensions/HeaderAnchor.html)). |\n      | github | A convenience extension to add: `magiclink`, `delete`, `tasklist`, `githubemoji`, `headeranchor`, `superfences`, and `nl2br` to parse and display Markdown in a github-ish way.  It is recommed to pair `github` with `extra` and `codehilite` (with language guessing off) to parse close to github's way.  Be aware of what extensions `github` loads, because you should not load extensions more than once. |\n      | progressbar | Create progress bars ([ProgressBar Documentation](http://facelessuser.github.io/PyMdown/Extensions/ProgressBar.html)). |\n      | superfences | Allow fenced blocks to be nested under lists, blockquotes, etc. and add special UML diagram blocks ([SuperFences Documentation](http://facelessuser.github.io/PyMdown/Extensions/SuperFences.html)). |\n  \n  ## Installation :\n  \n  ### Using [Package Control][3] (*Recommended*)\n  \n  For all Sublime Text 2/3 users we recommend install via [Package Control][3].\n  \n  1. [Install][11] Package Control if you haven't yet.\n  2. Use `cmd+shift+P` then `Package Control: Install Package`\n  3. Look for `Markdown Preview` and install it.\n  \n  ### Manual Install\n  \n  1. Click the `Preferences > Browse Packages…` menu\n  2. Browse up a folder and then into the `Installed Packages/` folder\n  3. Download [zip package][12] rename it to `Markdown Preview.sublime-package` and copy it into the `Installed Packages/` directory\n  4. Restart Sublime Text\n  \n  ## Usage :\n  \n  ### To preview :\n  \n   - optionally select some of your markdown for conversion\n   - use `cmd+shift+P` then `Markdown Preview` to show the follow commands (you will be prompted to select which parser you prefer):\n  	- Markdown Preview: Preview in Browser\n  	- Markdown Preview: Export HTML in Sublime Text\n  	- Markdown Preview: Copy to Clipboard\n  	- Markdown Preview: Open Markdown Cheat sheet\n   - or bind some key in your user key binding, using a line like this one:\n     `{ \"keys\": [\"alt+m\"], \"command\": \"markdown_preview\", \"args\": {\"target\": \"browser\", \"parser\":\"markdown\"} },` for a specific parser and target or `{ \"keys\": [\"alt+m\"], \"command\": \"markdown_preview_select\", \"args\": {\"target\": \"browser\"} },` to bring up the quick panel to select enabled parsers for a given target.\n   - once converted a first time, the output HTML will be updated on each file save (with LiveReload plugin)\n  \n  ### To build :\n  \n   - Just use `Ctrl+B` (Windows/Linux) or `cmd+B` (Mac) to build current file.\n  \n  ### To config :\n  \n  Using Sublime Text menu: `Preferences`->`Package Settings`->`Markdown Preview`\n  \n  - `Settings - User` is where you change your settings for Markdown Preview.\n  - `Settings - Default` is a good reference with detailed descriptions for each setting.\n  \n  ### Configuring Pygments\n  If you add the codehilite extension manually in the enabled extensions, you can override some of the default settings.\n  \n  * Turn language guessing *on* or *off* (*on* will highlight fenced blocks even if you don't specify a language)  `codehilite(guess_lang=False)` (True|False).\n  * Show line numbers: `codehilite(linenums=True)` (True|False).\n  * Change the higlight theme: `codehilite(pygments_style=emacs)`.\n  * Inline the CSS: `codehilite(noclasses=True)` (True|False).\n  * Use multiple: `codehilite(linenums=True, pygments_style-emacs)`.\n  \n  See [codehilte page](https://pythonhosted.org/Markdown/extensions/code_hilite.html) for more info.\n  \n  ### Meta Data Support\n  When the `meta` extension is enabled (https://pythonhosted.org/Markdown/extensions/meta_data.html), the results will be written to the HTML head in the form `<meta name=\"key\" content=\"value1,value2\">`.  `title` is the one exception, and its content will be written to the title tag in the HTML head.\n  \n  ### YAML Frontmatter Support\n  YAML frontmatter can be stripped out and read when `strip_yaml_front_matter` is set to  `true` in the settings file.  In general the, the fronmatter is handled the same as [meta data](#meta-data-support), but if both exist in a file, the YAML keys will override the `meta` extension keys.  There are a few special keys names that won't be handled as html meta data.\n  \n  #### Special YAML Key Names\n  Yaml frontmatter has a few special key names that are used that will not be handled as meta data:\n  \n  - **basepath**: An absolute path to configure the relative paths for images etc. (for when the markdown is supposed to reference images in a different location.)\n  - **references**: Can take a file path or an array of file paths for separate markdown files containing references, footnotes, etc.  Can be an absolute path or relative path.  Relative paths first use the source file's directory, and if the file cannot be found, it will use the `basepath` setting.\n  - **destination**: This is an absolute file path or relative file path for when the markdown is saved to html via the build command or the `Save to HTML` command.  Relative paths first use the source file's directory, and if the file cannot be found, it will use the `basepath` setting.\n  - **settings**: This is a dictionary where you can override settings that are in the settings file.\n  \n  #### Example\n  ```yaml\n  ---\n      # Builtin values\n      references:\n          - references.md\n          - abbreviations.md\n          - footnotes.md\n  \n      destination: destination.html\n  \n      # Meta Data\n      title: Test Page\n      author:\n          - John Doe\n          - Jane Doe\n  \n      # Settings overrides\n      settings:\n          enabled_extensions:\n          - extra\n          - github\n          - toc\n          - headerid\n          - smarty(smart_quotes=False) # smart quotes interferes with attr_list\n          - meta\n          - wikilinks\n          - admonition\n          - codehilite(guess_lang=False,pygments_style=github)\n  ---\n  ```\n  \n  ### Parsing Github Flavored Markdown :\n  Github Flavored Mardown (GFM) is a very popular markdown.  Markdown Preview can actually handle them in a couple of ways: online and offline.\n  \n  #### Online :\n  Parsing GFM using the online method requires using the Github API as the parser.  It may also require setting `github_mode` to `gfm` to get things like tasklists to render properly.\n  \n  #### Offline :\n  By default almost all extensions are enabled to help with the github feel, but there are some tweaks needed to get the full experience.\n  \n  GFM does not auto guess language in fenced blocks, but Markdown Preview does this by default.  You can fix this in one of two ways:\n  \n  1. Disable auto language guessing in the settings file `\"guess_language\": false,`\n  2. Or if you are manually defining extensions: `\"enabled_extensions\": [\"codehilite(guess_lang=False,pygments_style=github)\"]`\n  \n  \n  As mentioned earlier, almost all extensions are enabled by default, but as a reference, the minimum extensions that should be enabled are listed below:\n  \n  ```javascript\n  	\"enabled_extensions\": [\n  		\"extra\",\n  		\"github\",\n  		\"codehilite(guess_lang=False,pygments_style=github)\"\n  	]\n  ```\n  \n  This may be further enhanced in the future.\n  \n  \n  ## Support :\n  \n  - Any bugs about Markdown Preview please feel free to report [here][issue].\n  - And you are welcome to fork and submit pullrequests.\n  \n  \n  ## License :\n  \n  The code is available at github [project][home] under [MIT licence][4].\n  \n   [home]: https://github.com/revolunet/sublimetext-markdown-preview\n   [3]: https://sublime.wbond.net/\n   [4]: http://revolunet.mit-license.org\n   [5]: http://developer.github.com/v3/markdown\n   [6]: http://github.github.com/github-flavored-markdown/\n   [7]: https://github.com/dz0ny/LiveReload-sublimetext2\n   [8]: https://github.com/revolunet/sublimetext-markdown-preview/issues/27#issuecomment-11772098\n   [9]: https://github.com/revolunet/sublimetext-markdown-preview/issues/78#issuecomment-15644727\n   [10]: https://github.com/waylan/Python-Markdown\n   [11]: https://sublime.wbond.net/installation\n   [12]: https://github.com/revolunet/sublimetext-markdown-preview/archive/master.zip\n   [issue]: https://github.com/revolunet/sublimetext-markdown-preview/issues\n   [settings]: https://github.com/revolunet/sublimetext-markdown-preview/blob/master/MarkdownPreview.sublime-settings\n  \n   ",
 			"settings":
 			{
-				"buffer_size": 12107,
-				"line_ending": "Unix"
+				"buffer_size": 11597,
+				"line_ending": "Windows",
+				"name": "Package Control Messages",
+				"scratch": true
 			}
 		},
 		{
-			"contents": "<!DOCTYPE html>\n<html>\n<head>\n	<title>JavaScript demo</title>\n	<meta charset=\"utf-8\">\n	<style type=\"text/css\">\n		.old{\n			position: relative;\n			width: 50px;\n			height: 50px;\n			background-color: blue;	\n		}\n		.new{\n			border:3px solid #ccc;\n			border-radius: 5px;\n		}\n	</style>\n</head>\n<body>\n	<input id=\"number1\">\n	<input id=\"number2\">\n	<span id=\"result\"></span>\n	<button id=\"addbtn\">相加</button>\n	<p class=\"old\" id=\"p\"></p>\n\n	<script type=\"text/javascript\">\n/*\n	//任务1：控制台打印 hell0 world\n	console.log(\"hello world\");\n*/\n/*\n	//任务2：实现简单相加。\n	function $(id){\n		return document.getElementById(id);\n	}\n	\n	function clickEvent(){\n		$('addbtn').addEventListener('click',addEventHandle,false);\n	}\n	function addEventHandle(){\n		var num1 = $(\"number1\").value;\n		var num2 = $('number2').value;\n		var newNum = addNumber(num1,num2);\n		innerNumber(newNum);\n	}\n	function addNumber(num1,num2){\n		return num1 + num2;\n	}\n	function innerNumber(result){\n		$(\"result\").innerHTML=result;\n	}\n	clickEvent();\n\n	//任务三：判断是否是函数\n	function isFn(arr){\n		\n		return arr.constructor.toString().indexOf(\"Function\")>-1;\n\n	}\n	console.log(isFn([\"Banana\", \"Orange\", \"Apple\", \"Mango\"]));\n	*/\n\n	/*var arr = ['java', 'c', 'php', 'html'];\n	function output(item) {\n    console.log(item);\n	}\n	function each(arr , Fn){\n		arr.console(\"\")\n	}\n	each(arr, output); \n*/\n/*\n	//任务四：递归调用实现深度克隆\n	function cloneObject(src){\n		var o;\n		if (typeof src ==\"object\") {\n			if (src === null) {\n				o = null;\n			}else{\n				if (src instanceof Array) {\n					o = [];\n					for (var i = 0; i < src.length; i++) {\n						o.push(cloneObject(src[i]));\n					}\n				}else{\n					o ={};\n					for(var j in src){\n						o[j] = cloneObject(src[j]);\n					}\n				}\n			}	\n		}else{\n			 o =src;\n		}\n		return o;\n	}	\n	var srcObj = {\n		a:1,\n		b:{\n			b1:[\"hello\",\"hi\"],\n			b2:\"javascript\"\n		}\n	};\n	var abObj = srcObj;\n	var tarObj = cloneObject(srcObj);\n	srcObj.a = 2;\n	srcObj.b.b1[0] = \"Hello\";\n	//输出：\n	console.log(abObj.a);//2\n	console.log(abObj.b.b1[0]);//Hello\n	console.log(tarObj.a);//1\n	console.log(tarObj.b.b1[0]);//hello\n*/\n/*\n	//任务五：对数组进行去重操作，只考虑数组中元素为数字或字符串，返回一个去重后的数组。\n\n	function uniqArray(arr){\n		var newArray=new Array();\n	    var len=arr.length;\n	    for (var i=0;i<len ;i++){\n	        for(var j=i+1;j<len;j++){\n	            if(this[i]===this[j]){\n	                j=++i;//如果后面数组中有和前面相同的元素，则把前面的元素跳过，继续循环。\n	            }\n	        }\n	        newArray.push(this[i]);\n	    }\n	    return newArray;\n	}\n	var a = ['a','b','a','c'];	\n	var b = uniqArray(a);\n	console.log(b);//一直输出是[]空数组，==\n*/\n\n/*	//任务六：字符串去空格\n	function trim(str){\n		//正则表达式1：return str.replace(/^(\\s|\\u00A0)+|(\\s|\\u00A0)+$/g,\"\");\n		 return str.replace(/(^\\s*)|(\\s*$)/g, \"\");//正则表达式2\n	}\n	var str = '  hi!  ';\n	str = trim(str);\n	console.log(str);//'hi'\n*/\n/*	//任务七：使用each方法\n	function each(arr,fn){\n		for (var i = 0; i < arr.length; i++) {\n			fn(arr[i]);\n		};\n	}\n	var str = ['java','c','php','html'];\n	function output(item, index){\n		console.log(index+':'+item);//java,c ,php,html\n	}\n	each(str,output);*/\n\n/*	//任务八：获取对象里面第一层元素的数量\n	function getobjectLength(obj){\n		return Object.keys(obj).length;\n	}\n	var obj = {\n		a:1,\n		b:2,\n		c:{\n			c1:3,\n			c2:4\n		},\n		d:5\n	};\n	console.log(getobjectLength(obj));//4 */\n\n/*	//任务九：学习正则表达式\n	function isEmail(emailStr) {\n		var re = /^(\\w-*\\.*)+@(\\w-?)+(\\.\\w{2,})+$/;\n		return re.test(emailStr);\n	}\n	function isMobilephone(phone){\n		var re = /^1\\d{10}$/\n		return re.test(phone);\n	}\n	console.log(isEmail('1059002908@qq.com'));//true\n	console.log(isMobilephone('18813122761'));//true\n	console.log(isMobilephone('123456'));//false*/\n\n/*	//任务十：增加和移除类\n	function addClass(element,newClassName){\n		if(!element.className){\n			return element.className = newClassName;\n		}else{\n			var newClass = element.className;\n			newClass += \" \";\n			newClass = newClass += newClassName;\n			element.className = newClass;\n		}\n	}//增加类\n\n	function removeClass(element,oldClassName){\n		var elementClassName = element.className;  \n		if (!element.className) {\n			return ;\n		}else if(element.className.length = 0) return;\n		else if (element.className == oldClassName) {\n			element.className = \" \";\n		}else if (elementClassName.match(new RegExp(\"(^|\\\\s)\" + className + \"(\\\\s|$)\")))  \n        element.className = elementClassName.replace((new RegExp(\"(^|\\\\s)\" + className + \"(\\\\s|$)\")),\" \");\n	}//移除类\n\n	var p = document.getElementById(\"p\");\n	//removeClass(p,\"old\");\n	//addClass(p,\"new\");*/\n\n/*	function isSiblingNode(element, siblingNode) {\n   		var elementParent = element.parentNode;\n   		var siblingNodeParent = siblingNode.parentNode;\n   		return elementParent === siblingNodeParent;\n 	}\n 	var p = document.querySelector('#p');\n 	var btn = document.querySelector('#addbtn');\n 	console.log(isSiblingNode(p, btn));//true*/\n\n/* 	//获取当前位置：\n 	function getPosition(element) {\n   		var actualLeft = element.offsetLeft;\n   		var actualTop = element.offsetTop;\n   		return actualLeft + \" \" +actualTop;\n	}\n	var p = document.querySelector('#p');\n	console.log(getPosition(p));//8 45*/\n\n	//实现一个简单的Query：\n	function $(selector){\n		\n	}\n\n\n</script>\n</body>\n</html>",
-			"file": "/C/Users/kevin/Desktop/my programs/my javascript/baidu_ife/javascriptDemo.html",
-			"file_size": 5695,
-			"file_write_time": 130753677522352375,
+			"file": "/G/NEWsoftware/nodeJS/node_blog/views/blogs/index.md",
 			"settings":
 			{
-				"buffer_size": 5021,
+				"buffer_size": 6282,
 				"line_ending": "Windows"
 			}
 		},
 		{
-			"file": "blog_articles/js/jquery-2.1.3.min.js",
+			"file": "/G/NEWsoftware/nodeJS/node_modules/express/index.js",
 			"settings":
 			{
-				"buffer_size": 84320,
+				"buffer_size": 44,
 				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/G/NEWsoftware/nodeJS/node_blog/app.js",
+			"settings":
+			{
+				"buffer_size": 3260,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "/G/NEWsoftware/nodeJS/node_modules/express/lib/express.js",
+			"settings":
+			{
+				"buffer_size": 1773,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/G/NEWsoftware/nodeJS/node_blog/views/404.jade",
+			"settings":
+			{
+				"buffer_size": 57,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "/G/NEWsoftware/nodeJS/node_blog/views/index.jade",
+			"settings":
+			{
+				"buffer_size": 169,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"contents": "this is a demo page\n====================\n## hello markdown! ##\n[Java Eye](http://www.iteye.com/ \\\"Click\\\") ",
+			"file": "/G/NEWsoftware/nodeJS/node_blog/views/test.md",
+			"file_size": -1,
+			"file_write_time": -1,
+			"settings":
+			{
+				"buffer_size": 107,
+				"line_ending": "Windows"
 			}
 		}
 	],
@@ -518,16 +576,20 @@
 		"selected_items":
 		[
 			[
+				"git",
+				"Github: Blame"
+			],
+			[
+				"p",
+				"Package Control: Install Package"
+			],
+			[
 				"i",
 				"Package Control: Install Package"
 			],
 			[
 				"c",
 				"Git: Commit"
-			],
-			[
-				"git",
-				"Git: Gui"
 			],
 			[
 				"git ",
@@ -547,10 +609,6 @@
 			],
 			[
 				"pa",
-				"Package Control: Install Package"
-			],
-			[
-				"p",
 				"Package Control: Install Package"
 			],
 			[
@@ -586,13 +644,14 @@
 				"Snippet: html"
 			]
 		],
-		"width": 528.0
+		"width": 468.0
 	},
 	"console":
 	{
 		"height": 126.0,
 		"history":
 		[
+			"git",
 			"import urllib.request,os,hashlib; h = 'eb2297e1a458f27d836c04bb0cbaf282' + 'd0e7a3098092775ccb37ca9d6b2e4b7d'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://packagecontrol.io/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)"
 		]
 	},
@@ -607,22 +666,41 @@
 	},
 	"expanded_folders":
 	[
-		"/F/kevin software/github/kevinwang04.github.io",
 		"/F/kevin software/github/kevinwang04.github.io/blog_articles",
 		"/F/kevin software/github/kevinwang04.github.io/blog_articles/css",
+		"/F/kevin software/github/kevinwang04.github.io/blog_articles/js",
 		"/F/kevin software/github/kevinwang04.github.io/index_img",
+		"/F/kevin software/github/kevinwang04.github.io/js",
 		"/F/kevin software/github/kevinwang04.github.io/style",
-		"/C/Users/kevin/Desktop/my programs/my javascript/baidu_ife",
-		"/C/Users/kevin/Desktop/my programs/my javascript/baidu_ife/ife",
-		"/C/Users/kevin/Desktop/my programs/my javascript/baidu_ife/ife/jsLearning"
+		"/G/NEWsoftware/nodeJS/node_blog",
+		"/G/NEWsoftware/nodeJS/node_blog/views",
+		"/G/NEWsoftware/nodeJS/node_blog/views/img"
 	],
 	"file_history":
 	[
-		"/G/AutoHotKey/AutoHotKey/AutoHotKey/AutoHotKey 中文版/Extras/Scripts/IntelliSense.ahk",
+		"/G/NEWsoftware/Git/git-cheetah/git_shell_ext64.dll",
+		"/F/software/SublimeText3/Data/Packages/Default/Preferences.sublime-settings",
+		"/G/NEWsoftware/nodeJS/node_modules/express/package.json",
+		"/G/NEWsoftware/nodeJS/node_modules/express/node_modules/markdown/package.json",
+		"/G/NEWsoftware/nodeJS/node_blog/demo/school/student.js",
+		"/F/kevin software/github/kevinwang04.github.io/blog_articles/article_index.html",
+		"/G/NEWsoftware/nodeJS/node_blog/app.js",
+		"/G/NEWsoftware/nodeJS/node_blog/demo/school/teacher.js",
+		"/G/NEWsoftware/nodeJS/node_blog/demo/school/klass.js",
+		"/G/NEWsoftware/nodeJS/node_blog/demo/school/index.js",
+		"/G/NEWsoftware/nodeJS/node_blog/demo/school/school.js",
+		"/G/NEWsoftware/nodeJS/node_blog/views/index.jade",
+		"/G/NEWsoftware/nodeJS/node_blog/npm-debug.log",
+		"/G/NEWsoftware/nodeJS/node_blog/viws",
 		"/F/kevin software/github/kevinwang04.github.io/blog_articles/css/demo.css",
+		"/F/kevin software/github/kevinwang04.github.io/blog_articles/css/top_bar.css",
 		"/F/kevin software/github/kevinwang04.github.io/blog_articles/css/component.css",
-		"/C/Users/kevin/Desktop/my programs/my javascript/baidu_ife/javascriptDemo.html",
 		"/F/kevin software/github/kevinwang04.github.io/index.html",
+		"/F/kevin software/github/kevinwang04.github.io/style/top_bar.css",
+		"/C/Users/kevin/Desktop/my programs/my javascript/baidu_ife/javascriptDemo.html",
+		"/F/kevin software/github/kevinwang04.github.io/blog_articles/js/jquery-2.1.3.min.js",
+		"/G/NEWsoftware/nodeJS/node_modules/express/lib/express.js",
+		"/G/AutoHotKey/AutoHotKey/AutoHotKey/AutoHotKey 中文版/Extras/Scripts/IntelliSense.ahk",
 		"/F/kevin software/github/kevinwang04.github.io/style/main.css",
 		"/C/Users/kevin/Desktop/my programs/bata/源码/jQuery之家源码/网格图片3D翻转load页面/201410181539/index.html",
 		"/F/kevin software/github/kevinwang04.github.io/blog_articles/index.html",
@@ -630,7 +708,6 @@
 		"/C/Users/kevin/Desktop/my programs/bata/源码/jQuery之家源码/网格图片3D翻转load页面/201410181539/css/top_bar.css",
 		"/C/Users/kevin/Desktop/my programs/bata/源码/jQuery之家源码/网格图片3D翻转load页面/201410181539/css/component.css",
 		"/F/kevin software/github/kevinwang04.github.io/blog_articles/css/style.css",
-		"/F/kevin software/github/kevinwang04.github.io/style/top_bar.css",
 		"/F/kevin software/github/kevinwang04.github.io/blog_articles/js/grid3d.js",
 		"/C/Users/kevin/Desktop/my programs/bata/源码/jQuery之家源码/顶部隐藏菜单3D显示1/201412051551/css/component.css",
 		"/F/kevin software/github/kevinwang04.github.io/old_blog/bowen/bowen.html",
@@ -728,24 +805,7 @@
 		"/F/kevin software/github/kevinwang04.github.io/main",
 		"/F/kevin software/github/kevinwang04.github.io/index",
 		"/C/Users/kevin/Desktop/my programs/bata/源码/下拉菜单源码/demo/jquery实现/demo.html",
-		"/C/Users/kevin/Desktop/my programs/bata/源码/下拉菜单源码/demo/jquery实现/function quickSort(array){.js",
-		"/C/Users/kevin/Desktop/my programs/bata/源码/下拉菜单源码/demo/jquery实现/menu.html",
-		"/C/Users/kevin/Desktop/my programs/bata/源码/下拉菜单源码/demo/javascript实现/menu4（js）.html",
-		"/C/Users/kevin/Desktop/my programs/bata/源码/网页广告特效/右下角广告（源代码）/右下角弹框.html",
-		"/C/Users/kevin/Desktop/my programs/bata/源码/网页广告特效/右下角广告（源代码）/右下角弹框1.html",
-		"/C/Users/kevin/Desktop/my programs/bata/源码/网页广告特效/顶部广告（源代码）/ad_down.html",
-		"/C/Users/kevin/Desktop/my programs/bata/源码/网页广告特效/顶部广告（源代码）/adDemo_close.html",
-		"/C/Users/kevin/Desktop/my programs/bata/源码/搜索框源码/bing-search-ajax.htm",
-		"/C/Users/kevin/Desktop/my programs/bata/源码/搜索框源码/bing-search-demo.htm",
-		"/C/Users/kevin/Desktop/my programs/bata/源码/搜索框源码/mydemo.html",
-		"/C/Users/kevin/Desktop/my programs/bata/源码/AJAX源码/XMLHttpRequest.html",
-		"/C/Users/kevin/Desktop/my programs/bata/less/style/mainless.less",
-		"/C/Users/kevin/Desktop/my programs/bata/less/main.html",
-		"/F/kevin software/github/old_index.html",
-		"/C/Users/kevin/Desktop/my programs/bata/less/style/mainless.css",
-		"/C/Users/kevin/Desktop/my programs/bata/源码/手风琴特效/手风琴效果/demo.html",
-		"/C/Users/kevin/Desktop/my programs/bata/源码/手风琴特效/手风琴效果/jquery-1.9.1.js",
-		"/C/Users/kevin/Desktop/my programs/bata/bootstrap/newIndex.html"
+		"/C/Users/kevin/Desktop/my programs/bata/源码/下拉菜单源码/demo/jquery实现/function quickSort(array){.js"
 	],
 	"find":
 	{
@@ -763,6 +823,21 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"code",
+			"code style",
+			"tab",
+			".work",
+			"welcom",
+			".wel",
+			".work_on",
+			"wel",
+			"w",
+			".work_on",
+			".work",
+			".text_info",
+			".text-info",
+			"color-",
+			"student",
 			".main",
 			"h1",
 			"logo",
@@ -875,21 +950,7 @@
 			"rotate",
 			"name",
 			"png",
-			"img",
-			"jpg",
-			"span",
-			"gadget",
-			"gatget",
-			"ex_menu",
-			"sb",
-			"mian nav",
-			"article",
-			"crl",
-			"header",
-			"main",
-			"bg.png",
-			"MT_navwrap",
-			"face"
+			"img"
 		],
 		"highlight": false,
 		"in_selection": false,
@@ -907,24 +968,24 @@
 	"groups":
 	[
 		{
-			"selected": 1,
+			"selected": 12,
 			"sheets":
 			[
 				{
 					"buffer": 0,
-					"file": "blog_articles/article_index.html",
+					"file": "js/top_bar.js",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 9980,
+						"buffer_size": 1680,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								269,
-								269
+								313,
+								380
 							]
 						],
 						"settings":
@@ -938,21 +999,36 @@
 								"bh_c_define_open",
 								"bh_c_define_close",
 								"bh_c_define_content",
-								"bh_double_quote",
-								"bh_double_quote_center",
-								"bh_double_quote_open",
-								"bh_double_quote_close",
-								"bh_double_quote_content",
-								"bh_regex",
-								"bh_regex_center",
-								"bh_regex_open",
-								"bh_regex_close",
-								"bh_regex_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content",
 								"bh_default",
 								"bh_default_center",
 								"bh_default_open",
 								"bh_default_close",
 								"bh_default_content",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
 								"bh_round",
 								"bh_round_center",
 								"bh_round_open",
@@ -963,6 +1039,244 @@
 								"bh_square_open",
 								"bh_square_close",
 								"bh_square_content",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content"
+							],
+							"colorcode": true,
+							"function_name_status_row": 9,
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 207.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 12,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "blog_articles/js/main.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1925,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1047,
+								1047
+							]
+						],
+						"settings":
+						{
+							"BracketHighlighterBusy": false,
+							"auto_complete": false,
+							"bh_regions":
+							[
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content"
+							],
+							"colorcode": true,
+							"function_name_status_row": 29,
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 483.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 11,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "style/main.css",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 4419,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								3315,
+								3315
+							]
+						],
+						"settings":
+						{
+							"BracketHighlighterBusy": false,
+							"bh_regions":
+							[
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content"
+							],
+							"colorcode": true,
+							"function_name_status_row": 234,
+							"syntax": "Packages/CSS/CSS.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 5093.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 10,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "index.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 9106,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								2714,
+								2714
+							]
+						],
+						"settings":
+						{
+							"BracketHighlighterBusy": false,
+							"auto_complete": false,
+							"bh_regions":
+							[
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content",
 								"bh_angle",
 								"bh_angle_center",
 								"bh_angle_open",
@@ -973,265 +1287,87 @@
 								"bh_single_quote_open",
 								"bh_single_quote_close",
 								"bh_single_quote_content",
-								"bh_curly",
-								"bh_curly_center",
-								"bh_curly_open",
-								"bh_curly_close",
-								"bh_curly_content",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content",
 								"bh_unmatched",
 								"bh_unmatched_center",
 								"bh_unmatched_open",
 								"bh_unmatched_close",
 								"bh_unmatched_content",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content",
 								"bh_tag",
 								"bh_tag_center",
 								"bh_tag_open",
 								"bh_tag_close",
 								"bh_tag_content"
 							],
-							"function_name_status_row": 8,
+							"colorcode": true,
+							"function_name_status_row": 55,
 							"syntax": "Packages/HTML/HTML.tmLanguage",
 							"tab_size": 4,
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 1,
-					"type": "text"
-				},
-				{
-					"buffer": 1,
-					"file": "blog_articles/css/demo.css",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 2933,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								2902,
-								2902
-							]
-						],
-						"settings":
-						{
-							"BracketHighlighterBusy": false,
-							"bh_regions":
-							[
-								"bh_c_define",
-								"bh_c_define_center",
-								"bh_c_define_open",
-								"bh_c_define_close",
-								"bh_c_define_content",
-								"bh_double_quote",
-								"bh_double_quote_center",
-								"bh_double_quote_open",
-								"bh_double_quote_close",
-								"bh_double_quote_content",
-								"bh_regex",
-								"bh_regex_center",
-								"bh_regex_open",
-								"bh_regex_close",
-								"bh_regex_content",
-								"bh_default",
-								"bh_default_center",
-								"bh_default_open",
-								"bh_default_close",
-								"bh_default_content",
-								"bh_round",
-								"bh_round_center",
-								"bh_round_open",
-								"bh_round_close",
-								"bh_round_content",
-								"bh_square",
-								"bh_square_center",
-								"bh_square_open",
-								"bh_square_close",
-								"bh_square_content",
-								"bh_angle",
-								"bh_angle_center",
-								"bh_angle_open",
-								"bh_angle_close",
-								"bh_angle_content",
-								"bh_single_quote",
-								"bh_single_quote_center",
-								"bh_single_quote_open",
-								"bh_single_quote_close",
-								"bh_single_quote_content",
-								"bh_curly",
-								"bh_curly_center",
-								"bh_curly_open",
-								"bh_curly_close",
-								"bh_curly_content",
-								"bh_unmatched",
-								"bh_unmatched_center",
-								"bh_unmatched_open",
-								"bh_unmatched_close",
-								"bh_unmatched_content",
-								"bh_tag",
-								"bh_tag_center",
-								"bh_tag_open",
-								"bh_tag_close",
-								"bh_tag_content"
-							],
-							"function_name_status_row": 165,
-							"syntax": "Packages/CSS/CSS.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 3598.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 0,
-					"type": "text"
-				},
-				{
-					"buffer": 2,
-					"file": "blog_articles/css/top_bar.css",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 12040,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								1547,
-								1547
-							]
-						],
-						"settings":
-						{
-							"BracketHighlighterBusy": false,
-							"bh_regions":
-							[
-								"bh_c_define",
-								"bh_c_define_center",
-								"bh_c_define_open",
-								"bh_c_define_close",
-								"bh_c_define_content",
-								"bh_double_quote",
-								"bh_double_quote_center",
-								"bh_double_quote_open",
-								"bh_double_quote_close",
-								"bh_double_quote_content",
-								"bh_regex",
-								"bh_regex_center",
-								"bh_regex_open",
-								"bh_regex_close",
-								"bh_regex_content",
-								"bh_default",
-								"bh_default_center",
-								"bh_default_open",
-								"bh_default_close",
-								"bh_default_content",
-								"bh_round",
-								"bh_round_center",
-								"bh_round_open",
-								"bh_round_close",
-								"bh_round_content",
-								"bh_square",
-								"bh_square_center",
-								"bh_square_open",
-								"bh_square_close",
-								"bh_square_content",
-								"bh_angle",
-								"bh_angle_center",
-								"bh_angle_open",
-								"bh_angle_close",
-								"bh_angle_content",
-								"bh_single_quote",
-								"bh_single_quote_center",
-								"bh_single_quote_open",
-								"bh_single_quote_close",
-								"bh_single_quote_content",
-								"bh_curly",
-								"bh_curly_center",
-								"bh_curly_open",
-								"bh_curly_close",
-								"bh_curly_content",
-								"bh_unmatched",
-								"bh_unmatched_center",
-								"bh_unmatched_open",
-								"bh_unmatched_close",
-								"bh_unmatched_content",
-								"bh_tag",
-								"bh_tag_center",
-								"bh_tag_open",
-								"bh_tag_close",
-								"bh_tag_content"
-							],
-							"function_name_status_row": 61,
-							"syntax": "Packages/CSS/CSS.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": -0.0,
-						"translation.y": 1068.0,
+						"translation.y": 1311.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 4,
 					"type": "text"
 				},
 				{
-					"buffer": 3,
-					"file": "blog_articles/css/component.css",
+					"buffer": 4,
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 7183,
+						"buffer_size": 11597,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1830,
-								1830
+								11597,
+								11597
 							]
 						],
 						"settings":
 						{
 							"BracketHighlighterBusy": false,
+							"auto_indent": false,
 							"bh_regions":
 							[
-								"bh_c_define",
-								"bh_c_define_center",
-								"bh_c_define_open",
-								"bh_c_define_close",
-								"bh_c_define_content",
-								"bh_double_quote",
-								"bh_double_quote_center",
-								"bh_double_quote_open",
-								"bh_double_quote_close",
-								"bh_double_quote_content",
-								"bh_regex",
-								"bh_regex_center",
-								"bh_regex_open",
-								"bh_regex_close",
-								"bh_regex_content",
 								"bh_default",
 								"bh_default_center",
 								"bh_default_open",
 								"bh_default_close",
 								"bh_default_content",
-								"bh_round",
-								"bh_round_center",
-								"bh_round_open",
-								"bh_round_close",
-								"bh_round_content",
-								"bh_square",
-								"bh_square_center",
-								"bh_square_open",
-								"bh_square_close",
-								"bh_square_content",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content",
 								"bh_angle",
 								"bh_angle_center",
 								"bh_angle_open",
@@ -1242,48 +1378,250 @@
 								"bh_single_quote_open",
 								"bh_single_quote_close",
 								"bh_single_quote_content",
-								"bh_curly",
-								"bh_curly_center",
-								"bh_curly_open",
-								"bh_curly_close",
-								"bh_curly_content",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content",
 								"bh_unmatched",
 								"bh_unmatched_center",
 								"bh_unmatched_open",
 								"bh_unmatched_close",
 								"bh_unmatched_content",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content",
 								"bh_tag",
 								"bh_tag_center",
 								"bh_tag_open",
 								"bh_tag_close",
 								"bh_tag_content"
 							],
-							"function_name_status_row": 74,
-							"syntax": "Packages/CSS/CSS.tmLanguage",
-							"translate_tabs_to_spaces": false
+							"colorcode": true,
+							"default_dir": "F:\\kevin software\\github\\kevinwang04.github.io",
+							"function_name_status_row": 196,
+							"syntax": "Packages/Text/Plain text.tmLanguage",
+							"word_wrap": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 1505.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 3,
 					"type": "text"
 				},
 				{
-					"buffer": 4,
-					"file": "index.html",
+					"buffer": 5,
+					"file": "/G/NEWsoftware/nodeJS/node_blog/views/blogs/index.md",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 9025,
+						"buffer_size": 6282,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								144,
-								144
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"BracketHighlighterBusy": false,
+							"bh_regions":
+							[
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content"
+							],
+							"colorcode": true,
+							"function_name_status_row": 0,
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 207.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 8,
+					"type": "text"
+				},
+				{
+					"buffer": 6,
+					"file": "/G/NEWsoftware/nodeJS/node_modules/express/index.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 44,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								43,
+								43
+							]
+						],
+						"settings":
+						{
+							"BracketHighlighterBusy": false,
+							"bh_regions":
+							[
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content"
+							],
+							"colorcode": true,
+							"function_name_status_row": 1,
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage"
+						},
+						"translation.x": -0.0,
+						"translation.y": 46.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 9,
+					"type": "text"
+				},
+				{
+					"buffer": 7,
+					"file": "/G/NEWsoftware/nodeJS/node_blog/app.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 3260,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1431,
+								1431
 							]
 						],
 						"settings":
@@ -1292,36 +1630,16 @@
 							"auto_complete": false,
 							"bh_regions":
 							[
-								"bh_c_define",
-								"bh_c_define_center",
-								"bh_c_define_open",
-								"bh_c_define_close",
-								"bh_c_define_content",
-								"bh_double_quote",
-								"bh_double_quote_center",
-								"bh_double_quote_open",
-								"bh_double_quote_close",
-								"bh_double_quote_content",
-								"bh_regex",
-								"bh_regex_center",
-								"bh_regex_open",
-								"bh_regex_close",
-								"bh_regex_content",
 								"bh_default",
 								"bh_default_center",
 								"bh_default_open",
 								"bh_default_close",
 								"bh_default_content",
-								"bh_round",
-								"bh_round_center",
-								"bh_round_open",
-								"bh_round_close",
-								"bh_round_content",
-								"bh_square",
-								"bh_square_center",
-								"bh_square_open",
-								"bh_square_close",
-								"bh_square_content",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content",
 								"bh_angle",
 								"bh_angle_center",
 								"bh_angle_open",
@@ -1332,28 +1650,229 @@
 								"bh_single_quote_open",
 								"bh_single_quote_close",
 								"bh_single_quote_content",
-								"bh_curly",
-								"bh_curly_center",
-								"bh_curly_open",
-								"bh_curly_close",
-								"bh_curly_content",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content",
 								"bh_unmatched",
 								"bh_unmatched_center",
 								"bh_unmatched_open",
 								"bh_unmatched_close",
 								"bh_unmatched_content",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content",
 								"bh_tag",
 								"bh_tag_center",
 								"bh_tag_open",
 								"bh_tag_close",
 								"bh_tag_content"
 							],
-							"function_name_status_row": 6,
-							"syntax": "Packages/HTML/HTML.tmLanguage",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
+							"colorcode": true,
+							"function_name_status_row": 46,
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
+						"translation.y": 828.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 5,
+					"type": "text"
+				},
+				{
+					"buffer": 8,
+					"file": "/G/NEWsoftware/nodeJS/node_modules/express/lib/express.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1773,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1477,
+								1477
+							]
+						],
+						"settings":
+						{
+							"BracketHighlighterBusy": false,
+							"bh_regions":
+							[
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content"
+							],
+							"colorcode": true,
+							"function_name_status_row": 85,
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": -0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 6,
+					"type": "text"
+				},
+				{
+					"buffer": 9,
+					"file": "/G/NEWsoftware/nodeJS/node_blog/views/404.jade",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 57,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								39,
+								39
+							]
+						],
+						"settings":
+						{
+							"BracketHighlighterBusy": false,
+							"bh_regions":
+							[
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content"
+							],
+							"colorcode": true,
+							"function_name_status_row": 1,
+							"open_with_edit": true,
+							"syntax": "Packages/Jade/Syntaxes/Jade.tmLanguage"
+						},
+						"translation.x": -0.0,
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
@@ -1361,20 +1880,26 @@
 					"type": "text"
 				},
 				{
-					"buffer": 5,
-					"file": "style/top_bar.css",
+					"file": "/G/NEWsoftware/nodeJS/node_blog/views/img/404.jpg",
+					"semi_transient": false,
+					"stack_index": 1,
+					"type": "image"
+				},
+				{
+					"buffer": 10,
+					"file": "/G/NEWsoftware/nodeJS/node_blog/views/index.jade",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 12107,
+						"buffer_size": 169,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1547,
-								1547
+								169,
+								169
 							]
 						],
 						"settings":
@@ -1382,36 +1907,16 @@
 							"BracketHighlighterBusy": false,
 							"bh_regions":
 							[
-								"bh_c_define",
-								"bh_c_define_center",
-								"bh_c_define_open",
-								"bh_c_define_close",
-								"bh_c_define_content",
-								"bh_double_quote",
-								"bh_double_quote_center",
-								"bh_double_quote_open",
-								"bh_double_quote_close",
-								"bh_double_quote_content",
-								"bh_regex",
-								"bh_regex_center",
-								"bh_regex_open",
-								"bh_regex_close",
-								"bh_regex_content",
 								"bh_default",
 								"bh_default_center",
 								"bh_default_open",
 								"bh_default_close",
 								"bh_default_content",
-								"bh_round",
-								"bh_round_center",
-								"bh_round_open",
-								"bh_round_close",
-								"bh_round_content",
-								"bh_square",
-								"bh_square_center",
-								"bh_square_open",
-								"bh_square_close",
-								"bh_square_content",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content",
 								"bh_angle",
 								"bh_angle_center",
 								"bh_angle_open",
@@ -1422,49 +1927,68 @@
 								"bh_single_quote_open",
 								"bh_single_quote_close",
 								"bh_single_quote_content",
-								"bh_curly",
-								"bh_curly_center",
-								"bh_curly_open",
-								"bh_curly_close",
-								"bh_curly_content",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content",
 								"bh_unmatched",
 								"bh_unmatched_center",
 								"bh_unmatched_open",
 								"bh_unmatched_close",
 								"bh_unmatched_content",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content",
 								"bh_tag",
 								"bh_tag_center",
 								"bh_tag_open",
 								"bh_tag_close",
 								"bh_tag_content"
 							],
-							"function_name_status_row": 61,
-							"syntax": "Packages/CSS/CSS.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
+							"colorcode": true,
+							"function_name_status_row": 7,
+							"syntax": "Packages/Jade/Syntaxes/Jade.tmLanguage"
 						},
 						"translation.x": 0.0,
-						"translation.y": 1068.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 5,
+					"stack_index": 7,
 					"type": "text"
 				},
 				{
-					"buffer": 6,
-					"file": "/C/Users/kevin/Desktop/my programs/my javascript/baidu_ife/javascriptDemo.html",
+					"buffer": 11,
+					"file": "/G/NEWsoftware/nodeJS/node_blog/views/test.md",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 5021,
+						"buffer_size": 107,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								4990,
-								4990
+								107,
+								107
 							]
 						],
 						"settings":
@@ -1473,6 +1997,51 @@
 							"auto_complete": false,
 							"bh_regions":
 							[
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
 								"bh_double_quote",
 								"bh_double_quote_center",
 								"bh_double_quote_open",
@@ -1482,150 +2051,18 @@
 								"bh_tag_center",
 								"bh_tag_open",
 								"bh_tag_close",
-								"bh_tag_content",
-								"bh_c_define",
-								"bh_c_define_center",
-								"bh_c_define_open",
-								"bh_c_define_close",
-								"bh_c_define_content",
-								"bh_regex",
-								"bh_regex_center",
-								"bh_regex_open",
-								"bh_regex_close",
-								"bh_regex_content",
-								"bh_single_quote",
-								"bh_single_quote_center",
-								"bh_single_quote_open",
-								"bh_single_quote_close",
-								"bh_single_quote_content",
-								"bh_curly",
-								"bh_curly_center",
-								"bh_curly_open",
-								"bh_curly_close",
-								"bh_curly_content",
-								"bh_round",
-								"bh_round_center",
-								"bh_round_open",
-								"bh_round_close",
-								"bh_round_content",
-								"bh_square",
-								"bh_square_center",
-								"bh_square_open",
-								"bh_square_close",
-								"bh_square_content",
-								"bh_default",
-								"bh_default_center",
-								"bh_default_open",
-								"bh_default_close",
-								"bh_default_content",
-								"bh_angle",
-								"bh_angle_center",
-								"bh_angle_open",
-								"bh_angle_close",
-								"bh_angle_content",
-								"bh_unmatched",
-								"bh_unmatched_center",
-								"bh_unmatched_open",
-								"bh_unmatched_close",
-								"bh_unmatched_content"
+								"bh_tag_content"
 							],
-							"function_name_status_row": 230,
-							"syntax": "Packages/HTML/HTML.tmLanguage",
-							"translate_tabs_to_spaces": false
+							"colorcode": true,
+							"function_name_status_row": -1,
+							"open_with_edit": true,
+							"syntax": "Packages/MarkdownEditing/Markdown.tmLanguage"
 						},
 						"translation.x": 0.0,
-						"translation.y": 3864.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 6,
-					"type": "text"
-				},
-				{
-					"buffer": 7,
-					"file": "blog_articles/js/jquery-2.1.3.min.js",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 84320,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								84320,
-								84320
-							]
-						],
-						"settings":
-						{
-							"BracketHighlighterBusy": false,
-							"bh_regions":
-							[
-								"bh_double_quote",
-								"bh_double_quote_center",
-								"bh_double_quote_open",
-								"bh_double_quote_close",
-								"bh_double_quote_content",
-								"bh_tag",
-								"bh_tag_center",
-								"bh_tag_open",
-								"bh_tag_close",
-								"bh_tag_content",
-								"bh_c_define",
-								"bh_c_define_center",
-								"bh_c_define_open",
-								"bh_c_define_close",
-								"bh_c_define_content",
-								"bh_regex",
-								"bh_regex_center",
-								"bh_regex_open",
-								"bh_regex_close",
-								"bh_regex_content",
-								"bh_single_quote",
-								"bh_single_quote_center",
-								"bh_single_quote_open",
-								"bh_single_quote_close",
-								"bh_single_quote_content",
-								"bh_curly",
-								"bh_curly_center",
-								"bh_curly_open",
-								"bh_curly_close",
-								"bh_curly_content",
-								"bh_round",
-								"bh_round_center",
-								"bh_round_open",
-								"bh_round_close",
-								"bh_round_content",
-								"bh_square",
-								"bh_square_center",
-								"bh_square_open",
-								"bh_square_close",
-								"bh_square_content",
-								"bh_default",
-								"bh_default_center",
-								"bh_default_open",
-								"bh_default_close",
-								"bh_default_content",
-								"bh_angle",
-								"bh_angle_center",
-								"bh_angle_open",
-								"bh_angle_close",
-								"bh_angle_content",
-								"bh_unmatched",
-								"bh_unmatched_center",
-								"bh_unmatched_open",
-								"bh_unmatched_close",
-								"bh_unmatched_content"
-							],
-							"function_name_status_row": 4,
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 25324.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 7,
+					"stack_index": 0,
 					"type": "text"
 				}
 			]
@@ -1712,7 +2149,7 @@
 	"show_open_files": true,
 	"show_tabs": true,
 	"side_bar_visible": true,
-	"side_bar_width": 180.0,
+	"side_bar_width": 148.0,
 	"status_bar_visible": true,
 	"template_settings":
 	{

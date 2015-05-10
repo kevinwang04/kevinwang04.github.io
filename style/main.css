@@ -175,7 +175,7 @@ body {
     /*本来想设置成单页面全屏效果，后来为了适配移动端还是放弃了，呜呜。。。*/
     
     border: 1px solid white;
-    background: linear-gradient(to right, #3d7c72 0, #450c79 100%);
+    /* background: #ecf0f1; */
 }
 
 #name {
@@ -231,6 +231,8 @@ body {
 .work_wrap {
     /* margin-top: 80px; */
     /*width: 80%;*/
+    background: #ecf0f1;
+    box-shadow: 0 0 2px #666;
 }
 
 .work_wrap h1 {
@@ -239,6 +241,27 @@ body {
 
 .work_on h1 {
     color: rgba(35, 139, 48, .86);
+}
+
+.work_on p{
+    width: 80%;
+    margin: 40px auto;
+    padding: 0 0 0 20px;
+    text-align: left;
+    font-family: 'Open Sans','Helvetica Neue',Arial,sans-serif;
+    font-size: 18px;
+    word-spacing: 2px;
+    letter-spacing: 0.5px;
+    color:rgba(88, 105, 86, 0.6);
+    font-weight: 300;
+    line-height: 1.2em;
+}
+
+.divid_line{
+    width: 80%;
+    color: rgba(88, 105, 86, 0.6);
+    border: 2px solid rgba(88, 105, 86, 0.6);
+    margin: 20px auto 40px;
 }
 
 .rder-right {

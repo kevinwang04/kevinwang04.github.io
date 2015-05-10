@@ -21,6 +21,13 @@ jQuery(document).ready(function($){
 		$('main').toggleClass('nav-is-visible', addOrRemove);
 		$('.cd-3d-nav-container').toggleClass('nav-is-visible', addOrRemove);
 	}
+	
+	//this function initialise the selected item
+	$('.cd-3d-nav-container li:eq(1)').addClass('cd-selected').siblings('li').removeClass('cd-selected');
+	$('.cd-marker').addClass('color-2').css({
+			'left': $('.cd-selected').offset().left
+		});
+	
 
 	//this function update the .cd-marker position
 	function updateSelectedNav(type) {
