@@ -259,6 +259,7 @@ Main Components
 }
 
 .cd-3d-nav li {
+    list-style: none;
     height: 100%;
     width: 20%;
     float: left;
