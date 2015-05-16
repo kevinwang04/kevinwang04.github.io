@@ -202,3 +202,17 @@ section {
     border-left: 5px solid rgb(255, 136, 0);
     box-shadow: 2px 2px 2px #ccc;
 }
+
+.dummy-text p a:hover,.vice_title a:hover{
+	color: #666;
+	text-decoration: underline;
+}
+
+.dummy-text p .img1{
+	width: 1100px;
+}
+ 
+.dummy-img img{
+	width: 100%;
+	height: 100%;
+}
