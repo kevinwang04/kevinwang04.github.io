@@ -192,6 +192,7 @@ body {
 
 .icon:before {
     font-family: 'fontawesome';
+    font-size: 35px;
     speak: none;
     font-style: normal;
     font-weight: normal;
@@ -205,13 +206,12 @@ body {
 .close-content {
     position: fixed;
     z-index: 1000;
-    top: 0;
-    right: 10px;
+    top: 20px;
+    right: 30px;
     font-size: 1.6em;
-    color: #aaa;
+    color: rgba(114, 169, 144, 0.83);
     cursor: pointer;
     pointer-events: none;
-    padding: 1em;
     opacity: 0;
     -webkit-transition: opacity 0.3s;
     transition: opacity 0.3s;
