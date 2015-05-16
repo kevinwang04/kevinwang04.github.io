@@ -39,7 +39,6 @@
                         <figure>
                             <h1>这个五一不寂寞</h1>
                         </figure>
-                        
                         <figure></figure>
                         <figure></figure>
                         <figure></figure>
@@ -50,8 +49,8 @@
                 </div>
                 <!-- /grid-wrap -->
                 <div class="content">
-                <div>
-                        <div class="dummy-img"><img src="img/nodejs.png" alt="nodejs"/></div>
+                    <div>
+                        <div class="dummy-img"><img src="img/nodejs.png" alt="nodejs" /></div>
                         <p class="dummy-text vice_title">最近看了一点nodejs方面的书，想了解node在服务端的运行机制，顺带使用node和express的web框架搭建了一个小型博客，并且支持使用markdown上传博文，下面就跟着我来回忆一下具体的实现流程吧。
                             <br> 需要使用技术：node/jade/express/markdown.js/router.js/bower
                             <br><a href="https://github.com/kevinwang04/node_blog">github项目源码</a>
@@ -65,151 +64,151 @@
                             <p>安装node会自带安装node的包管理工具npm,不得不说这个工具使用起来十分方便，接下来的很多安装都是基于npm来完成的。</p>
                             <p>接着是安装node非常好用的express开发框架：</p>
                             <pre><code>npm install express -g
-</code></pre>
+                                 </code></pre>
                             <p>npm安装的模块都默认放在node下node_module目录下。</p>
                             <p>继续安装博客所需模块：</p>
                             <pre><code>npm install markdown-js
-npm install path
-</code></pre>
+                                 npm install path
+                                 </code></pre>
                             <p>继续，建立一个node<em>blog的工程目录用来放置我们的博客。再在node</em>blog目录下建立views、files文件夹来存放资源。最后新建一个app.js作为我们的blog程序文件。</p>
                             <p>然后来编辑app.js：</p>
                             <p>引入模块：</p>
                             <pre><code>var express = require('express');
 
-var markdown = require('markdown-js');
+                                 var markdown = require('markdown-js');
 
-var path = require('path'); 
-</code></pre>
+                                 var path = require('path'); 
+                                 </code></pre>
                             <p>设置端口：</p>
                             <pre><code>var port = process.env.PORT || 3000;
-//启动一个web服务器
-var app = express();
-</code></pre>
+                                 //启动一个web服务器
+                                 var app = express();
+                                 </code></pre>
                             <p>监听端口： app.listen(port);
                             </p>
                             <p>打印端口信息：</p>
                             <pre><code>console.log(&quot;Express server listening on:&quot; + port); 
-</code></pre>
+                                 </code></pre>
                             <p>继续设置视图的根目录和视图的模块引擎，这里我们的模块引擎使用的是jade：</p>
                             <pre><code>app.set('views', './views')
-app.set('view engine', 'jade')
-</code></pre>
+                                 app.set('view engine', 'jade')
+                                 </code></pre>
                             <p>接着写路由部分：</p>
                             <pre><code>app.get('/', function(req, res) {
-res.render('index', {
-    title: '首页'
-})
-})
-</code></pre>
+                                 res.render('index', {
+                                     title: '首页'
+                                 })
+                                 })
+                                 </code></pre>
                             <p>写完路由得建立我们的博客首页了。在node_blog目录下建立index.jade文件作为博客的首页，并简单编辑首页内容</p>
                             <pre><code>html
-head
-    meta(charset=&quot;utf-8&quot;)
-    title #{title}
-body
-    a My First markdown blog
-    br
-    a test page
-</code></pre>
+                                 head
+                                     meta(charset=&quot;utf-8&quot;)
+                                     title #{title}
+                                 body
+                                     a My First markdown blog
+                                     br
+                                     a test page
+                                 </code></pre>
                             <p>这里有一点比较坑的是jade的语法不允许空格和制表符tab同时使用，不然会报错，所以注意一下就好。 完事了之后保存，打开命令行窗口，切换到node_blog目录下，输入：
                             </p>
                             <pre><code>node app.js
-</code></pre>
+                                 </code></pre>
                             <p>命令行会显示程序启动成功，端口为3000。这时候，我们打开浏览器，在地址栏输入localhost：3000/便能看到我们的博客主页效果：</p>
                             <p><img src="http://i.imgur.com/zhmPhdK.png" alt="index" /></p>
                             <p>ok成功了，自己体验了一下确实感觉node建站非常方便，怪不得现在觉得nodejs有意思的人越来越多。</p>
                             <p>好我们继续。刚才在index下面添加了一个链接，当然我们现在点击是无法跳转的，因为还没有设置链接地址，好我们现在就在views文件下新建一个页面文件：test.html 然后在index.jade中引入链接：
                             </p>
                             <pre><code>html
-head
-    meta(charset=&quot;utf-8&quot;)
-    title #{title}
-body
-    a(href='./blogs/test.html') My First markdown blog
-</code></pre>
+                                 head
+                                    meta(charset=&quot;utf-8&quot;)
+                                    title #{title}
+                                body
+                                    a(href='./blogs/test.html') My First markdown blog
+                                </code></pre>
                             <p>ok，链接我们引入了，接下来重点来了。我们说过是要建立一个可以使用markdown的blog，所以就得编写路由将.md文件映射成.html文件使得可以被链接访问。在这里我碰到了不少阻碍，由于对express的版本历史不熟悉，使得引入模块方面出了不少问题。深入的原因我现在还不太理解，不过还是把引入的代码列出：</p>
                             <pre><code>var logger = require('morgan');
-var methodOverride = require('method-override');
-var session = require('express-session');
-var bodyParser = require('body-parser');
-var multer = require('multer');
-var errorHandler = require('errorhandler');
-var sta = require('static')
+                                var methodOverride = require('method-override');
+                                var session = require('express-session');
+                                var bodyParser = require('body-parser');
+                                var multer = require('multer');
+                                var errorHandler = require('errorhandler');
+                                var sta = require('static')
 
-app.use(logger('dev'));
-app.use(methodOverride());
-app.use(session({ resave: true, saveUninitialized: true, secret: 'uwotm8' }));
-app.use(bodyParser.json());                          // parse application/json
-app.use(bodyParser.urlencoded({ extended: true }));  // parse application/x-www-form-urlencoded
-app.use(multer());                                   // parse multipart/form-data
-app.use(express.static(path.join(__dirname, 'public')));
-app.use(express.static(__dirname + '/public'));  
-//app.use(app.router);
-app.use(bodyParser.urlencoded({
-    extended: true
-}));
-app.use(bodyParser.json());  
-</code></pre>
+                                app.use(logger('dev'));
+                                app.use(methodOverride());
+                                app.use(session({ resave: true, saveUninitialized: true, secret: 'uwotm8' }));
+                                app.use(bodyParser.json());                          // parse application/json
+                                app.use(bodyParser.urlencoded({ extended: true }));  // parse application/x-www-form-urlencoded
+                                app.use(multer());                                   // parse multipart/form-data
+                                app.use(express.static(path.join(__dirname, 'public')));
+                                app.use(express.static(__dirname + '/public'));  
+                                //app.use(app.router);
+                                app.use(bodyParser.urlencoded({
+                                    extended: true
+                                }));
+                                app.use(bodyParser.json());  
+                                </code></pre>
                             <p>这其中需要的模块都是通过npm install引入，方法同上。</p>
                             <p>接着是编写路由映射:</p>
                             <pre><code>var fs = require('fs');
-app.engine('md', function(path, options, fn) {
-    fs.readFile(path, 'utf8', function(err, str) {
-        if (err) return fn(err);
-        str = markdown.parse(str).toString();
-        fn(null, str);
-    });
-});
+                                        app.engine('md', function(path, options, fn) {
+                                            fs.readFile(path, 'utf8', function(err, str) {
+                                                if (err) return fn(err);
+                                                str = markdown.parse(str).toString();
+                                                fn(null, str);
+                                            });
+                                        });
 
-//改变博客文章路径
-app.get('/blogs/:title.html', function(req, res, next) {  
-    var path = [  
-        'blogs/',  
-        req.params.title, '.md'  
-    ].join('');  
+                                        //改变博客文章路径
+                                        app.get('/blogs/:title.html', function(req, res, next) {  
+                                            var path = [  
+                                                'blogs/',  
+                                                req.params.title, '.md'  
+                                            ].join('');  
 
-    console.log(path)  
-    res.render(path, {layout: false});  
-})  
+                                            console.log(path)  
+                                            res.render(path, {layout: false});  
+                                        })  
 
-//添加对文件是否存在的判断
-app.get('/blogs/:title.html', function(req, res, next) {  
+                                        //添加对文件是否存在的判断
+                                        app.get('/blogs/:title.html', function(req, res, next) {  
 
-    var urlPath = [  
-        'blogs/',  
-        req.params.title, '.md'  
-    ].join('');  
+                                            var urlPath = [  
+                                                'blogs/',  
+                                                req.params.title, '.md'  
+                                            ].join('');  
 
-    var filePath = path.normalize('./' + urlPath);  
-    path.exists(filePath, function  (exists) {  
-        if(!exists) {  
-            next();  
-        } else {  
-            res.render(urlPath, {layout: false});  
-        }  
-    });  
+                                            var filePath = path.normalize('./' + urlPath);  
+                                            path.exists(filePath, function  (exists) {  
+                                                if(!exists) {  
+                                                    next();  
+                                                } else {  
+                                                    res.render(urlPath, {layout: false});  
+                                                }  
+                                            });  
 
-})  
-</code></pre>
+                                        })  
+                                        </code></pre>
                             <p>ok,妥了，这样一来，我们的markdown文件就可以被当做html文件用链接访问到了。那我们就接着来到views文件夹下，把.html全部都改成.md。然后打开test.md开始编辑：</p>
                             <pre><code>this is a demo page
-====================
-## hello markdown! ##
-</code></pre>
+                            ====================
+                            ## hello markdown! ##
+                            </code></pre>
                             <p>好 我们已经重新改变了博客代码，所以要重启我们的程序。 按住ctrl+c退出程序，继续node app.js后去浏览器查看效果。在浏览器窗口打开localhost:3000，继续点击 <strong>My First markdown blog</strong>链接， 成功了~
                             </p>
                             <p><img src="http://i.imgur.com/zXdbLoA.png" alt="test" /></p>
                             <p>大功告成，接下来写了一个最近安卓学习的总结java_note.md放在viws下 然后在index.jade中引入
                             </p>
                             <pre><code>html
-head
-    meta(charset=&quot;utf-8&quot;)
-    title #{title}
-body
-    a(href='./blogs/test.html') My First markdown blog
-    br
-    a(href='./blogs/java_note.html') markdown test page
-</code></pre>
+                                head
+                                    meta(charset=&quot;utf-8&quot;)
+                                    title #{title}
+                                body
+                                    a(href='./blogs/test.html') My First markdown blog
+                                    br
+                                    a(href='./blogs/java_note.html') markdown test page
+                                </code></pre>
                             <p>继续重启服务器，在浏览器中看到效果：</p>
                             <p><img src="http://i.imgur.com/twDLCrP.png" alt="Android" class="img1" /></p>
                             <p>perfect~至此，一个使用nodejs搭建的简单的支持markdown的博客就建成了，一想到可以如此轻松的写博客，心里只有一个字，舒坦！</p>
@@ -236,7 +235,6 @@ body
                         <div class="ds-thread" data-thread-key="2" data-title="jQuery" data-url="http://kevinwang04.github.io/blog_articles/article_index.html"></div>
                         <!-- 多说评论框 end -->
                     </div>
-                    
                     <div>
                         <div class="dummy-img"></div>
                         <p class="dummy-text vice_title">The only people for me are the mad ones, the ones who are mad to live, mad to talk, mad to be saved, desirous of everything at the same time, the ones who never yawn or say a commonplace thing, but burn, burn, burn like fabulous yellow roman candles exploding like spiders across the stars.</p>
@@ -301,10 +299,10 @@ body
                 <a href="#">blogs</a>
             </li>
             <li>
-                <a href="#">Images</a>
+                <a href="#">projects</a>
             </li>
             <li>
-                <a href="#">projects</a>
+                <a href="#">resume</a>
             </li>
             <li>
                 <a href="#">contact me</a>
