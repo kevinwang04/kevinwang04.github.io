@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="zh" class="no-js">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<link href='http://fonts.useso.com/css?family=Open+Sans:400,300,600,700' rel='stylesheet' type='text/css'>
+
+	<link rel="stylesheet" href="css/reset.css"> <!-- CSS reset -->
+	<link rel="stylesheet" href="css/style.css"> <!-- Resource style -->
+	<script src="js/modernizr.js"></script> <!-- Modernizr -->
+</head>
+<body>
+	<header class="cd-header">
+		<a href="#" class="cd-logo"><img src="../logo.png" alt="Logo" class="logo"></a>
+		<a href="#" class="cd-3d-nav-trigger">
+			Menu
+			<span></span>
+		</a>
+	</header> <!-- .cd-header -->
+	
+	<main>
+		<div class="htmleaf-content">
+		   <canvas class="snow-canvas" speed="1" interaction="false" size="2" count="80" opacity="0.00001" start-color="rgba(253,252,251,1)" end-color="rgba(251,252,253,0.3)" wind-power="0" image="false" width="1366" height="667"></canvas>
+		   <canvas class="snow-canvas" speed="3" interaction="true" size="6" count="30" start-color="rgba(253,252,251,1)" end-color="rgba(251,252,253,0.3)" opacity="0.00001" wind-power="2" image="false" width="1366" height="667"></canvas>
+		    <canvas class="snow-canvas" speed="3" interaction="true" size="12" count="40" wind-power="-5" image="img/snow.png" width="1366" height="667"></canvas>
+		    <div class="resume_container">
+		    	<div class="resume_impress resume_box">
+		    		<a href="impress/impress.html">
+		    			
+		    		</a>
+		    	</div>
+		    	<div class="resume_pdf resume_box">
+		    		<a href="pdf.html">
+		    			
+		    		</a>
+		    	</div>
+	    	</div>
+	    	
+	    </div>
+	   
+	</main>
+	
+	<nav class="cd-3d-nav-container">
+		<ul class="cd-3d-nav">
+			<li class="cd-selected">
+				<a href="../index.html">home</a>
+			</li>
+
+			<li>
+				<a href="../blog_articles/article_index.html">blog</a>
+			</li>
+
+			<li>
+				<a href="http://www.htmleaf.com/">projects</a>
+			</li>
+
+			<li>
+				<a href="javascript:void">resume</a>
+			</li>
+
+			<li>
+				<a href="../contact_me/contact_me_index.html">contact me</a>
+			</li>
+		</ul> <!-- .cd-3d-nav -->
+
+		<span class="cd-marker color-1"></span>	
+	</nav> <!-- .cd-3d-nav-container -->
+<script src="http://libs.useso.com/js/jquery/2.1.1/jquery.min.js"></script>
+<script src="js/main.js"></script> <!-- Resource jQuery -->
+<script src="js/snow-plugin.js"></script>
+<script>
+		$(function(){
+			$(".snow-canvas").snow();
+		});
+</script>
+</body>
+</html>
