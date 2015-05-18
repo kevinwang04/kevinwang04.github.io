@@ -31,11 +31,16 @@ a {
 }
 
 .htmleaf-content{
-  
+    position: relative;
+    overflow: hidden;
+    height: 100%;
 }
 
 .cd-header {
+    position: fixed;
+    z-index: 100;
     height: 80px;
+    width: 100%;
     margin: 0 auto;
     -webkit-transition: -webkit-transform 0.5s;
     -moz-transition: -moz-transform 0.5s;
@@ -513,17 +518,16 @@ main.nav-is-visible {
     }
     .resume_container{
         position: absolute;
-        width: 500px;
+        width: 600px;
         margin: 0 auto;
         position: relative;
         top:260px;
     }
     .resume_box{
         float: left;
-        margin-left: 40px;
-        width: 200px;
-        height: 200px;
-        background-color: #ccc;
+        width: 600px;
+        height: 360px;
+        background-color:rgba(250, 252, 250, 0.38);
     }
     .resume_box a{
         width: 100%;
@@ -536,17 +540,18 @@ main.nav-is-visible {
     .resume_container{
         position: absolute;
         width: 70%;
+        height: 40%;
         margin: 50px auto;
         position: relative;
-        top:200px;
+        top:130px;
     }
     .resume_box{
         margin: 0 auto;
         position: relative;
         margin-top: 50px;
         width: 80%;
-        height: 200px;
-        background-color: #ccc;
+        height: 100%;
+        background-color: rgba(250, 252, 250, 0.38);
     }
     .resume_box a{
         width: 100%;

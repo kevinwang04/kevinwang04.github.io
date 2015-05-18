@@ -34,12 +34,14 @@
                             <h1>使用nodejs和markdown搭建博客   </h1>
                         </figure>
                         <figure>
-                            <h1>实现一个jQuery选择器</h1>
+                            <h1>前端-技术birdsview</h1>
                         </figure>
                         <figure>
-                            <h1>这个五一不寂寞</h1>
+                            <h1>浅谈javascript原型模式</h1>
                         </figure>
-                        <figure></figure>
+                        <figure>
+                            <h1></h1>
+                        </figure>
                         <figure></figure>
                         <figure></figure>
                         <figure></figure>
@@ -229,8 +231,151 @@
                     </div>
                     <div>
                         <div class="dummy-img"></div>
-                        <p class="dummy-text vice_title">The only people for me are the mad ones, the ones who are mad to live, mad to talk, mad to be saved, desirous of everything at the same time, the ones who never yawn or say a commonplace thing, but burn, burn, burn like fabulous yellow roman candles exploding like spiders across the stars.</p>
-                        <p class="dummy-text">The only people for me are the mad ones, the ones who are mad to live, mad to talk, mad to be saved, desirous of everything at the same time, the ones who never yawn or say a commonplace thing, but burn, burn, burn like fabulous yellow roman candles exploding like spiders across the stars.</p>
+                        <p class="dummy-text vice_title">js是一门面向对象的语言,然而却早有听闻其实现面向对象的过程和思想和其他语言不相类似.最近通过看Nicholas的那本被誉为 js圣经的javascript高级程序设计,还是比较清晰的理解了一下js面向对象的设计模式.下面就跟着书上的思路总结一下,顺带也帮助自己理清思路.</p>
+                        <div class="dummy-text">
+                            <p>
+                                作者在书中是从理解对象的概念开始讲,这里就不做赘述,直接进入创建对象的模式.
+                            </p>
+                            <ul>
+                                <li>
+                                    工厂模式
+                                </li>
+                            </ul>
+                            <blockquote>
+                                <p>
+                                    工厂模式是 软件工程领域一种广为人知的设计模式,这种模式抽象了创建具体对象的过程.
+                                </p>
+                            </blockquote>
+                            <p>
+                                我理解的工厂模式就像是现实生活中工厂用于制造特定产品的模具,可以快速生成对象模型.
+                                <br/> 书中代码:
+                            </p>
+                            <pre><code>function creatPerson(name,age,job){
+var o = new Object ();
+o.name = name;
+o.age = age;
+o.job = job;
+o.sayName = function(){
+alert(this.name);
+};
+}
+var person1 = creatPerson("kevinwang","20","student");
+var person2 = creatPerson("miaoge","22","student");
+</code></pre>
+                            <p>
+                                工厂模式的弊端在于没有解决如何识别一个对象类型的问题.
+                            </p>
+                            <ul>
+                                <li>
+                                    构造函数模式
+                                </li>
+                            </ul>
+                            <p>
+                                构造函数模式模式在javascript中应该算是比较常见的一种方式,在我理解其主要区别于工厂模式是在于在构造函数内使用this对象,以及用new操作符直接实例化一个对象取代return一个显式定义的对象.
+                            </p>
+                            <pre><code>function Person(name,age,job){
+this.name = name;
+this.age = age;
+this.job = job;
+this.sayName = function(){
+alert(this.name);
+};
+}
+var person1 = new Person("kevinwang","20","student");
+var person2 = new Person("miaoge","22","student");
+</code></pre>
+                            <p>
+                                当然构造函数也有自身的弊端,它的缺点就是每个方法(比如上面的alert方法)都要在创建的每一个实例中实现一遍,当然也可以把实例中同样任务的函数移到构造函数外通过this对象实现同样的功能.但是缺点就是当实例对象需要很多方法的时候,我们所定义的引用的封装性就会很差.
+                            </p>
+                            <ul>
+                                <li>
+                                    原型模式
+                                </li>
+                            </ul>
+                            <blockquote>
+                                <p>
+                                    我们创建的每一个函数都有一个prototype属性,这个属性是一个指针,指向一个对象,而这个对象的用途是包含可以由特定类型的所有实例共享的属性和方法.
+                                </p>
+                            </blockquote>
+                            <p>
+                                "特定类型的所有实例共享的属性和方法",最开始并不能很好地理解这句话,不明白为何在创建一个函数时要为它默认创建一个包含指向该函数的constructor属性的原型对象,而后来却发现这种设计模式有种独到
+                                <br/> 的优势在于当创建一个实例时,我们可以最大限度的使用原型对象中的共有属性部分,而特定实例的私有属性方法或者需要覆盖原型中的某些属性我们也可以放心大胆的去定义而不会改变原型对象.
+                                <br/> 此外
+                                 <strong>
+    使用原型模式必须要注意的一点就是原型的动态性
+   </strong> ,当某个原型修改为另一个对象就等于切断了构造函数和最初原型的联系,导致再次通过该构造函数实例的对象将不具有最初的原型对象的属性.可能的避免方法有两个:
+                                <br/> 1.在重写的原型中加入构造器属性并指向原先的构造函数.
+                                <br/> 2.不要使用字面量方法完全的重写原型,使用原型的属性方法添加或改变原型.
+                            </p>
+                            <p>
+                                当然共享的本质也为原型带来一些问题,对于包含引用类型值的属性来说,改变引用中属性的值将导致其他基于该原型属性的实例中的该属性也发生变化,而这可能是我们不愿意看到的,所以我们就有了更好的模式.
+                            </p>
+                            <ul>
+                                <li>
+                                    组合使用构造函数和原型模式
+                                </li>
+                            </ul>
+                            <p>
+                                使用构造函数定义实例的私有属性,原型来定义实例所共同享有的属性,这不失为一种良策
+                            </p>
+                            <pre><code>function Person(name,age,job){
+this.name = name;
+this.age = age;
+this.job = job;
+this.friends = ["shelby","Court"];
+}
+Person.prototype = {
+constructor:Person
+sayName:function(){
+alert(this.name);
+};
+}
+
+var person1 = new Person("Nicholas","29","Engineer");
+var person2 = new Person("kevinwang","20","student");
+</code></pre>
+                            <p>
+                                <strong>
+    组合模式可以说是定义引用类型的默认模式
+   </strong>
+                            </p>
+                            <hr/>
+                            <p>
+                                除此之外,还有类似于:动态原型模式/寄生构造函数模式/稳妥构造函数模式等都是具有各自的特性,需要结合具体的实例来确定使用何种创建模式.
+                                <br/> 另外,javascript的继承方式也可谓剑走偏锋---
+                            </p>
+                            <ul>
+                                <li>
+                                    <p>
+                                        基于原型链的继承
+                                    </p>
+                                </li>
+                                <li>
+                                    <p>
+                                        借用构造函数
+                                    </p>
+                                </li>
+                                <li>
+                                    <p>
+                                        组合继承
+                                    </p>
+                                </li>
+                                <li>
+                                    <p>
+                                        原型式继承
+                                    </p>
+                                </li>
+                                <li>
+                                    <p>
+                                        寄生式继承以及寄生组合式继承
+                                    </p>
+                                </li>
+                            </ul>
+                            <p>
+                                各种继承方式的优劣还是有不少可以细品,择日再谈.
+                                <br/> 谢谢观赏.
+                            </p>
+                        </div>
                         <!-- 多说评论框 start -->
                         <div class="ds-thread" data-thread-key="2" data-title="jQuery" data-url="http://kevinwang04.github.io/blog_articles/article_index.html"></div>
                         <!-- 多说评论框 end -->
