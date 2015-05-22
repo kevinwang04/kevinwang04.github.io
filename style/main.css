@@ -173,6 +173,7 @@ body {
 }
 
 #welcome_context {
+    background: url(../bg2.png) no-repeat top left 100%;
     position: relative;
     width: 100%;
     padding-bottom: 20px;
