@@ -646,11 +646,20 @@ main.nav-is-visible
     }*/
     .resume_box a
     {
+        font-size: 20px;
+        line-height: 30px;
         display: block;
-
-        width: 100%;
-        height: 100%;
+        margin: 0 auto;
+        background-color: white;
+        width: 100px;
+        height: 30px;
+        color:  black;
     }
+     .resume_box a:hover{
+        text-decoration: none;
+        color: white;
+        background-color:#041212;
+     }
     /* 矢量图svg部分· */
     .progress
     {
@@ -671,8 +680,8 @@ main.nav-is-visible
     }
     .progress .more_info{
         margin-top: 15px;
-        width: 50px;
-        height: 20px;
+        width: 100%;
+        height: 30px;
     }
 
 }
@@ -702,11 +711,20 @@ main.nav-is-visible
    } */
     .resume_box a
     {
+        font-size: 20px;
+        line-height: 30px;
         display: block;
-
-        width: 100%;
-        height: 100%;
+        margin: 0 auto;
+        background-color: white;
+        width: 100px;
+        height: 30px;
+        color:  black;
     }
+     .resume_box a:hover{
+        text-decoration: none;
+        color: white;
+        background-color:#041212;
+     }
     /* 矢量图svg部分· */
     .progress
     {
