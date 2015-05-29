@@ -1,16 +1,14 @@
 <!doctype html>
 <html lang="zh">
+
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=1024" />
     <meta name="apple-mobile-web-app-capable" content="yes" />
-    <title>impress.js | presentation tool based on the power of CSS3 transforms and transitions in modern browsers | by Bartek Szopka @bartaz</title>
-    
+    <title>kevinwang的在线简历</title>
     <meta name="description" content="impress.js is a presentation tool based on the power of CSS3 transforms and transitions in modern browsers and inspired by the idea behind prezi.com." />
     <meta name="author" content="Bartek Szopka" />
-
     <link href="http://fonts.googleapis.com/css?family=Open+Sans:regular,semibold,italic,italicsemibold|PT+Sans:400,700,400italic,700italic|PT+Serif:400,700,400italic,700italic" rel="stylesheet" />
-
     <!--
         
         Impress.js doesn't depend on any external stylesheets. It adds all of the styles it needs for the
@@ -27,11 +25,9 @@
         
     -->
     <link href="css/impress-demo.css" rel="stylesheet" />
-    
-    <link rel="shortcut icon" href="favicon.png" />
+    <link rel="shortcut icon" href="../../shortcut.png" />
     <link rel="apple-touch-icon" href="apple-touch-icon.png" />
 </head>
-
 <!--
     
     Body element is used by impress.js to set some useful class names, that will allow you to detect
@@ -50,20 +46,18 @@
     it can be found later, when `hint` element is being described.
     
 -->
-<body class="impress-not-supported">
 
-<!--
+<body class="impress-not-supported">
+    <!--
     For example this fallback message is only visible when there is `impress-not-supported` class on body.
 -->
-<div class="back_menu">
-    <a href="../resume_index.html"></a>
-</div>
-<div class="fallback-message">
-    <p>Your browser <b>doesn't support the features required</b> by impress.js, so you are presented with a simplified version of this presentation.</p>
-    <p>For the best experience please use the latest <b>Chrome</b>, <b>Safari</b> or <b>Firefox</b> browser.</p>
-</div>
-
-<!--
+    <div class="back_menu">
+        <a href="../resume_index.html"></a>
+    </div>
+    <div class="fallback-message">
+        <p>啊哈，手机浏览效果不够赞哦，建议使用PC端 <b>Chrome</b>, <b>Safari</b> or <b>Firefox</b> 浏览器浏览。</p>
+    </div>
+    <!--
     
     Now that's the core element used by impress.js.
     
@@ -84,9 +78,8 @@
     right around the corner of this tag ;)
     
 -->
-<div id="impress">
-
-    <!--
+    <div id="impress">
+        <!--
         
         Here is where interesting thing start to happen.
         
@@ -103,11 +96,21 @@
         It will not be rotated or scaled.
         
     -->
-    <div id="bored" class="step slide" data-x="-1000" data-y="-1500">
-        <q>Aren't you just <b>bored</b> with all those slides-based presentations?</q>
-    </div>
-
-    <!--
+        <div id="bored" class="step " data-x="-1000" data-y="-1500">
+            <q><strong>基本信息：</strong>
+                <br> 王欢/男/北京科技大学/计算机与通信工程学院/通信工程/大二/
+                <br>
+                <strong>联系方式：</strong>
+                 <br>
+                <a href="http://kevinwang04.github.io">个人主页</a>
+                <br>
+                <a href="http://github.com/kevinwang04">github</a>
+                <br>
+                <a href="mailto:kavinwang04@gmail.com"> Email</a>
+                <br> qq:1059002908
+            </q>
+        </div>
+        <!--
         
         The `id` attribute of the step element is used to identify it in the URL, but it's optional.
         If it is not defined, it will get a default value of `step-N` where N is a number of slide.
@@ -122,15 +125,23 @@
         Using classic `id`-based links like `#step-2` makes these links usable also in fallback mode.
         
     -->
-    <div class="step slide" data-x="0" data-y="-1500">
-        <q>Don't you think that presentations given <strong>in modern browsers</strong> shouldn't <strong>copy the limits</strong> of 'classic' slide decks?</q>
-    </div>
-
-    <div class="step slide" data-x="1000" data-y="-1500">
-        <q>Would you like to <strong>impress your audience</strong> with <strong>stunning visualization</strong> of your talk?</q>
-    </div>
-
-    <!--
+        <div class="step " data-x="0" data-y="-1500">
+            <p>对这些挺感兴趣：
+                <br>
+            </p>
+            <p class="skill_list">
+                    1.web前端
+                <br> 2.web服务端
+                <br> 3.移动端
+                <br> 4.设计
+                <br> 5.漂亮妹子
+            </p>
+        </div>
+        <div class="step " data-x="1000" data-y="-1500">
+            <q>so...
+                <br> 作为准前端攻城湿，俺都会些啥？</q>
+        </div>
+        <!--
         
         This is an example of step element being scaled.
         
@@ -140,13 +151,19 @@
         down (4 times) to make it back to its correct size.
         
     -->
-    <div id="title" class="step" data-x="0" data-y="0" data-scale="4">
-        <span class="try">then you should try</span>
-        <h1>impress.js<sup>*</sup></h1>
-        <span class="footnote"><sup>*</sup> no rhyme intended</span>
-    </div>
-
-    <!--
+        <div id="title" class="step" data-x="0" data-y="0" data-scale="4">
+            <p>略掌握：
+                <br> HTML/CSS/JavaScript/HTML5&css3/XML
+            </p>
+            <p>略会使：
+                <br> bootstrap/jQuery/jQueryUI/JSON/jQuery-mobile/nodejs/zepto.js/bower/npm/Grunt.js<br>/markdown/git/
+            </p>
+            <p>略知晓：
+                <br> HTTP/angularJS/common.js/AMD/underscore.js/
+                <br>backbone.js/Canvas/DOM/XSS/Ajax/less/cookie/
+            </p>
+        </div>
+        <!--
         
         This element introduces rotation.
         
@@ -154,17 +171,25 @@
         element should be rotated by 90 degrees clockwise.
         
     -->
-    <div id="its" class="step" data-x="850" data-y="3000" data-rotate="90" data-scale="5">
-        <p>It's a <strong>presentation tool</strong> <br/>
-        inspired by the idea behind <a href="http://prezi.com">prezi.com</a> <br/>
-        and based on the <strong>power of CSS3 transforms and transitions</strong> in modern browsers.</p>
-    </div>
+        <div id="its" class="step" data-x="850" data-y="3000" data-rotate="90" data-scale="5">
+            <p>
+                <strong>俗话说；涛克易思气扑，show me the work：</strong>
+                 <br>
+                <a href="http://kevinwang04.github.io">个人主页</a>
+                <br>
+                <a href="http://www.o-odata.cn">企业demo</a>
+                <br>
+                <a href="https://kevinwang04.github.io/old_blog/old_index.html"> 博客1.0</a>
+            </p>
+        </div>
 
-    <div id="big" class="step" data-x="3500" data-y="2100" data-rotate="180" data-scale="6">
-        <p>visualize your <b>big</b> <span class="thoughts">thoughts</span></p>
-    </div>
-
-    <!--
+        <div id="big" class="step" data-x="3500" data-y="2100" data-rotate="180" data-scale="4">
+            <p>
+                俗话又说，不想当 <b class="rotating">全栈</b>的前端不是好码农，so...
+                <br/> 是时候进军大后端了
+            </p>
+        </div>
+        <!--
         
         And now it gets really exciting! We move into third dimension!
         
@@ -173,11 +198,25 @@
         positioned far away from us (by 3000px).
         
     -->
-    <div id="tiny" class="step" data-x="2825" data-y="2325" data-z="-3000" data-rotate="300" data-scale="1">
-        <p>and <b>tiny</b> ideas</p>
-    </div>
-
-    <!--
+        <div id="tiny" class="step" data-x="2825" data-y="2325" data-z="-3000" data-rotate="300" data-scale="1">
+            <p>
+                <ul>
+                    <li>linux/windows + Apache + mysql + php </li>
+                    <li>熟悉简单的服务器搭建和管理</li>
+                    <li>了解基本数据库操作 </li>
+                    <li>理解php后台MVC结构 </li>
+                    <li>把玩过wordpress.</li>
+                    <li>nodejs:node + express + jade +mongoDB </li>
+                    <li>python: 使用scrapy框架写一些网页spider</li>
+                </ul> 
+                
+                
+                 
+                
+               
+            </p>
+        </div>
+        <!--
         
         This step here doesn't introduce anything new when it comes to data attributes, but you
         should notice in the demo that some words of this text are being animated.
@@ -197,24 +236,43 @@
         Only one current step has the `present` class.
         
     -->
-    <div id="ing" class="step" data-x="3500" data-y="-850" data-rotate="270" data-scale="6">
-        <p>by <b class="positioning">positioning</b>, <b class="rotating">rotating</b> and <b class="scaling">scaling</b> them on an infinite canvas</p>
-    </div>
+        <div id="ing" class="step" data-x="3500" data-y="-850" data-rotate="270" data-scale="6">
+            <p>嗯哼， <b class="positioning">cocos2d-html5</b>和<b class="rotating">webGL</b> 以及 <b class="scaling">hybrid应用开发</b>也是很有意思的嘛...
+            </p>
+        </div>
 
-    <div id="imagination" class="step" data-x="6700" data-y="-300" data-scale="6">
-        <p>the only <b>limit</b> is your <b class="imagination">imagination</b></p>
-    </div>
+        <div id="imagination" class="step" data-x="6700" data-y="-300" data-scale="6">
+            <p> 最近也关注这些...<br>
+                
+                <a href="http://zhuanlan.zhihu.com/FrontendMagazine">前端外刊</a>
+                <br>
+                <a href="http://zhuanlan.zhihu.com/qianduan">前端小记</a>
+                <br>
+                <a href="http://www.imooc.com/space/index">慕课</a>
+                <br>
+                <a href="http://codepen.io/">codepen</a>
+                <br>
+                 <a href="http://dribbble.com/">dribbble</a>
+                <br>
+                <a href="https://github.com/baidu-ife/ife">百度前端技术学院</a>
+                <br>
+            </p>
+        </div>
 
-    <div id="source" class="step" data-x="6300" data-y="2000" data-rotate="20" data-scale="4">
-        <p>want to know more?</p>
-        <q><a href="http://github.com/bartaz/impress.js">use the source</a>, Luke!</q>
-    </div>
+        <div id="source" class="step" data-x="6300" data-y="2500" data-rotate="90" data-scale="3">
+            <p class="daily">透露一下日常<br>
+                操作系统：Linux Ubuntu14.04、win7<br>
+                编辑器：sublime text3、vim、gedit<br>
+                IDE：eclipse、webstorm<br>
+                debug工具：chrome devTool、firebug、<br>
+            </p>
+            
+        </div>
 
-    <div id="one-more-thing" class="step" data-x="6000" data-y="4000" data-scale="2">
-        <p>one more thing...</p>
-    </div>
-
-    <!--
+        <div id="one-more-thing" class="step" data-x="6000" data-y="4000" data-scale="2">
+            <p>one more thing...</p>
+        </div>
+        <!--
         
         And the last one shows full power and flexibility of impress.js.
         
@@ -226,12 +284,12 @@
         as `data-rotate` (these two are basically aliases).
         
     -->
-    <div id="its-in-3d" class="step" data-x="6200" data-y="4300" data-z="-100" data-rotate-x="-40" data-rotate-y="10" data-scale="2">
-        <p><span class="have">have</span> <span class="you">you</span> <span class="noticed">noticed</span> <span class="its">it's</span> <span class="in">in</span> <b>3D<sup>*</sup></b>?</p>
-        <span class="footnote">* beat that, prezi ;)</span>
-    </div>
-
-    <!--
+        <div id="its-in-3d" class="step" data-x="6200" data-y="4300" data-z="-100" data-rotate-x="-40" data-rotate-y="10" data-scale="2">
+            <p><span class="have">正在</span> <span class="you">寻觅</span> <span class="noticed">2015</span> <span class="its">暑假</span> <span class="in"></span> <b>实习中<sup></sup></b>，</p>
+            <span class="footnote">客官，求勾搭哟~<br>
+            <a href="mailto:kavinwang04@gmail.com"> 邮件戳我</a></span>
+        </div>
+        <!--
         
         So to summarize of all the possible attributes used to position presentation steps, we have:
         
@@ -246,12 +304,10 @@
         CSS transfrom docs: https://developer.mozilla.org/en/CSS/transform
         
     -->
-    <div id="overview" class="step" data-x="3000" data-y="1500" data-scale="10">
+        <div id="overview" class="step" data-x="3000" data-y="1500" data-scale="10">
+        </div>
     </div>
-
-</div>
-
-<!--
+    <!--
     
     Hint is not related to impress.js in any way.
     
@@ -275,16 +331,15 @@
     Just sayin' ;)
     
 -->
-<div class="hint">
-    <p>Use a spacebar or arrow keys to navigate</p>
-</div>
-<script>
-if ("ontouchstart" in document.documentElement) { 
-    document.querySelector(".hint").innerHTML = "<p>Tap on the left or right to navigate</p>";
-}
-</script>
-
-<!--
+    <div class="hint">
+        <p>使用空格或方向键继续</p>
+    </div>
+    <script>
+    if ("ontouchstart" in document.documentElement) {
+        document.querySelector(".hint").innerHTML = "<p>Tap on the left or right to navigate</p>";
+    }
+    </script>
+    <!--
     
     Last, but not least.
     
@@ -299,10 +354,11 @@ if ("ontouchstart" in document.documentElement) {
     Of course you can wrap it in any kind of "DOM ready" event, but I was too lazy to do so ;)
     
 -->
-<script src="js/impress.js"></script>
-<script>impress().init();</script>
-
-<!--
+    <script src="js/impress.js"></script>
+    <script>
+    impress().init();
+    </script>
+    <!--
     
     The `impress()` function also gives you access to the API that controls the presentation.
     
@@ -326,10 +382,9 @@ if ("ontouchstart" in document.documentElement) {
     is used in event handlers.
     
 -->
-
 </body>
-</html>
 
+</html>
 <!--
     
     Now you know more or less everything you need to build your first impress.js presentation, but before
@@ -358,7 +413,6 @@ if ("ontouchstart" in document.documentElement) {
     Think about it. 'Cause impress.js may not help you, if you have nothing interesting to say.
     
 -->
-
 <!--
     
     Are you still reading this?
@@ -374,4 +428,3 @@ if ("ontouchstart" in document.documentElement) {
     Cheers!
     
 -->
-
