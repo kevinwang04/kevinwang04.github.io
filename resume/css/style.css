@@ -646,7 +646,8 @@ main.nav-is-visible
     }*/
     .resume_box a
     {
-        font-size: 20px;
+        font-size: 13px;
+        font-family: 'Open Sans', 'Helvetica Neue', Helvetica, 'Hiragino Sans GB', 'Microsoft YaHei', 'Source Han Sans CN', 'WenQuanYi Micro Hei', Arial, sans-serif;
         line-height: 30px;
         display: block;
         margin: 0 auto;
@@ -654,6 +655,8 @@ main.nav-is-visible
         width: 100px;
         height: 30px;
         color:  black;
+        border-radius: 20px;
+       /*  box-shadow: 2px 2px 2px #666; */
     }
      .resume_box a:hover{
         text-decoration: none;
@@ -711,7 +714,8 @@ main.nav-is-visible
    } */
     .resume_box a
     {
-        font-size: 20px;
+        font-size: 13px;
+        font-family: 'Open Sans', 'Helvetica Neue', Helvetica, 'Hiragino Sans GB', 'Microsoft YaHei', 'Source Han Sans CN', 'WenQuanYi Micro Hei', Arial, sans-serif;
         line-height: 30px;
         display: block;
         margin: 0 auto;
@@ -719,6 +723,7 @@ main.nav-is-visible
         width: 100px;
         height: 30px;
         color:  black;
+        border-radius: 20px;
     }
      .resume_box a:hover{
         text-decoration: none;
@@ -743,4 +748,11 @@ main.nav-is-visible
     {
         display: inline-block;
     }
+}
+
+svg text{
+    font-family: 微软雅黑;
+    font-size: 20px;
+    color: black;
+
 }
