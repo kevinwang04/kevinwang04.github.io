@@ -20,6 +20,18 @@
 		{
 			"follow_symlinks": true,
 			"path": "G:\\NEWsoftware\\nodeJS\\node_blog"
+		},
+		{
+			"follow_symlinks": true,
+			"path": "G:\\NEWsoftware\\nodeJS\\angular-js"
+		},
+		{
+			"follow_symlinks": true,
+			"path": "F:\\kevin software\\github\\peng"
+		},
+		{
+			"follow_symlinks": true,
+			"path": "G:\\NEWsoftware\\nodeJS\\hexo_blog"
 		}
 	]
 }

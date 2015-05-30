@@ -278,13 +278,13 @@ p.dummy-text:nth-child(3) {
     -webkit-transition-delay: 0.2s;
     transition-delay: 0.2s;
 }
-
+@media screen and (min-width: 768px){
 .dummy-img {
     height: 400px;
     background-color: #ddd;
     margin: 30px auto;
 }
-
+}
 .dummy-text {
     text-align: left;
     margin: 0 auto;
