@@ -731,3 +731,9 @@ a:focus {
  .daily{
     margin-top: 150px;
  }
+ #title p{
+    font-size: 35px;
+ }
+ #tiny{
+    font-size: 35px;
+ }
