@@ -32,6 +32,18 @@
 		{
 			"follow_symlinks": true,
 			"path": "G:\\NEWsoftware\\nodeJS\\hexo_blog"
+		},
+		{
+			"follow_symlinks": true,
+			"path": "G:\\NEWsoftware\\nodeJS\\N-blog"
+		},
+		{
+			"follow_symlinks": true,
+			"path": "G:\\NEWsoftware\\nodeJS\\Ghost"
+		},
+		{
+			"follow_symlinks": true,
+			"path": "G:\\NEWsoftware\\nodeJS\\N-chat"
 		}
 	]
 }
