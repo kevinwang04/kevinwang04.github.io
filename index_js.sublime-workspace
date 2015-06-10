@@ -4,6 +4,42 @@
 		"selected_items":
 		[
 			[
+				"coo",
+				"cookieValue〔argument〕"
+			],
+			[
+				"exp",
+				"expires〔variable〕"
+			],
+			[
+				"ex",
+				"exdate"
+			],
+			[
+				"el",
+				"else"
+			],
+			[
+				"nav",
+				"navigator〔variable〕"
+			],
+			[
+				"sele",
+				"select	.select()"
+			],
+			[
+				"deb",
+				"debugger〔keyword〕"
+			],
+			[
+				"lists",
+				"list-style"
+			],
+			[
+				"play",
+				"playimg"
+			],
+			[
 				"fone",
 				"font-size"
 			],
@@ -478,68 +514,51 @@
 			[
 				"text",
 				"text-transform"
-			],
-			[
-				"backgr",
-				"background-color"
-			],
-			[
-				"list",
-				"list-style-type"
-			],
-			[
-				"st",
-				"style	Tag"
-			],
-			[
-				"bor",
-				"border-right"
-			],
-			[
-				"wid",
-				"width"
-			],
-			[
-				"backgrou",
-				"background-color"
-			],
-			[
-				"ta",
-				"target	Attr"
-			],
-			[
-				"ce",
-				"cellspacing	Attr"
-			],
-			[
-				"cel",
-				"cellpadding	Attr"
 			]
 		]
 	},
 	"buffers":
 	[
 		{
-			"file": "/G/NEWsoftware/nodeJS/N-blog/package.json",
+			"file": "/F/kevin software/github/peng/js/index_js.js",
 			"settings":
 			{
-				"buffer_size": 494,
+				"buffer_size": 4801,
 				"line_ending": "Windows"
 			}
 		},
 		{
-			"file": "/G/NEWsoftware/nodeJS/Ghost/CONTRIBUTING.md",
+			"file": "/F/kevin software/github/Hbuider/hello_Hbuider/test.js",
 			"settings":
 			{
-				"buffer_size": 10869,
+				"buffer_size": 4447,
 				"line_ending": "Windows"
 			}
 		},
 		{
-			"file": "/G/NEWsoftware/nodeJS/N-chat/public/javascripts/chat.js",
+			"contents": "\n    function runImg(){}\n    runImg.prototype={\n        bigbox:null,//最外层容器\n        boxul:null,//子容器ul\n        imglist:null,//子容器img\n        numlist:null,//子容器countNum\n        prov:0,//上次显示项\n        index:0,//当前显示项\n        timer:null,//控制图片转变效果\n        play:null,//控制自动播放\n        imgurl:[],//存放图片\n        count:0,//存放的个数\n        $:function(obj)\n        {\n            if(typeof(obj)==\"string\")\n            {\n                if(obj.indexOf(\"#\")>=0)\n                {\n                    obj=obj.replace(\"#\",\"\");\n                    if(document.getElementById(obj))\n                    {\n                        return document.getElementById(obj);\n                    }\n                    else\n                    {\n                        alert(\"没有容器\"+obj);\n                        return null;\n                    }   \n                }\n                else\n                {\n                    return document.createElement(obj);\n                }\n            }\n            else\n            {\n                return obj;\n            }\n        },\n        //初始化\n        info:function(id)\n        {\n            this.count=this.count<=5?this.count:5;\n            this.bigbox=this.$(id);\n            for(var i=0;i<2;i++)\n            {\n                var ul=this.$(\"ul\");\n                for(var j=1;j<=this.count;j++)\n                {\n                    var li=this.$(\"li\");\n                    li.innerHTML=i==0?this.imgurl[j-1]:j;\n                    ul.appendChild(li);\n                }\n                this.bigbox.appendChild(ul);\n                debugger;\n            }\n            this.boxul=this.bigbox.getElementsByTagName(\"ul\");\n            this.boxul[0].className=\"imgList\";\n            this.boxul[1].className=\"countNum\";\n            this.imglist=this.boxul[0].getElementsByTagName(\"li\");\n            this.numlist=this.boxul[1].getElementsByTagName(\"li\");\n            for(var j=0;j<this.imglist.length;j++)\n            {\n                this.alpha(j,0);\n            }\n            this.alpha(0,100);\n            this.numlist[0].className=\"current\";\n        },\n        //封装程序入口\n        action:function(id)\n        {\n            this.autoplay();\n            this.mouseoverout(this.bigbox,this.numlist);\n        },\n        //图片切换效果\n        imgshow:function(num,numlist,imglist)\n        {\n            this.index=num;\n            var pralpha=100;\n            var inalpha=0;\n            for(var i=0;i<numlist.length;i++)\n            {\n                numlist[i].className=\"\";\n            }\n            numlist[this.index].className=\"current\";\n            clearInterval(this.timer);\n            for(var j=0;j<this.imglist.length;j++)\n            {\n                    this.alpha(j,0);\n            }\n            this.alpha(this.prov,100);\n            this.alpha(this.index,0);\n            var $this=this;\n            //利用透明度来实现切换图片\n            this.timer=setInterval(function(){\n                inalpha+=2;\n                pralpha-=2;\n                if(inalpha>100){inalpha=100};//不能大于100\n                if(pralpha<0){pralpha=100};\n                //为兼容性赋样式\n                $this.alpha($this.prov,pralpha);\n                $this.alpha($this.index,inalpha);\n                if(inalpha==100&&pralpha==0){clearInterval($this.timer)};//当等于100的时候就切换完成了\n            },20)//经测试20是我认为最合适的值\n        },\n        //设置透明度\n        alpha:function(i,opacity){\n            this.imglist[i].style.opacity=opacity/100;\n            this.imglist[i].style.filter=\"alpha(opacity=\"+opacity+\")\";\n        },\n        //自动播放\n        autoplay:function(){\n            var $this=this;\n            this.play=setInterval(function(){\n                $this.prov=$this.index;\n                $this.index++;\n                if($this.index>$this.imglist.length-1){$this.index=0};\n                $this.imgshow($this.index,$this.numlist,$this.imglist);\n                },2000)\n        },\n        //处理鼠标事件\n        mouseoverout:function(box,numlist)\n        {\n            var $this=this;\n            box.onmouseover=function()\n            {\n                clearInterval($this.play);\n            }\n            box.onmouseout=function()\n            {\n                $this.autoplay($this.index);\n            }\n            for(var i=0;i<numlist.length;i++)\n            {\n                numlist[i].index=i;\n                numlist[i].onmouseover=function(){\n                    $this.prov=$this.index;\n                    $this.imgshow(this.index,$this.numlist,$this.imglist);\n                }\n            }\n        }\n    }\n    window.onload=function(){\n        var runimg=new runImg();\n        runimg.count=4;\n        runimg.imgurl=[\n       			\"<img src=\\\"img/lamp1.jpg\\\">\",\n				\"<img src=\\\"img/lamp2.jpg\\\">\",\n				\"<img src=\\\"img/lamp3.jpg\\\">\",\n				\"<img src=\\\"img/lamp4.jpg\\\">\",\n        ];\n        runimg.info(\"#box\");\n        runimg.action(\"#box\");\n    }\n       \n",
+			"file": "/F/kevin software/github/Hbuider/hello_Hbuider/more.js",
+			"file_size": 5239,
+			"file_write_time": 130782562389108338,
 			"settings":
 			{
-				"buffer_size": 3606,
+				"buffer_size": 4829,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "/C/Users/kevin/Desktop/my programs/my javascript/baidu_ife/ife/javascriptDemo.html",
+			"settings":
+			{
+				"buffer_size": 12095,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "/F/kevin software/github/Hbuider/hello_Hbuider/index.html",
+			"settings":
+			{
+				"buffer_size": 1697,
 				"line_ending": "Windows"
 			}
 		}
@@ -641,18 +660,32 @@
 	},
 	"expanded_folders":
 	[
-		"/F/kevin software/github/kevinwang04.github.io/style",
-		"/F/kevin software/github/kevinwang04.github.io/works",
-		"/G/NEWsoftware/nodeJS/N-chat",
-		"/G/NEWsoftware/nodeJS/N-chat/node_modules",
-		"/G/NEWsoftware/nodeJS/N-chat/node_modules/.bin",
-		"/G/NEWsoftware/nodeJS/N-chat/public",
-		"/G/NEWsoftware/nodeJS/N-chat/public/javascripts",
-		"/G/NEWsoftware/nodeJS/N-chat/routes",
-		"/G/NEWsoftware/nodeJS/N-chat/views"
+		"/C/Users/kevin/Desktop/my programs/my javascript/baidu_ife/ife",
+		"/F/kevin software/github/peng/js"
 	],
 	"file_history":
 	[
+		"/F/software/SublimeText3/Data/Packages/User/Default (Windows).sublime-keymap",
+		"/F/software/SublimeText3/Data/Packages/Web Inspector/Default (Windows).sublime-keymap",
+		"/C/Users/kevin/Desktop/test.js",
+		"/F/software/SublimeText3/Data/Packages/User/node.sublime-build",
+		"/F/software/SublimeText3/Data/Packages/User/nodejs.sublime-build",
+		"/C/Users/kevin/Desktop/untitled.sublime-build",
+		"/F/software/SublimeText3/Data/Packages/Web Inspector/swi.sublime-settings",
+		"/G/NEWsoftware/nodeJS/N-blog/package.json",
+		"/G/NEWsoftware/nodeJS/Ghost/CONTRIBUTING.md",
+		"/G/NEWsoftware/nodeJS/hexo_blog/source/_posts/前端知识梳理-1.md",
+		"/G/NEWsoftware/nodeJS/hexo_blog/public/index.html",
+		"/C/Users/kevin/Desktop/my programs/markdown/web_interview.html",
+		"/F/kevin software/github/kevinwang04.github.io/blog_articles/article_index.html",
+		"/G/NEWsoftware/nodeJS/hexo_blog/CNAME",
+		"/G/NEWsoftware/nodeJS/hexo_blog/themes/TKL/_config.yml",
+		"/G/NEWsoftware/nodeJS/my_phonegap/www/index.html",
+		"/G/NEWsoftware/nodeJS/bookshop/index.html",
+		"/C/Users/kevin/Desktop/my programs/bata/源码/jQuery吧/ResponsiveSlides.js-master/ResponsiveSlides.js-master/responsiveslides.js",
+		"/C/Users/kevin/Desktop/my programs/markdown/电子技术实习.md",
+		"/F/kevin software/github/peng/js/index_js.js",
+		"/G/NEWsoftware/nodeJS/bookshop/app.js",
 		"/C/Users/kevin/Desktop/new.txt",
 		"/G/NEWsoftware/mongodb/blog/blog.0",
 		"/G/NEWsoftware/mongodb/blog/storage.bson",
@@ -661,7 +694,6 @@
 		"/F/kevin software/github/kevinwang04.github.io/resume/resume_index.html",
 		"/F/kevin software/github/kevinwang04.github.io/resume/css/style.css",
 		"/G/NEWsoftware/nodeJS/hexo_blog/_config.yml",
-		"/G/NEWsoftware/nodeJS/hexo_blog/themes/TKL/_config.yml",
 		"/G/NEWsoftware/nodeJS/hexo_blog/.deploy_git/index.html",
 		"/G/NEWsoftware/nodeJS/hexo_blog/themes/TKL/layout/casper/post/comments.ejs",
 		"/G/NEWsoftware/nodeJS/hexo_blog/themes/TKL/layout/casper/post/duoshuo.ejs",
@@ -677,7 +709,6 @@
 		"/C/Users/kevin/Desktop/my programs/bata/源码/jQuery吧/12/index.html",
 		"/F/kevin software/github/peng/css/jqueryba.css",
 		"/F/kevin software/github/peng/css/add.css",
-		"/F/kevin software/github/peng/js/index_js.js",
 		"/F/kevin software/github/peng/oto_files/tg_style.css",
 		"/F/kevin software/github/peng/oto_files/tg_index.css",
 		"/C/Users/kevin/Desktop/my programs/bata/源码/jQuery之家源码/canvas3D雪花飘落/201505171633/index.html",
@@ -688,7 +719,6 @@
 		"/F/software/SublimeText3/Data/Packages/HTML-CSS-JS Prettify/HTMLPrettify.sublime-settings",
 		"/G/NEWsoftware/nodeJS/angular-js/post/post.html",
 		"/G/NEWsoftware/nodeJS/angular-js/static/myblog.js",
-		"/F/kevin software/github/kevinwang04.github.io/blog_articles/article_index.html",
 		"/F/kevin software/github/kevinwang04.github.io/resume/impress.html",
 		"/C/Users/kevin/Desktop/my programs/bata/源码/jQuery之家源码/雪花飘落特效/真实逼真的雪花飘落场景代码/index.html",
 		"/F/kevin software/github/kevinwang04.github.io/index.html",
@@ -753,7 +783,6 @@
 		"/F/kevin software/github/kevinwang04.github.io/style/bootstrap.min.css",
 		"/F/kevin software/github/kevinwang04.github.io/js/jquery-2.1.3.min.js",
 		"/F/kevin software/github/kevinwang04.github.io/js/main.js",
-		"/F/software/SublimeText3/Data/Packages/User/Default (Windows).sublime-keymap",
 		"/F/software/SublimeText3/Data/Packages/Emmet/Emmet.sublime-settings",
 		"/F/software/SublimeText3/Data/Packages/CSScomb/Default.sublime-keymap",
 		"/F/kevin software/github/kevinwang04.github.io/old_blog/main.css",
@@ -763,28 +792,11 @@
 		"/F/software/SublimeText3/Data/Packages/Git/Git.sublime-settings",
 		"/F/software/SublimeText3/Data/Packages/User/CSScomb.sublime-settings",
 		"/F/software/SublimeText3/Data/Packages/CSScomb/CSScomb.sublime-settings",
-		"/F/software/SublimeText3/Data/Packages/User/CTags.sublime-settings",
-		"/F/software/SublimeText3/Data/Packages/User/Preferences.sublime-settings",
-		"/F/software/SublimeText3/Data/Packages/Alignment/Default (Windows).sublime-keymap",
-		"/F/software/SublimeText3/Data/Packages/Default/Default (Windows).sublime-keymap",
-		"/F/software/SublimeText3/Data/Packages/Alignment/Base File.sublime-settings",
-		"/F/software/SublimeText3/Data/Packages/User/Base File.sublime-settings",
-		"/F/kevin software/wordpress/wordpress-4.1-zh_CN/wordpress/.tags",
-		"/F/kevin software/wordpress/wordpress-4.1-zh_CN/wordpress/wp-includes/js/tinymce/plugins/paste/plugin.js",
-		"/F/kevin software/wordpress/wordpress-4.1-zh_CN/wordpress/wp-includes/option.php",
-		"/F/software/SublimeText3/Data/Packages/CTags/CTags.sublime-settings",
-		"/F/kevin software/github/kevinwang04.github.io/old_blog/bowen/bowen.css",
-		"/G/NEWsoftware/nodeJS/node_modules/grunt-contrib-watch/node_modules/tiny-lr-fork/node_modules/qs/test/browser/jquery.js",
-		"/F/kevin software/github/kevinwang04.github.io/old_blog/bowen/about_life/life_article/article2.html",
-		"/F/kevin software/github/kevinwang04.github.io/other_src/Font-Awesome-3.2.1/src/icons.yml",
-		"/F/kevin software/github/kevinwang04.github.io/main.css",
-		"/F/kevin software/github/kevinwang04.github.io/other_src/Font-Awesome-3.2.1/src/community.html",
-		"/F/kevin software/github/kevinwang04.github.io/other_src/Font-Awesome-3.2.1/src/design.html",
-		"/F/kevin software/github/kevinwang04.github.io/other_src/Font-Awesome-3.2.1/src/examples.html"
+		"/F/software/SublimeText3/Data/Packages/User/CTags.sublime-settings"
 	],
 	"find":
 	{
-		"height": 34.0
+		"height": 35.0
 	},
 	"find_in_files":
 	{
@@ -798,6 +810,12 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"Left",
+			"imgshow",
+			"prev",
+			";\n",
+			"ctrl+shift+r",
+			"info",
 			"·",
 			"Hexo",
 			"git",
@@ -919,13 +937,7 @@
 			".all",
 			".navspan",
 			"title",
-			"h1",
-			"self_info",
-			"h2",
-			"title",
-			".title",
-			".tille",
-			".info"
+			"h1"
 		],
 		"highlight": false,
 		"in_selection": false,
@@ -943,116 +955,24 @@
 	"groups":
 	[
 		{
-			"selected": 2,
+			"selected": 3,
 			"sheets":
 			[
 				{
 					"buffer": 0,
-					"file": "/G/NEWsoftware/nodeJS/N-blog/package.json",
+					"file": "/F/kevin software/github/peng/js/index_js.js",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 494,
+						"buffer_size": 4801,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								274,
-								274
-							]
-						],
-						"settings":
-						{
-							"BracketHighlighterBusy": false,
-							"auto_complete": true,
-							"bh_regions":
-							[
-								"bh_curly",
-								"bh_curly_center",
-								"bh_curly_open",
-								"bh_curly_close",
-								"bh_curly_content",
-								"bh_angle",
-								"bh_angle_center",
-								"bh_angle_open",
-								"bh_angle_close",
-								"bh_angle_content",
-								"bh_round",
-								"bh_round_center",
-								"bh_round_open",
-								"bh_round_close",
-								"bh_round_content",
-								"bh_c_define",
-								"bh_c_define_center",
-								"bh_c_define_open",
-								"bh_c_define_close",
-								"bh_c_define_content",
-								"bh_tag",
-								"bh_tag_center",
-								"bh_tag_open",
-								"bh_tag_close",
-								"bh_tag_content",
-								"bh_unmatched",
-								"bh_unmatched_center",
-								"bh_unmatched_open",
-								"bh_unmatched_close",
-								"bh_unmatched_content",
-								"bh_single_quote",
-								"bh_single_quote_center",
-								"bh_single_quote_open",
-								"bh_single_quote_close",
-								"bh_single_quote_content",
-								"bh_square",
-								"bh_square_center",
-								"bh_square_open",
-								"bh_square_close",
-								"bh_square_content",
-								"bh_regex",
-								"bh_regex_center",
-								"bh_regex_open",
-								"bh_regex_close",
-								"bh_regex_content",
-								"bh_double_quote",
-								"bh_double_quote_center",
-								"bh_double_quote_open",
-								"bh_double_quote_close",
-								"bh_double_quote_content",
-								"bh_default",
-								"bh_default_center",
-								"bh_default_open",
-								"bh_default_close",
-								"bh_default_content"
-							],
-							"colorcode": true,
-							"function_name_status_row": 12,
-							"syntax": "Packages/JavaScript/JSON.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 2,
-					"type": "text"
-				},
-				{
-					"buffer": 1,
-					"file": "/G/NEWsoftware/nodeJS/Ghost/CONTRIBUTING.md",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 10869,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								10867,
-								10867
+								2754,
+								2754
 							]
 						],
 						"settings":
@@ -1061,46 +981,16 @@
 							"auto_complete": false,
 							"bh_regions":
 							[
-								"bh_c_define",
-								"bh_c_define_center",
-								"bh_c_define_open",
-								"bh_c_define_close",
-								"bh_c_define_content",
-								"bh_regex",
-								"bh_regex_center",
-								"bh_regex_open",
-								"bh_regex_close",
-								"bh_regex_content",
-								"bh_round",
-								"bh_round_center",
-								"bh_round_open",
-								"bh_round_close",
-								"bh_round_content",
-								"bh_default",
-								"bh_default_center",
-								"bh_default_open",
-								"bh_default_close",
-								"bh_default_content",
-								"bh_single_quote",
-								"bh_single_quote_center",
-								"bh_single_quote_open",
-								"bh_single_quote_close",
-								"bh_single_quote_content",
-								"bh_curly",
-								"bh_curly_center",
-								"bh_curly_open",
-								"bh_curly_close",
-								"bh_curly_content",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content",
 								"bh_double_quote",
 								"bh_double_quote_center",
 								"bh_double_quote_open",
 								"bh_double_quote_close",
 								"bh_double_quote_content",
-								"bh_angle",
-								"bh_angle_center",
-								"bh_angle_open",
-								"bh_angle_close",
-								"bh_angle_content",
 								"bh_tag",
 								"bh_tag_center",
 								"bh_tag_open",
@@ -1111,85 +1001,88 @@
 								"bh_square_open",
 								"bh_square_close",
 								"bh_square_content",
-								"bh_unmatched",
-								"bh_unmatched_center",
-								"bh_unmatched_open",
-								"bh_unmatched_close",
-								"bh_unmatched_content"
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content"
 							],
 							"colorcode": true,
-							"function_name_status_row": 158,
-							"syntax": "Packages/MarkdownEditing/Markdown.tmLanguage"
+							"function_name_status_row": 91,
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 5542.0,
+						"translation.y": 1784.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 1,
+					"stack_index": 3,
 					"type": "text"
 				},
 				{
-					"buffer": 2,
-					"file": "/G/NEWsoftware/nodeJS/N-chat/public/javascripts/chat.js",
-					"semi_transient": true,
+					"buffer": 1,
+					"file": "/F/kevin software/github/Hbuider/hello_Hbuider/test.js",
+					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 3606,
+						"buffer_size": 4447,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								0,
-								0
+								2763,
+								2763
 							]
 						],
 						"settings":
 						{
 							"BracketHighlighterBusy": false,
+							"auto_complete": false,
 							"bh_regions":
 							[
-								"bh_c_define",
-								"bh_c_define_center",
-								"bh_c_define_open",
-								"bh_c_define_close",
-								"bh_c_define_content",
-								"bh_regex",
-								"bh_regex_center",
-								"bh_regex_open",
-								"bh_regex_close",
-								"bh_regex_content",
-								"bh_round",
-								"bh_round_center",
-								"bh_round_open",
-								"bh_round_close",
-								"bh_round_content",
-								"bh_default",
-								"bh_default_center",
-								"bh_default_open",
-								"bh_default_close",
-								"bh_default_content",
-								"bh_single_quote",
-								"bh_single_quote_center",
-								"bh_single_quote_open",
-								"bh_single_quote_close",
-								"bh_single_quote_content",
-								"bh_curly",
-								"bh_curly_center",
-								"bh_curly_open",
-								"bh_curly_close",
-								"bh_curly_content",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content",
 								"bh_double_quote",
 								"bh_double_quote_center",
 								"bh_double_quote_open",
 								"bh_double_quote_close",
 								"bh_double_quote_content",
-								"bh_angle",
-								"bh_angle_center",
-								"bh_angle_open",
-								"bh_angle_close",
-								"bh_angle_content",
 								"bh_tag",
 								"bh_tag_center",
 								"bh_tag_open",
@@ -1200,23 +1093,323 @@
 								"bh_square_open",
 								"bh_square_close",
 								"bh_square_content",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content"
+							],
+							"colorcode": true,
+							"function_name_status_row": 101,
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 1717.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "/F/kevin software/github/Hbuider/hello_Hbuider/more.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 4829,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								2496,
+								2549
+							]
+						],
+						"settings":
+						{
+							"BracketHighlighterBusy": false,
+							"auto_complete": false,
+							"bh_regions":
+							[
 								"bh_unmatched",
 								"bh_unmatched_center",
 								"bh_unmatched_open",
 								"bh_unmatched_close",
-								"bh_unmatched_content"
+								"bh_unmatched_content",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content"
 							],
 							"colorcode": true,
-							"function_name_status_row": 0,
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
+							"function_name_status_row": 85,
+							"open_with_edit": true,
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage"
 						},
-						"translation.x": -0.0,
-						"translation.y": 810.0,
+						"translation.x": 0.0,
+						"translation.y": 1311.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "/C/Users/kevin/Desktop/my programs/my javascript/baidu_ife/ife/javascriptDemo.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 12095,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								11543,
+								11543
+							]
+						],
+						"settings":
+						{
+							"BracketHighlighterBusy": false,
+							"auto_complete": false,
+							"bh_regions":
+							[
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content"
+							],
+							"colorcode": true,
+							"function_name_status_row": 485,
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 9118.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "/F/kevin software/github/Hbuider/hello_Hbuider/index.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1697,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1577,
+								1577
+							]
+						],
+						"settings":
+						{
+							"BracketHighlighterBusy": false,
+							"auto_complete": false,
+							"bh_regions":
+							[
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content"
+							],
+							"colorcode": true,
+							"function_name_status_row": 74,
+							"syntax": "Packages/HTML/HTML.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 741.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 4,
 					"type": "text"
 				}
 			]
@@ -1224,7 +1417,7 @@
 	],
 	"incremental_find":
 	{
-		"height": 26.0
+		"height": 27.0
 	},
 	"input":
 	{
@@ -1255,7 +1448,7 @@
 	"menu_visible": true,
 	"output.exec":
 	{
-		"height": 405.0
+		"height": 112.0
 	},
 	"output.find_results":
 	{
@@ -1268,7 +1461,7 @@
 	"project": "index_js.sublime-project",
 	"replace":
 	{
-		"height": 48.0
+		"height": 50.0
 	},
 	"save_all_on_build": true,
 	"select_file":
@@ -1303,7 +1496,7 @@
 	"show_open_files": true,
 	"show_tabs": true,
 	"side_bar_visible": true,
-	"side_bar_width": 255.0,
+	"side_bar_width": 225.0,
 	"status_bar_visible": true,
 	"template_settings":
 	{

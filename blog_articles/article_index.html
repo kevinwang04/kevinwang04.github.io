@@ -42,7 +42,9 @@
                         <figure>
                             <h1>前端知识梳理_1</h1>
                         </figure>
-                        <figure></figure>
+                        <figure>
+                        <h1>百度ife前端技术学院task0002</h1>
+                        </figure>
                         <figure></figure>
                         <figure></figure>
                         <figure></figure>
@@ -744,9 +746,502 @@ $(&quot;&quot;).stringifyArray(array)
                         <!-- 多说评论框 end -->
                     </div>
                     <div>
-                        <div class="dummy-img"></div>
-                        <p class="dummy-text vice_title">The only people for me are the mad ones, the ones who are mad to live, mad to talk, mad to be saved, desirous of everything at the same time, the ones who never yawn or say a commonplace thing, but burn, burn, burn like fabulous yellow roman candles exploding like spiders across the stars.</p>
-                        <p class="dummy-text">The only people for me are the mad ones, the ones who are mad to live, mad to talk, mad to be saved, desirous of everything at the same time, the ones who never yawn or say a commonplace thing, but burn, burn, burn like fabulous yellow roman candles exploding like spiders across the stars.</p>
+                        <div class="dummy-img"><img src="img/ife.png" height="405" width="597" alt="ife.png"></div>
+                        <p class="dummy-text  vice_title">任务二算是对于前端基础知识一次概览，所以我还是怀着非常谨慎的态度想要努力的去弄懂每一个知识点，当然由于自身水平还有其他因素导致可能对于许多实现的方法理解不深，然而并不能允许自己抱着浅尝辄止的心态去学习。比如学习过程中发现对于JavaScript事件代理机制、正则表达式的匹配、ajax异步加载的理解还是不够深入，日后还需加强。</p>
+                        <div class="dummy-text">
+                        <h3>下面是关于任务二的要求以及自己的完成情况</h3>
+<p><a href="https://github.com/baidu-ife/ife/tree/master/task/task0002" title="任务二要求">baidu/ife任务二要求</a></p>
+<p><a href="https://github.com/kevinwang04/ife/tree/master/task0002" title="我完成的情况">我完成的情况</a></p>    
+                            <pre><code>/*
+//任务1：控制台打印 hell0 world
+console.log(&quot;hello world&quot;);
+*/
+/*
+//任务2：实现简单相加。
+function $(id){
+    return document.getElementById(id);
+}
+
+function clickEvent(){
+    $('addbtn').addEventListener('click',addEventHandle,false);
+}
+function addEventHandle(){
+    var num1 = $(&quot;number1&quot;).value;
+    var num2 = $('number2').value;
+    var newNum = addNumber(num1,num2);
+    innerNumber(newNum);
+}
+function addNumber(num1,num2){
+    return num1 + num2;
+}
+function innerNumber(result){
+    $(&quot;result&quot;).innerHTML=result;
+}
+clickEvent();
+
+//任务三：判断是否是函数
+function isFn(arr){
+
+    return arr.constructor.toString().indexOf(&quot;Function&quot;)&gt;-1;
+
+}
+
+console.log(isFn([&quot;Banana&quot;, &quot;Orange&quot;, &quot;Apple&quot;, &quot;Mango&quot;]));
+*/
+
+/*var arr = ['java', 'c', 'php', 'html'];
+function output(item) {
+console.log(item);
+}
+function each(arr , Fn){
+    arr.console(&quot;&quot;)
+}
+each(arr, output); 
+*/
+
+//任务四：递归调用实现深度克隆
+function cloneObject(src){
+    var o;
+    if (typeof src ==&quot;object&quot;) {
+        if (src === null) {
+            o = null;
+        }else{
+            if (src instanceof Array) {
+                o = [];
+                for (var i = 0; i &lt; src.length; i++) {
+                    o.push(cloneObject(src[i]));
+                }
+            }else{
+                o ={};
+                for(var j in src){
+                    o[j] = cloneObject(src[j]);
+                }
+            }
+        }   
+    }else{
+         o =src;
+    }
+    return o;
+}   
+var srcObj = {
+    a:1,
+    b:{
+        b1:[&quot;hello&quot;,&quot;hi&quot;],
+        b2:&quot;javascript&quot;
+    }
+};
+/*
+var abObj = srcObj;
+var tarObj = cloneObject(srcObj);
+srcObj.a = 2;
+srcObj.b.b1[0] = &quot;Hello&quot;;
+//输出：
+console.log(abObj.a);//2
+console.log(abObj.b.b1[0]);//Hello
+console.log(tarObj.a);//1
+console.log(tarObj.b.b1[0]);//hello
+*/
+/*
+//任务五：对数组进行去重操作，只考虑数组中元素为数字或字符串，返回一个去重后的数组。
+
+function uniqArray(arr){
+    var newArray=new Array();
+    var len=arr.length;
+    for (var i=0;i&lt;len ;i++){
+        for(var j=i+1;j&lt;len;j++){
+            if(this[i]===this[j]){
+                j=++i;//如果后面数组中有和前面相同的元素，则把前面的元素跳过，继续循环。
+            }
+        }
+        newArray.push(this[i]);
+    }
+    return newArray;
+}
+*/
+//更好的实现：
+function uniqArray(arr){
+    var newArray = [];
+    for(var i=0;i&lt;arr.length;i++){
+        if(arr[i]!==&quot;&quot;&amp;&amp;newArray.indexof(arr[i])&lt;0){
+            newArray.push(arr[i]);
+        }
+    }
+    return newArray;
+}
+/*
+var a = ['a','b','a','c'];  
+var b = uniqArray(a);
+console.log(b);//一直输出是[]空数组，==
+*/
+
+//任务六：字符串去空格
+function trim(str){
+    //正则表达式1：return str.replace(/^(\s|\u00A0)+|(\s|\u00A0)+$/g,&quot;&quot;);
+     return str.replace(/(^\s*)|(\s*$)/g, &quot;&quot;);//正则表达式2
+}
+/*  
+var str = '  hi!  ';
+str = trim(str);
+console.log(str);//'hi'
+*/
+
+//任务七：使用each方法
+function each(arr,fn){
+    for (var i = 0; i &lt; arr.length; i++) {
+        fn(arr[i]);
+    };
+}
+/*  
+var str = ['java','c','php','html'];
+function output(item, index){
+    console.log(index+':'+item);//java,c ,php,html
+}
+each(str,output);*/
+
+//任务八：获取对象里面第一层元素的数量
+function getobjectLength(obj){
+    return Object.keys(obj).length;
+}
+/*  
+var obj = {
+    a:1,
+    b:2,
+    c:{
+        c1:3,
+        c2:4
+    },
+    d:5
+};
+console.log(getobjectLength(obj));//4 */
+
+//任务九：学习正则表达式
+function isEmail(emailStr) {
+    var re = /^(\w-*\.*)+@(\w-?)+(\.\w{2,})+$/;
+    return re.test(emailStr);
+}
+function isMobilephone(phone){
+    var re = /^1\d{10}$/
+    return re.test(phone);
+}
+/*  console.log(isEmail('1059002908@qq.com'));//true
+console.log(isMobilephone('18813122761'));//true
+console.log(isMobilephone('123456'));//false*/
+
+//任务十：增加和移除类
+function addClass(element,newClassName){
+    if(!element.className){
+        return element.className = newClassName;
+    }else{
+        var newClass = element.className;
+        newClass += &quot; &quot;;
+        newClass = newClass += newClassName;
+        element.className = newClass;
+    }
+}//增加类
+
+function removeClass(element,oldClassName){
+    var elementClassName = element.className;  
+    if (!element.className) {
+        return ;
+    }else if(element.className.length = 0) return;
+    else if (element.className == oldClassName) {
+        element.className = &quot; &quot;;
+    }else if (elementClassName.match(new RegExp(&quot;(^|\\s)&quot; + className + &quot;(\\s|$)&quot;)))  
+    element.className = elementClassName.replace((new RegExp(&quot;(^|\\s)&quot; + className + &quot;(\\s|$)&quot;)),&quot; &quot;);
+}//移除类
+
+/*  var p = document.getElementById(&quot;p&quot;);
+//removeClass(p,&quot;old&quot;);
+//addClass(p,&quot;new&quot;);*/
+
+function isSiblingNode(element, siblingNode) {
+    var elementParent = element.parentNode;
+    var siblingNodeParent = siblingNode.parentNode;
+    console.log(siblingNodeParent);
+    return elementParent === siblingNodeParent;
+}
+/*var p = document.querySelector('#p');
+var btn = document.querySelector('#addbtn');
+console.log(isSiblingNode(p, btn));*/
+
+//获取当前位置：
+function getPosition(element) {
+    var left = element.offsetLeft;
+    var top = element.offsetTop;
+    var parentOffset = element.offsetParent;
+
+    if(parentOffset!==0) {
+        left += parentOffset.offsetLeft;
+        top += parentOffset.offsetTop;
+        parentOffset = parentOffset.offsetParent;
+    }
+
+    var scrollLeft = document.body.scrollLeft + document.documentElement.scrollLeft;
+    var scrollTop = document.body.scrollTop + document.documentElement.scrollTop;
+
+    left -= scrollLeft;
+    top -=scrollTop;
+
+    return{
+        x:left,
+        y:top
+    }
+}
+var p = document.querySelector('#p');
+console.log(getPosition(p));//8 45
+
+//任务3.2
+//实现一个简单的query
+function $(selector){
+    return document.querySelector(selector);
+}
+
+//不用querySelector实现：
+/*  function $(selector) {
+var allchilds = [];
+var childs = function (element) {    // 递归获取所有子元素
+    return element.getElementsByTagName('*');
+}
+
+var ele = document.getElementsByTagName('html')[0];    // 获取所有元素
+var sele = selector.replace(/\s+/, ' ').split(' ');    // 去除多余的空格并分割
+
+for (var i = 0, len = sele.length; i &lt; len; i++) {
+    ele = childs(ele);
+    var eleLen = ele.length;
+    var isGet = false;
+
+    switch (sele[i][0]) {    // 从子节点中查找
+        case '#':
+            for (var j = 0; j &lt; eleLen; j++) {
+                if (ele[j].id === sele[i].substring(1)) {
+                    ele = ele[j];
+                    isGet = true;
+                    break;
+                }
+            }
+            break;
+        case '.':
+            for (var j = 0; j &lt; eleLen; j++) {
+                var name = uniqArray(ele[j].className.split(' '));
+                if (name.indexOf(sele[i].substring(1)) !== -1) {
+                    ele = ele[j];
+                    isGet = true;
+                    break;
+                }
+            }
+            break;
+        case '[':
+            var valueLoc = sele[i].indexOf('=');
+            if (valueLoc !== -1) {
+                var key = sele[i].substring(1, valueLoc);
+                var value = sele[i].substring(valueLoc + 1, sele[i].length - 1);
+                for (var j = 0; j &lt; eleLen; j++) {
+                    if (ele[j][key] === value) {
+                        ele = ele[j];
+                        isGet = true;
+                        break;
+                    }
+                }
+            }
+            else {
+                var key = sele[i].substring(1, sele[i].length - 1);
+                for (var j = 0; j &lt; eleLen; j++) {
+                    if (ele[j][key]) {
+                        ele = ele[j];
+                        isGet = true;
+                        break;
+                    }
+                }
+            }
+            break;
+        default :
+            for (var j = 0; j &lt; eleLen; j++) {
+                if (ele[j].tagName === sele[i].toUpperCase()) {    // tagName 属性的返回值始终是大写的
+                    ele = ele[j];
+                    isGet = true;
+                    break;
+                }
+            }
+            break;
+    }
+}
+
+if (!isGet) {
+    ele = null;
+}
+
+return ele;
+}*/
+
+//任务4.1 给element对象绑定event事件
+function addEvent(element,event,listener){
+    element['on'+event] = listener;
+}
+
+//移除事件
+function removeEvent(element,event,listener){
+    element['on'+event] = null;
+}
+
+//绑定click事件
+function addClickEvent(element,listener){
+    element.onclick = listener;
+}
+
+//绑定entre事件
+function addEntreEvent(element,listener){
+    element.onkeydown = function(e){
+        e = e || window.event;
+        if (e.keyCode == 13) {
+            listener();
+        }
+    }
+}
+
+//把上面的方法结合成$的方法
+$.on = addEvent;
+$.un = removeEvent;
+$.click = addClickEvent;
+$.entre = addEntreEvent;
+
+/*
+$.click($(&quot;#item1&quot;), clickListener);
+$.click($(&quot;#item2&quot;), clickListener);
+$.click($(&quot;#item3&quot;), clickListener);
+*/
+
+//事件代理学习：
+// 我们增加了一个按钮，当点击按钮时，改变list里面的项目，这个时候你再点击一下li，绑定事件不再生效了。
+// 那是不是我们每次改变了DOM结构或者内容后，都需要重新绑定事件呢？当然不会这么笨，接下来学习一下事件代理，然后实现下面新的方法。
+function delegateEvent(element, tag, eventName, listener) {
+    element['on' + eventName] = function(e) {
+        var e = e || window.event;
+        var target = e.srcElement ? e.srcElement : e.target;
+        var tname = target.nodeName.toLowerCase();
+        if (tname === tag) {
+            target['on' + eventName] = listener;
+        }
+    }
+}
+
+$.delegate = delegateEvent;
+
+/*
+$.delegate($(&quot;#list&quot;), &quot;li&quot;, &quot;click&quot;, clickListener);
+*/
+
+//任务5.1 判断是否为IE浏览器
+function isIE(){
+    var ua = navigator.userAgent.toLowerCase();
+    var ie = ua.match(/rv:([\d.]+)/) || ua.match(/msie ([\d.]+)/);
+    if(ie){
+        return ie[1];
+    }
+    else{
+        return -1;
+    }
+}
+
+//设置cookie
+function setCookie(cookieName,cookieValue,expireDays){
+    if(expireDays){
+        var exdate = new Day();
+        exdate.setDate(exdate.getDate()+expireDays);
+        var expires = ';expires='+exdate.toUTCString();
+    }
+    else{
+        expires = &quot;&quot;;
+    }
+    document.cookie = cookieName + '=' +escape(cookieValue) + expires;
+}
+
+//获取cookie
+function getCookie(cookieName) {
+    var re = new RegExp(cookieName + '=(.*?)($|;)');
+    return re.exec(document.cookie)[1];
+}
+
+//任务6.1 学习Ajax
+function ajax(url, options) {
+// 创建对象
+    var xmlhttp;
+    if (window.XMLHttpRequest) {
+        xmlhttp = new XMLHttpRequest();
+    }
+    else {        //兼容 IE5 IE6
+        xmlhttp = new ActiveXObject('Microsoft.XMLHTTP');
+    }
+
+    // 处理data
+    if (options.data) {
+        var dataarr = [];
+        for (var item in options.data) {
+            dataarr.push(item + '=' + encodeURI(options.data[item]));
+        }
+        var data = dataarr.join('&amp;');
+    }
+
+    // 处理type
+    if (!options.type) {
+        options.type = 'GET';
+    }
+    options.type = options.type.toUpperCase();
+
+    // 发送请求
+    if (options.type === 'GET') {
+        var myURL = '';
+        if (options.data) {
+            myURL = url + '?' + data;
+        }
+        else {
+            myURL = url;
+        }
+        xmlhttp.open('GET', myURL, true);
+        xmlhttp.send();
+    }
+    else if (options.type === 'POST') {
+        xmlhttp.open('POST', url, true);
+        xmlhttp.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
+        xmlhttp.send(data);
+    }
+
+    // readyState
+    xmlhttp.onreadystatechange = function () {
+        if (xmlhttp.readyState === 4) {
+            if (xmlhttp.status === 200) {
+                if (options.onsuccess) {
+                    options.onsuccess(xmlhttp.responseText, xmlhttp.responseXML);
+                }
+            }
+            else {
+                if (options.onfail) {
+                    options.onfail();
+                }
+            }
+        }
+    }
+}
+
+// 示例：
+/*
+ajax(
+'prompt.php',
+{
+    data: {
+        q: 'a'
+    },
+    onsuccess: function (responseText, xhr) {
+        console.log(responseText);
+    },
+    onfail : function () {
+        console.log('fail');
+    }
+}
+);
+*/
+</code></pre>
+                        </div>
                         <!-- 多说评论框 start -->
                         <div class="ds-thread" data-thread-key="5" data-title="jQuery" data-url="http://kevinwang04.github.io/blog_articles/article_index.html"></div>
                         <!-- 多说评论框 end -->
