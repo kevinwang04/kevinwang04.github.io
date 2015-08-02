@@ -40,9 +40,11 @@
                             <h1>浅谈javascript原型模式</h1>
                         </figure>
                         <figure>
-                            <h1></h1>
+                            <h1>前端知识梳理_1</h1>
                         </figure>
-                        <figure></figure>
+                        <figure>
+                        <h1>百度ife前端技术学院task0002</h1>
+                        </figure>
                         <figure></figure>
                         <figure></figure>
                         <figure></figure>
@@ -301,7 +303,7 @@ var person2 = new Person("miaoge","22","student");
                                 "特定类型的所有实例共享的属性和方法",最开始并不能很好地理解这句话,不明白为何在创建一个函数时要为它默认创建一个包含指向该函数的constructor属性的原型对象,而后来却发现这种设计模式有种独到
                                 <br/> 的优势在于当创建一个实例时,我们可以最大限度的使用原型对象中的共有属性部分,而特定实例的私有属性方法或者需要覆盖原型中的某些属性我们也可以放心大胆的去定义而不会改变原型对象.
                                 <br/> 此外
-                                 <strong>
+                                <strong>
     使用原型模式必须要注意的一点就是原型的动态性
    </strong> ,当某个原型修改为另一个对象就等于切断了构造函数和最初原型的联系,导致再次通过该构造函数实例的对象将不具有最初的原型对象的属性.可能的避免方法有两个:
                                 <br/> 1.在重写的原型中加入构造器属性并指向原先的构造函数.
@@ -382,16 +384,864 @@ var person2 = new Person("kevinwang","20","student");
                     </div>
                     <div>
                         <div class="dummy-img"></div>
-                        <p class="dummy-text vice_title">The only people for me are the mad ones, the ones who are mad to live, mad to talk, mad to be saved, desirous of everything at the same time, the ones who never yawn or say a commonplace thing, but burn, burn, burn like fabulous yellow roman candles exploding like spiders across the stars.</p>
-                        <p class="dummy-text">The only people for me are the mad ones, the ones who are mad to live, mad to talk, mad to be saved, desirous of everything at the same time, the ones who never yawn or say a commonplace thing, but burn, burn, burn like fabulous yellow roman candles exploding like spiders across the stars.</p>
+                        <p class="dummy-text vice_title">
+                            俗话说，基础不牢，地动山摇，尤见基础的重要性。学习的过程是一个不断总结，反复积累的过程，没有谁可以一曝十寒，高手也是在把握了一个个非常基础的知识点的基础上再拓宽技能的。最近去搜罗了一些对于前端非常常见的问题和知识点，并总结整理了一下，方便自己日后对照复习使用，也便于大家一起交流学习。
+                        </p>
+                        <div class="dummy-text">
+                            <h3>前端基础梳理</h3>
+                            <hr />
+                            <hr />
+                            <ul>
+                                <li>
+                                    <p>doctype作用/行内块级元素/css空元素/两种盒子模型/</p>
+                                </li>
+                                <li>
+                                    <p>link和@import的区别/css选择器种类?/哪些属性可以继承?/css3新增伪类/</p>
+                                    <pre><code>css优先级就近/载入样式使用最后载入/!important &gt;内联 &gt; id &gt; class &gt; tag/ 新增伪类:first-of-type,last-of-type,only-of-type,only-child,nth-child(),:enabled,:disabled,:checked
+</code></pre>
+                                </li>
+                                <li>
+                                    <p>div居中,浮动元素居中*/浏览器内核种类/常见兼容性问题原因及解决/</p>
+                                </li>
+                                <li>
+                                    <p>html5shim框架/</p>
+                                </li>
+                                <li>
+                                    <p>display:list-item/</p>
+                                </li>
+                                <li>
+                                    <p>淘宝的页面初始化:</p>
+                                    <pre><code>      body, h1, h2, h3, h4, h5, h6, hr, p, blockquote, dl, dt, dd, ul, ol, li, pre, form, fieldset, legend, button, input, textarea, th, td { margin:0; padding:0; }
+body, button, input, select, textarea { font:12px/1.5tahoma, arial, \5b8b\4f53; }
+h1, h2, h3, h4, h5, h6{ font-size:100%; }
+address, cite, dfn, em, var { font-style:normal; }
+code, kbd, pre, samp { font-family:couriernew, courier, monospace; }
+small{ font-size:12px; }
+ul, ol { list-style:none; }
+a { text-decoration:none; }
+a:hover { text-decoration:underline; }
+sup { vertical-align:text-top; }
+sub{ vertical-align:text-bottom; }
+legend { color:#000; }
+fieldset, img { border:0; }
+button, input, select, textarea { font-size:100%; }
+table { border-collapse:collapse; border-spacing:0; } er-spacing:0; } 
+</code></pre>
+                                </li>
+                                <li>
+                                    <p>absolute的containing block/margin collapse/对于BFC规范的理解/iframe的缺点:阻塞主页面的onload事件,影响页面并行加载/</p>
+                                </li>
+                                <li>
+                                    <p>css定义的权重: 1.tag:1
+                                    </p>
+                                    <p>2.class:10</p>
+                                    <p>3.id:100</p>
+                                </li>
+                            </ul>
+                            <p>权重相同,后定义者起作用</p>
+                            <ul>
+                                <li>
+                                    <p>eval的作用:把对应的字符串解析成js代码并运行/避免使用eval,不安全,消耗性能</p>
+                                </li>
+                                <li>
+                                    <p>通用的事件侦听函数:</p>
+                                    <pre><code>    // event(事件)工具集，来源：https://github.com/markyun
+markyun.Event = {
+    // 页面加载完成后
+    readyEvent : function(fn) {
+        if (fn==null) {
+            fn=document;
+        }
+        var oldonload = window.onload;
+        if (typeof window.onload != 'function') {
+            window.onload = fn;
+        } else {
+            window.onload = function() {
+                oldonload();
+                fn();
+            };
+        }
+    },
+    // 视能力分别使用dom0||dom2||IE方式 来绑定事件
+    // 参数： 操作的元素,事件名称 ,事件处理程序
+    addEvent : function(element, type, handler) {
+        if (element.addEventListener) {
+            //事件类型、需要执行的函数、是否捕捉
+            element.addEventListener(type, handler, false);
+        } else if (element.attachEvent) {
+            element.attachEvent('on' + type, function() {
+                handler.call(element);
+            });
+        } else {
+            element['on' + type] = handler;
+        }
+    },
+    // 移除事件
+    removeEvent : function(element, type, handler) {
+        if (element.removeEnentListener) {
+            element.removeEnentListener(type, handler, false);
+        } else if (element.datachEvent) {
+            element.detachEvent('on' + type, handler);
+        } else {
+            element['on' + type] = null;
+        }
+    }, 
+    // 阻止事件 (主要是事件冒泡，因为IE不支持事件捕获)
+    stopPropagation : function(ev) {
+        if (ev.stopPropagation) {
+            ev.stopPropagation();
+        } else {
+            ev.cancelBubble = true;
+        }
+    },
+    // 取消事件的默认行为
+    preventDefault : function(event) {
+        if (event.preventDefault) {
+            event.preventDefault();
+        } else {
+            event.returnValue = false;
+        }
+    },
+    // 获取事件目标
+    getTarget : function(event) {
+        return event.target || event.srcElement;
+    },
+    // 获取event对象的引用，取到事件的所有信息，确保随时能使用event；
+    getEvent : function(e) {
+        var ev = e || window.event;
+        if (!ev) {
+            var c = this.getEvent.caller;
+            while (c) {
+                ev = c.arguments[0];
+                if (ev &amp;&amp; Event == ev.constructor) {
+                    break;
+                }
+                c = c.caller;
+            }
+        }
+        return ev;
+    }
+};
+</code></pre>
+                                </li>
+                                <li>
+                                    <p>99%的网站都需要被重构&lt;&lt;网站重构:应用web标准进行设计&gt;&gt;</p>
+                                </li>
+                                <li>
+                                    <p>优雅降级和渐进增强(主要针对于浏览器)/</p>
+                                </li>
+                                <li>
+                                    <p>nodejs的应用场景:高并发/聊天/实时消息送达</p>
+                                </li>
+                                <li>
+                                    <p>web应用从服务器推送data到客户端有哪些方式:</p>
+                                    <p>1.html5 websoket</p>
+                                    <p>2.WebSoket通过flash</p>
+                                    <p>3.XHR长时间连接</p>
+                                    <p>4.XHR Multipart Streaming</p>
+                                    <p>5.不可见的Iframe</p>
+                                </li>
+                            </ul>
+                            <hr />
+                            <p>javascript基础:</p>
+                            <p>数据类型/面向对象/继承/闭包/插件/作用域/跨域/原型链/模块化/自定义事件/异步装载回调/模板引擎/nodejs/</p>
+                            <ul>
+                                <li>
+                                    <p>深入理解闭包:</p>
+                                    <pre><code>         function say667() {
+    // Local variable that ends up within closure
+    var num = 666;
+    var sayAlert = function() { alert(num); }
+    num++;
+    return sayAlert;
+}
+//执行say667()后,say667()闭包内部变量会存在,而闭包内部函数的内部变量不会存在.使得Javascript的垃圾回收机制GC不会收回say667()所占用的资源，因为say667()的内部函数的执行需要依赖say667()中的变量。这是对闭包作用的非常直白的描述.
+</code></pre>
+                                </li>
+                                <li>
+                                    <p>new操作符具体干了写什么?</p>
+                                    <p>1.创建空对象,this引用该对象,同时继承该对象的原型 .</p>
+                                    <p>2.为该引用的对象加入属性和方法</p>
+                                    <p>3.创建的对象由this所引用,最后隐式返回this.</p>
+                                </li>
+                                <li>
+                                    <p>了解json</p>
+                                </li>
+                                <li>
+                                    <p>js延迟加载的方式有哪些:动态创建DOM方式/按需异步载入js/defer和async</p>
+                                </li>
+                                <li>
+                                    <p>理解ajax的交互模型,同步和异步的区别,如何解决跨域问题</p>
+                                    <pre><code>ajax优点:1.通过异步模式局部刷新,提升用户体验/2.优化了浏览器和服务器之间的传输,减少了不必要的数据往返,减少了带宽的占用/3.Ajax在客户端运行,承担了一部分服务器的工作,减少了大量用户下的服务器负载
+
+ajax缺点:1.ajax不支持浏览器back按钮/2.安全问题:AJAX暴露了与服务器交互的细节/3.对搜索引擎的支持比较弱/4.破坏了程序的异常机制/5.不容易调用
+</code></pre>
+                                </li>
+                                <li>
+                                    <p>跨域:jsonp/iframe/window.name/window.postMessage/服务器上设置代理页面</p>
+                                </li>
+                                <li>
+                                    <p>模块化是如何执行?</p>
+                                    <pre><code>//立即执行函数,不暴露私有成员
+var module1 = (function(){
+    var _count = 0;
+    var m1 = function(){
+        //...
+    };
+    var m2 = function(){
+        //...
+    };
+    return {
+            m1:m1,
+            m2:m2
+            };
+})();
+</code></pre>
+                                </li>
+                                <li>
+                                    <p>document.write和innerHTML的区别:前者只能重绘整个页面,后者可以重绘页面的一部分</p>
+                                </li>
+                                <li>
+                                    <p>js中call()和apply()的区别?</p>
+                                </li>
+                                <li>
+                                    <p>jQuery中如何将数组转化为json字符串,然后再转化回来?</p>
+                                    <pre><code>     $.fn.stringifyArray = function(array) {
+    return JSON.stringify(array)
+}
+
+
+$.fn.parseArray = function(array) {
+    return JSON.parse(array)
+} 
+
+
+然后调用：
+$(&quot;&quot;).stringifyArray(array)
+</code></pre>
+                                </li>
+                                <li>
+                                    <p>javascript的作用域和变量申明提升问题</p>
+                                </li>
+                            </ul>
+                            <hr />
+                            <p>其他:</p>
+                            <p>HTTP/正则/优化/重构/响应式/移动端/团队协作/SEO/UED/职业生涯</p>
+                            <ul>
+                                <li>
+                                    <p>前端开发的优化问题:雅虎的14条军规</p>
+                                </li>
+                                <li>
+                                    <p>http状态码有哪些,分别代表什么意思?</p>
+                                    <pre><code>100-199 用于指定客户端应相应的某些动作。 
+</code></pre>
+                                    <p>200-299 用于表示请求成功。 300-399 用于已经移动的文件并且常被包含在定位头信息中指定新的地址信息。 400-499 用于指出客户端的错误。400 1、语义有误，当前请求无法被服务器理解。401 当前请求需要用户验证 403 服务器已经理解请求，但是拒绝执行它。 500-599 用于支持服务器错误。 503 – 服务不可用</p>
+                                </li>
+                                <li>
+                                    <p>一个页面从输入 URL 到页面加载显示完成，这个过程中都发生了什么？（流程说的越详细越好）</p>
+                                </li>
+                                <li>
+                                    <p>你所知道的页面性能优化方法有那些？</p>
+                                </li>
+                                <li>
+                                    <p>除了前端以外还了解什么其它技术么？你最最厉害的技能是什么？</p>
+                                </li>
+                                <li>
+                                    <p>AMD（Modules/Asynchronous-Definition）、CMD（Common Module Definition）规范区别？</p>
+                                </li>
+                                <li>
+                                    <p>谈谈你认为怎样做能使项目做的更好？</p>
+                                </li>
+                                <li>
+                                    <p>你对前端界面工程师这个职位是怎么样理解的？它的前景会怎么样？</p>
+                                </li>
+                                <li>
+                                    <p>加班的看法</p>
+                                </li>
+                                <li>
+                                    <p>平时如何管理你的项目，如何设计突发大规模并发架构？</p>
+                                    <ul>
+                                        <li>
+                                            <p>先期团队必须确定好全局样式（globe.css），编码模式(utf-8) 等</p>
+                                        </li>
+                                        <li>
+                                            <p>编写习惯必须一致（例如都是采用继承式的写法，单样式都写成一行）</p>
+                                        </li>
+                                        <li>
+                                            <p>标注样式编写人，各模块都及时标注（标注关键样式调用的地方）</p>
+                                        </li>
+                                        <li>
+                                            <p>页面进行标注（例如 页面 模块 开始和结束）</p>
+                                        </li>
+                                        <li>
+                                            <p>CSS跟HTML 分文件夹并行存放，命名都得统一（例如style.css）</p>
+                                        </li>
+                                        <li>
+                                            <p>JS 分文件夹存放 命民以该JS 功能为准英文翻译</p>
+                                        </li>
+                                        <li>
+                                            <p>图片采用整合的 images.png png8 格式文件使用 尽量整合在一起使用方便将来的管理</p>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <p>哪些操作会导致内存泄露(内存泄漏指任何对象在您不再拥有或需要它之后仍然存在。)</p>
+                                </li>
+                            </ul>
+                            <p>setTimeout 的第一个参数使用字符串而非函数的话，会引发内存泄漏。 闭包、控制台日志、循环（在两个对象彼此引用且彼此保留时，就会产生一个循环）
+                            </p>
+                            <ul>
+                                <li>你说你热爱前端，那么应该WEB行业的发展很关注吧？ 说说最近最流行的一些东西吧？</li>
+                            </ul>
+                            <p>Node.js、Mongodb、npmM、MVVM、MEAN</p>
+                            <ul>
+                                <li>你有了解我们公司吗？说说你的认识？</li>
+                            </ul>
+                            <p>因为我想去阿里，所以我针对阿里的说 最羡慕就是在双十一购物节，350.19亿元，每分钟支付79万笔。海量数据，居然无一漏单、无一故障。太厉害了。
+                            </p>
+                            <ul>
+                                <li>移动端（比如：Android IOS）怎么做好用户体验?</li>
+                            </ul>
+                            <h4>前端必须掌握知识点</h4>
+                            <hr />
+                            <ol>
+                                <li>
+                                    <p>DOM结构 —— 两个节点之间可能存在哪些关系以及如何在节点之间任意移动</p>
+                                </li>
+                                <li>
+                                    <p>DOM操作 ——如何添加、移除、移动、复制、创建和查找节点等。</p>
+                                </li>
+                                <li>
+                                    <p>事件 —— 如何使用事件，以及IE和标准DOM事件模型之间存在的差别</p>
+                                </li>
+                                <li>
+                                    <p>XMLHttpRequest —— 这是什么、怎样完整地执行一次GET请求、怎样检测错误</p>
+                                </li>
+                                <li>
+                                    <p>严格模式与混杂模式 —— 如何触发这两种模式，区分它们有何意义</p>
+                                </li>
+                                <li>
+                                    <p>盒模型 —— 外边距、内边距和边框之间的关系，及IE8以下版本的浏览器中的盒模型</p>
+                                </li>
+                                <li>
+                                    <p>块级元素与行内元素 —— 怎么用CSS控制它们、以及如何合理的使用它们</p>
+                                </li>
+                                <li>
+                                    <p>浮动元素——怎么使用它们、它们有什么问题以及怎么解决这些问题</p>
+                                </li>
+                                <li>
+                                    <p>HTML与XHTML——二者有什么区别，你觉得应该使用哪一个并说出理由</p>
+                                </li>
+                                <li>
+                                    <p>JSON —— 作用、用途、设计结构</p>
+                                </li>
+                            </ol>
+                            <hr />
+                            <h1>创建时间.2015.5.31</h1>
+                            <p>================= by kevinwang =========================</p>
+                            <h1>================= 转载请附上链接地址</h1>
+                        </div>
                         <!-- 多说评论框 start -->
                         <div class="ds-thread" data-thread-key="4" data-title="jQuery" data-url="http://kevinwang04.github.io/blog_articles/article_index.html"></div>
                         <!-- 多说评论框 end -->
                     </div>
                     <div>
-                        <div class="dummy-img"></div>
-                        <p class="dummy-text vice_title">The only people for me are the mad ones, the ones who are mad to live, mad to talk, mad to be saved, desirous of everything at the same time, the ones who never yawn or say a commonplace thing, but burn, burn, burn like fabulous yellow roman candles exploding like spiders across the stars.</p>
-                        <p class="dummy-text">The only people for me are the mad ones, the ones who are mad to live, mad to talk, mad to be saved, desirous of everything at the same time, the ones who never yawn or say a commonplace thing, but burn, burn, burn like fabulous yellow roman candles exploding like spiders across the stars.</p>
+                        <div class="dummy-img"><img src="img/ife.png" height="405" width="597" alt="ife.png"></div>
+                        <p class="dummy-text  vice_title">任务二算是对于前端基础知识一次概览，所以我还是怀着非常谨慎的态度想要努力的去弄懂每一个知识点，当然由于自身水平还有其他因素导致可能对于许多实现的方法理解不深，然而并不能允许自己抱着浅尝辄止的心态去学习。比如学习过程中发现对于JavaScript事件代理机制、正则表达式的匹配、ajax异步加载的理解还是不够深入，日后还需加强。</p>
+                        <div class="dummy-text">
+                        <h3>下面是关于任务二的要求以及自己的完成情况</h3>
+<p><a href="https://github.com/baidu-ife/ife/tree/master/task/task0002" title="任务二要求">baidu/ife任务二要求</a></p>
+<p><a href="https://github.com/kevinwang04/ife/tree/master/task0002" title="我完成的情况">我完成的情况</a></p>    
+                            <pre><code>/*
+//任务1：控制台打印 hell0 world
+console.log(&quot;hello world&quot;);
+*/
+/*
+//任务2：实现简单相加。
+function $(id){
+    return document.getElementById(id);
+}
+
+function clickEvent(){
+    $('addbtn').addEventListener('click',addEventHandle,false);
+}
+function addEventHandle(){
+    var num1 = $(&quot;number1&quot;).value;
+    var num2 = $('number2').value;
+    var newNum = addNumber(num1,num2);
+    innerNumber(newNum);
+}
+function addNumber(num1,num2){
+    return num1 + num2;
+}
+function innerNumber(result){
+    $(&quot;result&quot;).innerHTML=result;
+}
+clickEvent();
+
+//任务三：判断是否是函数
+function isFn(arr){
+
+    return arr.constructor.toString().indexOf(&quot;Function&quot;)&gt;-1;
+
+}
+
+console.log(isFn([&quot;Banana&quot;, &quot;Orange&quot;, &quot;Apple&quot;, &quot;Mango&quot;]));
+*/
+
+/*var arr = ['java', 'c', 'php', 'html'];
+function output(item) {
+console.log(item);
+}
+function each(arr , Fn){
+    arr.console(&quot;&quot;)
+}
+each(arr, output); 
+*/
+
+//任务四：递归调用实现深度克隆
+function cloneObject(src){
+    var o;
+    if (typeof src ==&quot;object&quot;) {
+        if (src === null) {
+            o = null;
+        }else{
+            if (src instanceof Array) {
+                o = [];
+                for (var i = 0; i &lt; src.length; i++) {
+                    o.push(cloneObject(src[i]));
+                }
+            }else{
+                o ={};
+                for(var j in src){
+                    o[j] = cloneObject(src[j]);
+                }
+            }
+        }   
+    }else{
+         o =src;
+    }
+    return o;
+}   
+var srcObj = {
+    a:1,
+    b:{
+        b1:[&quot;hello&quot;,&quot;hi&quot;],
+        b2:&quot;javascript&quot;
+    }
+};
+/*
+var abObj = srcObj;
+var tarObj = cloneObject(srcObj);
+srcObj.a = 2;
+srcObj.b.b1[0] = &quot;Hello&quot;;
+//输出：
+console.log(abObj.a);//2
+console.log(abObj.b.b1[0]);//Hello
+console.log(tarObj.a);//1
+console.log(tarObj.b.b1[0]);//hello
+*/
+/*
+//任务五：对数组进行去重操作，只考虑数组中元素为数字或字符串，返回一个去重后的数组。
+
+function uniqArray(arr){
+    var newArray=new Array();
+    var len=arr.length;
+    for (var i=0;i&lt;len ;i++){
+        for(var j=i+1;j&lt;len;j++){
+            if(this[i]===this[j]){
+                j=++i;//如果后面数组中有和前面相同的元素，则把前面的元素跳过，继续循环。
+            }
+        }
+        newArray.push(this[i]);
+    }
+    return newArray;
+}
+*/
+//更好的实现：
+function uniqArray(arr){
+    var newArray = [];
+    for(var i=0;i&lt;arr.length;i++){
+        if(arr[i]!==&quot;&quot;&amp;&amp;newArray.indexof(arr[i])&lt;0){
+            newArray.push(arr[i]);
+        }
+    }
+    return newArray;
+}
+/*
+var a = ['a','b','a','c'];  
+var b = uniqArray(a);
+console.log(b);//一直输出是[]空数组，==
+*/
+
+//任务六：字符串去空格
+function trim(str){
+    //正则表达式1：return str.replace(/^(\s|\u00A0)+|(\s|\u00A0)+$/g,&quot;&quot;);
+     return str.replace(/(^\s*)|(\s*$)/g, &quot;&quot;);//正则表达式2
+}
+/*  
+var str = '  hi!  ';
+str = trim(str);
+console.log(str);//'hi'
+*/
+
+//任务七：使用each方法
+function each(arr,fn){
+    for (var i = 0; i &lt; arr.length; i++) {
+        fn(arr[i]);
+    };
+}
+/*  
+var str = ['java','c','php','html'];
+function output(item, index){
+    console.log(index+':'+item);//java,c ,php,html
+}
+each(str,output);*/
+
+//任务八：获取对象里面第一层元素的数量
+function getobjectLength(obj){
+    return Object.keys(obj).length;
+}
+/*  
+var obj = {
+    a:1,
+    b:2,
+    c:{
+        c1:3,
+        c2:4
+    },
+    d:5
+};
+console.log(getobjectLength(obj));//4 */
+
+//任务九：学习正则表达式
+function isEmail(emailStr) {
+    var re = /^(\w-*\.*)+@(\w-?)+(\.\w{2,})+$/;
+    return re.test(emailStr);
+}
+function isMobilephone(phone){
+    var re = /^1\d{10}$/
+    return re.test(phone);
+}
+/*  console.log(isEmail('1059002908@qq.com'));//true
+console.log(isMobilephone('18813122761'));//true
+console.log(isMobilephone('123456'));//false*/
+
+//任务十：增加和移除类
+function addClass(element,newClassName){
+    if(!element.className){
+        return element.className = newClassName;
+    }else{
+        var newClass = element.className;
+        newClass += &quot; &quot;;
+        newClass = newClass += newClassName;
+        element.className = newClass;
+    }
+}//增加类
+
+function removeClass(element,oldClassName){
+    var elementClassName = element.className;  
+    if (!element.className) {
+        return ;
+    }else if(element.className.length = 0) return;
+    else if (element.className == oldClassName) {
+        element.className = &quot; &quot;;
+    }else if (elementClassName.match(new RegExp(&quot;(^|\\s)&quot; + className + &quot;(\\s|$)&quot;)))  
+    element.className = elementClassName.replace((new RegExp(&quot;(^|\\s)&quot; + className + &quot;(\\s|$)&quot;)),&quot; &quot;);
+}//移除类
+
+/*  var p = document.getElementById(&quot;p&quot;);
+//removeClass(p,&quot;old&quot;);
+//addClass(p,&quot;new&quot;);*/
+
+function isSiblingNode(element, siblingNode) {
+    var elementParent = element.parentNode;
+    var siblingNodeParent = siblingNode.parentNode;
+    console.log(siblingNodeParent);
+    return elementParent === siblingNodeParent;
+}
+/*var p = document.querySelector('#p');
+var btn = document.querySelector('#addbtn');
+console.log(isSiblingNode(p, btn));*/
+
+//获取当前位置：
+function getPosition(element) {
+    var left = element.offsetLeft;
+    var top = element.offsetTop;
+    var parentOffset = element.offsetParent;
+
+    if(parentOffset!==0) {
+        left += parentOffset.offsetLeft;
+        top += parentOffset.offsetTop;
+        parentOffset = parentOffset.offsetParent;
+    }
+
+    var scrollLeft = document.body.scrollLeft + document.documentElement.scrollLeft;
+    var scrollTop = document.body.scrollTop + document.documentElement.scrollTop;
+
+    left -= scrollLeft;
+    top -=scrollTop;
+
+    return{
+        x:left,
+        y:top
+    }
+}
+var p = document.querySelector('#p');
+console.log(getPosition(p));//8 45
+
+//任务3.2
+//实现一个简单的query
+function $(selector){
+    return document.querySelector(selector);
+}
+
+//不用querySelector实现：
+/*  function $(selector) {
+var allchilds = [];
+var childs = function (element) {    // 递归获取所有子元素
+    return element.getElementsByTagName('*');
+}
+
+var ele = document.getElementsByTagName('html')[0];    // 获取所有元素
+var sele = selector.replace(/\s+/, ' ').split(' ');    // 去除多余的空格并分割
+
+for (var i = 0, len = sele.length; i &lt; len; i++) {
+    ele = childs(ele);
+    var eleLen = ele.length;
+    var isGet = false;
+
+    switch (sele[i][0]) {    // 从子节点中查找
+        case '#':
+            for (var j = 0; j &lt; eleLen; j++) {
+                if (ele[j].id === sele[i].substring(1)) {
+                    ele = ele[j];
+                    isGet = true;
+                    break;
+                }
+            }
+            break;
+        case '.':
+            for (var j = 0; j &lt; eleLen; j++) {
+                var name = uniqArray(ele[j].className.split(' '));
+                if (name.indexOf(sele[i].substring(1)) !== -1) {
+                    ele = ele[j];
+                    isGet = true;
+                    break;
+                }
+            }
+            break;
+        case '[':
+            var valueLoc = sele[i].indexOf('=');
+            if (valueLoc !== -1) {
+                var key = sele[i].substring(1, valueLoc);
+                var value = sele[i].substring(valueLoc + 1, sele[i].length - 1);
+                for (var j = 0; j &lt; eleLen; j++) {
+                    if (ele[j][key] === value) {
+                        ele = ele[j];
+                        isGet = true;
+                        break;
+                    }
+                }
+            }
+            else {
+                var key = sele[i].substring(1, sele[i].length - 1);
+                for (var j = 0; j &lt; eleLen; j++) {
+                    if (ele[j][key]) {
+                        ele = ele[j];
+                        isGet = true;
+                        break;
+                    }
+                }
+            }
+            break;
+        default :
+            for (var j = 0; j &lt; eleLen; j++) {
+                if (ele[j].tagName === sele[i].toUpperCase()) {    // tagName 属性的返回值始终是大写的
+                    ele = ele[j];
+                    isGet = true;
+                    break;
+                }
+            }
+            break;
+    }
+}
+
+if (!isGet) {
+    ele = null;
+}
+
+return ele;
+}*/
+
+//任务4.1 给element对象绑定event事件
+function addEvent(element,event,listener){
+    element['on'+event] = listener;
+}
+
+//移除事件
+function removeEvent(element,event,listener){
+    element['on'+event] = null;
+}
+
+//绑定click事件
+function addClickEvent(element,listener){
+    element.onclick = listener;
+}
+
+//绑定entre事件
+function addEntreEvent(element,listener){
+    element.onkeydown = function(e){
+        e = e || window.event;
+        if (e.keyCode == 13) {
+            listener();
+        }
+    }
+}
+
+//把上面的方法结合成$的方法
+$.on = addEvent;
+$.un = removeEvent;
+$.click = addClickEvent;
+$.entre = addEntreEvent;
+
+/*
+$.click($(&quot;#item1&quot;), clickListener);
+$.click($(&quot;#item2&quot;), clickListener);
+$.click($(&quot;#item3&quot;), clickListener);
+*/
+
+//事件代理学习：
+// 我们增加了一个按钮，当点击按钮时，改变list里面的项目，这个时候你再点击一下li，绑定事件不再生效了。
+// 那是不是我们每次改变了DOM结构或者内容后，都需要重新绑定事件呢？当然不会这么笨，接下来学习一下事件代理，然后实现下面新的方法。
+function delegateEvent(element, tag, eventName, listener) {
+    element['on' + eventName] = function(e) {
+        var e = e || window.event;
+        var target = e.srcElement ? e.srcElement : e.target;
+        var tname = target.nodeName.toLowerCase();
+        if (tname === tag) {
+            target['on' + eventName] = listener;
+        }
+    }
+}
+
+$.delegate = delegateEvent;
+
+/*
+$.delegate($(&quot;#list&quot;), &quot;li&quot;, &quot;click&quot;, clickListener);
+*/
+
+//任务5.1 判断是否为IE浏览器
+function isIE(){
+    var ua = navigator.userAgent.toLowerCase();
+    var ie = ua.match(/rv:([\d.]+)/) || ua.match(/msie ([\d.]+)/);
+    if(ie){
+        return ie[1];
+    }
+    else{
+        return -1;
+    }
+}
+
+//设置cookie
+function setCookie(cookieName,cookieValue,expireDays){
+    if(expireDays){
+        var exdate = new Day();
+        exdate.setDate(exdate.getDate()+expireDays);
+        var expires = ';expires='+exdate.toUTCString();
+    }
+    else{
+        expires = &quot;&quot;;
+    }
+    document.cookie = cookieName + '=' +escape(cookieValue) + expires;
+}
+
+//获取cookie
+function getCookie(cookieName) {
+    var re = new RegExp(cookieName + '=(.*?)($|;)');
+    return re.exec(document.cookie)[1];
+}
+
+//任务6.1 学习Ajax
+function ajax(url, options) {
+// 创建对象
+    var xmlhttp;
+    if (window.XMLHttpRequest) {
+        xmlhttp = new XMLHttpRequest();
+    }
+    else {        //兼容 IE5 IE6
+        xmlhttp = new ActiveXObject('Microsoft.XMLHTTP');
+    }
+
+    // 处理data
+    if (options.data) {
+        var dataarr = [];
+        for (var item in options.data) {
+            dataarr.push(item + '=' + encodeURI(options.data[item]));
+        }
+        var data = dataarr.join('&amp;');
+    }
+
+    // 处理type
+    if (!options.type) {
+        options.type = 'GET';
+    }
+    options.type = options.type.toUpperCase();
+
+    // 发送请求
+    if (options.type === 'GET') {
+        var myURL = '';
+        if (options.data) {
+            myURL = url + '?' + data;
+        }
+        else {
+            myURL = url;
+        }
+        xmlhttp.open('GET', myURL, true);
+        xmlhttp.send();
+    }
+    else if (options.type === 'POST') {
+        xmlhttp.open('POST', url, true);
+        xmlhttp.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
+        xmlhttp.send(data);
+    }
+
+    // readyState
+    xmlhttp.onreadystatechange = function () {
+        if (xmlhttp.readyState === 4) {
+            if (xmlhttp.status === 200) {
+                if (options.onsuccess) {
+                    options.onsuccess(xmlhttp.responseText, xmlhttp.responseXML);
+                }
+            }
+            else {
+                if (options.onfail) {
+                    options.onfail();
+                }
+            }
+        }
+    }
+}
+
+// 示例：
+/*
+ajax(
+'prompt.php',
+{
+    data: {
+        q: 'a'
+    },
+    onsuccess: function (responseText, xhr) {
+        console.log(responseText);
+    },
+    onfail : function () {
+        console.log('fail');
+    }
+}
+);
+*/
+</code></pre>
+                        </div>
                         <!-- 多说评论框 start -->
                         <div class="ds-thread" data-thread-key="5" data-title="jQuery" data-url="http://kevinwang04.github.io/blog_articles/article_index.html"></div>
                         <!-- 多说评论框 end -->
@@ -446,11 +1296,12 @@ var person2 = new Person("kevinwang","20","student");
             <li>
                 <a href="#">projects</a>
             </li>
-            <li>
-                <a href="../resume/resume_index.html">resume</a>
-            </li>
+           
             <li>
                 <a href="#">contact me</a>
+            </li>
+            <li>
+                <a href="http://resume.kwang520.com">resume</a>
             </li>
         </ul>
         <!-- .cd-3d-nav -->

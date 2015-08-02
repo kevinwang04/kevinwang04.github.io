@@ -349,8 +349,9 @@ body {
     
     padding-bottom: 50px;
     padding-bottom: 50px;
-    background: linear-gradient(to bottom, #7c8886 0, #1f2221 100%);
-    background: linear-gradient(to bottom, #7c8886 0, #1f2221 100%);
+    /* background: linear-gradient(to bottom, #7c8886 0, #1f2221 100%); */
+    background: url(../bkg_footer.png) repeat-x;
+    background-color: #444;
 }
 
 .footer h4,

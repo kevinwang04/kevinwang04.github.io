@@ -23,15 +23,39 @@
 		},
 		{
 			"follow_symlinks": true,
-			"path": "G:\\NEWsoftware\\nodeJS\\angular-js"
-		},
-		{
-			"follow_symlinks": true,
 			"path": "F:\\kevin software\\github\\peng"
 		},
 		{
 			"follow_symlinks": true,
 			"path": "G:\\NEWsoftware\\nodeJS\\hexo_blog"
+		},
+		{
+			"follow_symlinks": true,
+			"path": "G:\\NEWsoftware\\nodeJS\\N-blog"
+		},
+		{
+			"follow_symlinks": true,
+			"path": "G:\\NEWsoftware\\nodeJS\\Ghost"
+		},
+		{
+			"follow_symlinks": true,
+			"path": "G:\\NEWsoftware\\nodeJS\\N-chat"
+		},
+		{
+			"follow_symlinks": true,
+			"path": "G:\\NEWsoftware\\nodeJS\\zepto"
+		},
+		{
+			"follow_symlinks": true,
+			"path": "G:\\NEWsoftware\\nodeJS\\my_phonegap"
+		},
+		{
+			"follow_symlinks": true,
+			"path": "G:\\NEWsoftware\\nodeJS\\bookshop"
+		},
+		{
+			"follow_symlinks": true,
+			"path": "F:\\kevin software\\github\\Hbuider\\hello_Hbuider"
 		}
 	]
 }
