@@ -177,7 +177,6 @@ body {
     position: relative;
     width: 100%;
     padding-bottom: 20px;
-    height: 450px;
     /*本来想设置成单页面全屏效果，后来为了适配移动端还是放弃了，呜呜。。。*/
 
     border: 1px solid white;
@@ -194,8 +193,9 @@ body {
     color: white;
 }
 
-.top_contact {
-    margin-top: 350px;
+.pic-left{
+    height: 250px;
+    margin-top: 50px;
 }
 
 #demo3 h3 {
@@ -366,4 +366,21 @@ h5 {
 .footer_icon {
     font-size: 40px;
     color: rgb(134, 139, 138);
+}
+
+/*文字*/
+.show-text-1{
+    margin-top: 30px;
+    font-size: 25px;
+    letter-spacing: 2px;
+}
+.show-text-2{
+    margin-top: 30px;
+    font-size: 25px;
+    letter-spacing: 2px;
+}
+.show-text-3{
+    margin-top: 30px;
+    font-size: 25px;
+    letter-spacing: 2px;
 }

@@ -90,10 +90,14 @@
                     <div id="welcome_context">
                         <div class="top_contact">
                             <div class="row">
-                                <div class="col-xs-12 col-md-3 col-md-offset-3 contact_me text-center">
-                                    <h4><a href="mailto:kavinwang04@gmail.com">kavinwang04@gmail<i class="icon-envelope-alt"></i></a></h4></div>
-                                <div class="col-xs-12 col-md-3 text-center">
-                                    <h4><a href="https://github.com/kevinwang04"><i class="icon-github"></i>contact me on github</a></h4></div>
+                                <div class="col-xs-12 col-md-4 text-center">
+                                    <img src="assets/images/creative.png" alt="pic-left" class="pic-left">
+                                </div>
+                                <div class="col-xs-12 col-md-8 text-left">
+                                    <div class="show-text-1"></div> 
+                                    <div class="show-text-2"></div> 
+                                    <div class="show-text-3"></div> 
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -120,6 +124,8 @@
                                 <h5 class="text-center">STAY HUNGRY · STAY FOOLISH   </h5>
                                 <h5 class="text-center"><a href="old_blog/old_index.html">WELCOME TO BLOG 1.0</a></h5>
                             </div>
+                            <!-- 音乐 -->
+                            <iframe class="163music" frameborder="no" border="0" marginwidth="0" style="position:absolute;right:0px;bottom:0px" marginheight="0" width=298 height=52 src="http://music.163.com/outchain/player?type=2&id=27984284&auto=1&height=32"></iframe>
                         </div>
                     </div>
                 </div>
@@ -137,7 +143,7 @@
                 <a href="blog_articles/article_index.html">blogs</a>
             </li>
             <li>
-                <a href="#">projects</a>
+                <a href="timeline/proexperience.html">experience</a>
             </li>
             <li>
                 <a href="http://home.kwang520.com/diary">my diary</a>
@@ -155,6 +161,7 @@
     <script type="text/javascript" src="js/bootstrap.min.js"></script>
     <script src="assets/js/jquery.logosDistort.min.js"></script>
     <script src="js/top_bar.js"></script>
+    <script src="js/l-by-l.min.js"></script>
     <script>
     var options = {
         effectWeight: 1.5,
@@ -164,8 +171,34 @@
         directions: [1, 1, -1, 1, 1, 1, 1, 1]
     };
     $("#demo3").logosDistort(options);
+    //文字
+    
+    $(document).ready(function($) {
+        $(".show-text-1").lbyl({
+            content: "You can't connect the dots looking forward; you can only connect them looking backwards. So you have to trust that the dots will somehow connect in your future.",
+            speed: 100, //time between each new letter being added
+            type: 'show', // 'show' or 'fade'
+            fadeSpeed: 500, // Only relevant when the 'type' is set to 'fade'
+            finished: function() {
+                $(".show-text-2").lbyl({
+                    content: " If you haven't found it yet， keep looking. Don't settle. As with all matters of the heart， you’ll know when you find it.",
+                    speed: 100, //time between each new letter being added
+                    type: 'show', // 'show' or 'fade'
+                    fadeSpeed: 500, // Only relevant when the 'type' is set to 'fade'
+                    finished: function() {
+                        $(".show-text-3").lbyl({
+                            content: " If you live each day as if it was your last， someday you'll most certainly be right.",
+                            speed: 100, //time between each new letter being added
+                            type: 'show', // 'show' or 'fade'
+                            fadeSpeed: 500, // Only relevant when the 'type' is set to 'fade'
+                        });
+                    }
+                });
+            }
+        });
+    });
     </script>
-    <!--<script type="text/javascript" src="https://apps.bdimg.com/libs/jqueryui/1.10.4/jquery-ui.min.js"></script>-->
+
 </body>
 
 </html>
