@@ -101,7 +101,7 @@ var timelineData = {
                 "startDate":"2015,3",
                 "endDate":"2015,4",
                 "headline":"学院篮球赛",
-                "text":"there may be amount of trifles in life, but when stand in the basketball court, the only thing to think is fighting",
+                "text":"there may be amount of trifles in life, but when standing in the basketball court, the only thing to think is fighting",
                 "asset":
                 {
                     "media":"image/8.JPG",
@@ -113,7 +113,7 @@ var timelineData = {
                 "startDate":"2015,9",
                 "endDate":"2015,9",
                 "headline":"一生痴绝处，无梦到徽州",
-                "text":"忘不了鳌鱼峰的日落，如同忘不了天都峰和鲫鱼背上的云雾斜阳，忘不了宏村的南湖，如同忘不了属于属于徽州的一水一画",
+                "text":"忘不了鳌鱼峰的日落，如同忘不了天都峰和鲫鱼背上的云雾斜阳，忘不了宏村的南湖，如同忘不了属于徽州的一水一画",
                 "asset":
                 {
                     "media":"image/9.png",
