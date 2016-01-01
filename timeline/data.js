@@ -104,7 +104,7 @@ var timelineData = {
                 "text":"there may be amount of trifles in life, but when stand in the basketball court, the only thing to think is fighting",
                 "asset":
                 {
-                    "media":"image/8.jpg",
+                    "media":"image/8.JPG",
                     "credit":"photo by zhangtaojun",
                     "caption":"Basketball === Brother"
                 }
